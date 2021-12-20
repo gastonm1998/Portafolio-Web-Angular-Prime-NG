@@ -11,12 +11,13 @@ export class ProyectosComponent implements OnInit {
 
 	responsiveOptions;
 
+
   constructor() {
     this.responsiveOptions = [
       {
           breakpoint: '1024px',
-          numVisible: 3,
-          numScroll: 3
+          numVisible: 2,
+          numScroll: 2
       },
       {
           breakpoint: '768px',
@@ -38,7 +39,7 @@ export class ProyectosComponent implements OnInit {
         nombre: "anubis",direccionImagen: "../../../assets/portada anubis.png"
       },
       {
-        nombre: "b",direccionImagen: "../../../assets/portada senku.png"
+        nombre: "Senku",direccionImagen: "../../../assets/portada senku.png"
       },
       {
         nombre: "c",direccionImagen: "../../../assets/portada portafolio.png"
@@ -48,5 +49,6 @@ export class ProyectosComponent implements OnInit {
       },
     ];
   }
+
 
 }

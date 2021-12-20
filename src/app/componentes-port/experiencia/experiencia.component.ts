@@ -17,16 +17,16 @@ export class ExperienciaComponent implements OnInit {
 
     this.experiencia = [
       {
-        status: "Time 1", date: '15/10/2020 14:00', icon: PrimeIcons.ID_CARD, color: '#673AB7',descripcion:"a"
+        status: "Temcoco", date: '01/2016 - 06/2016', icon: PrimeIcons.ID_CARD, color: '#bbe3ff',descripcion:"Bobinado y mantenimientos de motores electicos industriales, bombas de agua."
       },
       {
-        status: "Time 2",date: '15/10/2020 16:15', icon: PrimeIcons.ENVELOPE, color: '#FF9800',descripcion:"b"
+        status: "Ledesma",date: '04/2018 - 10/2018', icon: PrimeIcons.ID_CARD, color: '#bbe3ff',descripcion:"Pasante para practicas de electricidad industrial y mantenimiento"
       },
       {
-        status: "Time 3",date: '16/10/2020 10:00', icon: PrimeIcons.CHECK, color: '#607D8B',descripcion:"c"
+        status: "ElectroTec",date: '06/2017 - 09-2017', icon: PrimeIcons.ID_CARD, color: '#bbe3ff',descripcion:"Ayudante en reparacion de productos electronicos"
       },
       {
-        status: "Time 4",date: '16/10/2020 10:00', icon: PrimeIcons.CHECK, color: '#607D8B',descripcion:"d"
+        status: "Independiente",date: '01-2016 - 12/2021', icon: PrimeIcons.ID_CARD, color: '#bbe3ff',descripcion:"Armado, reparacion y mantenimiento de PC para gaming y workstation"
       },
     ];
 
@@ -34,17 +34,15 @@ export class ExperienciaComponent implements OnInit {
 
     this.educacion = [
       {
-        status: "Time 1", date: '15/10/2020 14:00', icon: PrimeIcons.ID_CARD, color: '#673AB7',descripcion:"a"
+        status: "Escuela Tecnica Ingeniero Herminio Arrieta", date: '03/2012 - 11/2018', icon: PrimeIcons.ID_CARD, color: '#bbe3ff',descripcion:"Técnico en instalaciones eléctricas y automáticas"
       },
       {
-        status: "Time 2",date: '15/10/2020 16:15', icon: PrimeIcons.ENVELOPE, color: '#FF9800',descripcion:"b"
+        status: "Platzi",date: '09/2020 - 09/2021', icon: PrimeIcons.ID_CARD, color: '#bbe3ff',descripcion:"Multiples cursos de formacion para programacion"
       },
       {
-        status: "Time 3",date: '16/10/2020 10:00', icon: PrimeIcons.CHECK, color: '#607D8B',descripcion:"c"
+        status: "Plan nacional de formación en programación Argentina Programa",date: '06/2021 - Cursando', icon: PrimeIcons.ID_CARD, color: '#bbe3ff',descripcion:"Programa de formacion de desarrolladores web full stack Jr"
       },
-      {
-        status: "Time 4",date: '16/10/2020 10:00', icon: PrimeIcons.CHECK, color: '#607D8B',descripcion:"d"
-      },
+
     ];
   }
 

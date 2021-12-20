@@ -2,13 +2,13 @@
 
 
 
-
+<h1 class="titulo"> Experiencia</h1>
 
   <div class="card">
-    <h5>Customized</h5>
+
     <p-timeline [value]="experiencia" align="alternate" styleClass="customized-timeline">
         <ng-template pTemplate="marker" let-event>
-            <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
+            <span class="custom-marker p-shadow-6" [style.backgroundColor]="event.color">
                 <i [ngClass]="event.icon"></i>
             </span>
         </ng-template>
@@ -16,19 +16,19 @@
             <p-card [header]="event.status" [subheader]="event.date">
 
                   <p > {{event.descripcion}}</p>
-                <button pButton label="Read more" class="p-button-text"></button>
+
             </p-card>
         </ng-template>
     </p-timeline>
   </div>
 
-
+  <h1 class="titulo"> Educacion</h1>
 
   <div class="card">
-    <h5>Customized</h5>
+
     <p-timeline [value]="educacion" align="alternate" styleClass="customized-timeline">
         <ng-template pTemplate="marker" let-event>
-            <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
+            <span class="custom-marker p-shadow-6" [style.backgroundColor]="event.color">
                 <i [ngClass]="event.icon"></i>
             </span>
         </ng-template>
@@ -36,9 +36,10 @@
             <p-card [header]="event.status" [subheader]="event.date">
 
                   <p > {{event.descripcion}}</p>
-                <button pButton label="Read more" class="p-button-text"></button>
+
             </p-card>
         </ng-template>
     </p-timeline>
   </div>
+
 

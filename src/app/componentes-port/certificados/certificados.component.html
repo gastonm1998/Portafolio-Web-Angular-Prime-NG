@@ -1,8 +1,20 @@
-<div class="container">
+
+<h1 class="titulo">Hard - Skills</h1>
+
+<div class="hard-skills">
 
   <p-accordion [multiple]="true">
-      <p-accordionTab header="javascript" class="acordion" >
+      <p-accordionTab  class="acordion" >
+
+        <ng-template pTemplate="header"  styleClass="dark-panel ">
+          <div class="header-certificados">
+
+            <p > <img src="../../../assets/icons/logo-javascript.svg" alt=""> JavaScript</p>
+          </div>
+        </ng-template>
+
           <!-- javascript-->
+
         <div class="acordion-body">
             <p-card header="Advanced Card" subheader="Card Subheader" [style]="{width: '360px'}" styleClass="p-card-shadow" class="carta">
               <ng-template pTemplate="header">
@@ -107,10 +119,18 @@
             </p-card>
           </div>
 
+          <!-- ----------------------python-------------------------- -->
 
       </p-accordionTab>
-      <p-accordionTab header="Header II">
 
+        <!--Phyton-->
+      <p-accordionTab header="">
+        <ng-template pTemplate="header"  styleClass="dark-panel ">
+          <div class="header-certificados">
+
+            <p > <img src="../../../assets/icons/python-icon.svg" alt=""> Python</p>
+          </div>
+        </ng-template>
         <!--python-->
 
         <div class="acordion-body">
@@ -192,10 +212,16 @@
         </div>
 
 
-
+<!-- ----------------------html/css-------------------------- -->
 
     </p-accordionTab>
-      <p-accordionTab header="Header III">
+      <p-accordionTab header="">
+        <ng-template pTemplate="header"  styleClass="dark-panel ">
+          <div class="header-certificados">
+
+            <p > <img src="../../../assets/icons/w3_css-icon.svg" alt=""> <img src="../../../assets/icons/w3_html5-icon.svg" alt=""> HTML / CSS</p>
+          </div>
+        </ng-template>
 
         <!--Html css-->
         <div class="acordion-body">
@@ -237,8 +263,14 @@
         </div>
       </p-accordionTab>
 
+      <!-- ----------------------iot-------------------------- -->
+      <p-accordionTab header="">
+        <ng-template pTemplate="header"  styleClass="dark-panel ">
+          <div class="header-certificados">
 
-      <p-accordionTab header="Header III">
+            <p > <img src="../../../assets/icons/wifi.svg" alt=""> IoT</p>
+          </div>
+        </ng-template>
         <!--Iot-->
 
         <div class="acordion-body">
@@ -333,8 +365,14 @@
         </div>
     </p-accordionTab>
 
+    <!-- ------------------ data base -------------------------->
+    <p-accordionTab header="">
+      <ng-template pTemplate="header"  styleClass="dark-panel ">
+        <div class="header-certificados">
 
-    <p-accordionTab header="Header III">
+          <p > <img src="../../../assets/icons/mysql-ar21.svg" alt="" width="50px" > Data Base</p>
+        </div>
+      </ng-template>
       <!--Data base-->
       <div class="acordion-body">
         <p-card header="Advanced Card" subheader="Card Subheader" [style]="{width: '360px'}" styleClass="p-card-shadow" class="carta">
@@ -363,8 +401,14 @@
       </div>
     </p-accordionTab>
 
+    <!--------------------------- comp----------------------->
+  <p-accordionTab header="">
+    <ng-template pTemplate="header"  styleClass="dark-panel ">
+      <div class="header-certificados">
 
-  <p-accordionTab header="Header III">
+        <p > <img src="../../../assets/icons/github-icon-1.svg" alt=""> Complementos</p>
+      </div>
+    </ng-template>
     <!--complemento-->
     <div class="acordion-body">
       <p-card header="Advanced Card" subheader="Card Subheader" [style]="{width: '360px'}" styleClass="p-card-shadow" class="carta">

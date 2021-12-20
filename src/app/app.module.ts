@@ -20,7 +20,9 @@ import { CertificadosComponent } from './componentes-port/certificados/certifica
 import {AccordionModule} from 'primeng/accordion';
 import { ProyectosComponent } from './componentes-port/proyectos/proyectos.component';
 import {CarouselModule} from 'primeng/carousel';
-
+import {DialogModule} from 'primeng/dialog';
+import { DescripcionSenkuComponent } from './componentes-port/proyectos/descripcion-senku/descripcion-senku.component';
+import { RippleModule } from 'primeng/ripple';
 const appRoutes:Routes = [
   {path:'', component:CartelInicioComponent},
   {path:'lobby', component:LobbyComponent},
@@ -36,17 +38,20 @@ const appRoutes:Routes = [
     SoftSkillsComponent,
     ExperienciaComponent,
     CertificadosComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    DescripcionSenkuComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     ButtonModule,
+    RippleModule,
     CardModule,
     AccordionModule,
     TimelineModule,
     CarouselModule,
+    DialogModule,
 
     RouterModule.forRoot(appRoutes)
   ],

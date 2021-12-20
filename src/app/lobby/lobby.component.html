@@ -1,4 +1,49 @@
-<app-tarjeta-presentacion></app-tarjeta-presentacion>
-<app-experiencia></app-experiencia>
-<app-certificados></app-certificados>
-<app-proyectos></app-proyectos>
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-light " style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img class="imagen" src="../../assets/argprog.png" alt="" width="60" height="48">
+
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav  mx-auto ">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">
+            <button pButton pRipple type="button" label="Home" class="p-button-text p-button-secondary"></button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/lobby/#descripcion">
+            <button pButton pRipple type="button" label="Descripcion" class="p-button-text p-button-secondary"></button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/lobby/#experiencia">
+            <button pButton pRipple type="button" label="Experiencia" class="p-button-text p-button-secondary"></button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/lobby/#hard-skills">
+            <button pButton pRipple type="button" label="Hard Skills" class="p-button-text p-button-secondary"></button>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="/lobby/#proyectos">
+            <button pButton pRipple type="button" label="Proyectos" class="p-button-text p-button-secondary"></button>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<app-tarjeta-presentacion id="presentacion"></app-tarjeta-presentacion>
+<app-experiencia id="experiencia"></app-experiencia>
+<app-certificados id="hard-skills"></app-certificados>
+<app-proyectos id="proyectos"></app-proyectos >
+
