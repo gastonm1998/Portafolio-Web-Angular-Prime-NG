@@ -23,6 +23,8 @@ import {CarouselModule} from 'primeng/carousel';
 import {DialogModule} from 'primeng/dialog';
 import { DescripcionSenkuComponent } from './componentes-port/proyectos/descripcion-senku/descripcion-senku.component';
 import { RippleModule } from 'primeng/ripple';
+import { DescripcionPortafolioComponent } from './componentes-port/proyectos/descripcion-portafolio/descripcion-portafolio.component';
+import { DescripcionAnubisComponent } from './componentes-port/proyectos/descripcion-anubis/descripcion-anubis.component';
 const appRoutes:Routes = [
   {path:'', component:CartelInicioComponent},
   {path:'lobby', component:LobbyComponent},
@@ -39,7 +41,9 @@ const appRoutes:Routes = [
     ExperienciaComponent,
     CertificadosComponent,
     ProyectosComponent,
-    DescripcionSenkuComponent
+    DescripcionSenkuComponent,
+    DescripcionPortafolioComponent,
+    DescripcionAnubisComponent
   ],
   imports: [
     BrowserModule,
