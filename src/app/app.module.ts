@@ -1,7 +1,8 @@
 import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CartelInicioComponent } from './home/cartel-inicio/cartel-inicio.component';
@@ -25,6 +26,8 @@ import { DescripcionSenkuComponent } from './componentes-port/proyectos/descripc
 import { RippleModule } from 'primeng/ripple';
 import { DescripcionPortafolioComponent } from './componentes-port/proyectos/descripcion-portafolio/descripcion-portafolio.component';
 import { DescripcionAnubisComponent } from './componentes-port/proyectos/descripcion-anubis/descripcion-anubis.component';
+import { ContactoComponent } from './contacto/contacto.component';
+import {KnobModule} from 'primeng/knob';
 const appRoutes:Routes = [
   {path:'', component:CartelInicioComponent},
   {path:'lobby', component:LobbyComponent},
@@ -43,7 +46,8 @@ const appRoutes:Routes = [
     ProyectosComponent,
     DescripcionSenkuComponent,
     DescripcionPortafolioComponent,
-    DescripcionAnubisComponent
+    DescripcionAnubisComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +59,10 @@ const appRoutes:Routes = [
     AccordionModule,
     TimelineModule,
     CarouselModule,
+    KnobModule,
     DialogModule,
+    FormsModule,
+    CommonModule,
 
     RouterModule.forRoot(appRoutes)
   ],

@@ -20,10 +20,22 @@
 .soft-skills{
   display: flex;
   background-color: #f8f9fa;
+  flex-wrap: wrap;
 }
 
 .card{
   margin: 5%;
   max-width: 80%;
-  width: auto;
+
+
+
+}
+
+.medidores{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.indicador{
+  margin: 5%;
 }

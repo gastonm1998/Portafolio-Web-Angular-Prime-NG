@@ -12,6 +12,10 @@ export class ProyectosComponent implements OnInit {
 	responsiveOptions;
 
 
+
+
+
+
   constructor() {
     this.responsiveOptions = [
       {
