@@ -1,4 +1,10 @@
-<h1 class=" titulo">About Me</h1>
+
+
+
+<div class="titulo">
+  <i class="pi pi-chevron-right" style="font-size: 2rem"></i>
+  <h1 class=" titulo2">    About Me</h1>
+</div>
 
 <div class="presentacion">
 
@@ -9,9 +15,7 @@
     <ng-template pTemplate="header">
         <img alt="Card" src="../../../assets/fondo8.jpg">
     </ng-template>
-    <p>💻 Soy un estudiante en la carrera de análisis de sistemas y constantemente me encuentro estudiando para potenciar mis conocimientos en el desarrollo web <br><br>
-
-      ⌨ Actualmente tengo conocimientos en lenguajes cómo Python, JavaScript, HTML, CSS, GO, C, sistemas de control de versiones como GitHub y IoT.<br><br>
+    <p>
 
       🎯 Soy una persona curiosa, autodidacta, me gusta estar en constante aprendizaje, el trabajar en equipo y tengo una pasión muy grande por el mundo de la tecnología<br><br>
 
@@ -29,36 +33,110 @@
 
   <div class="card shadow " >
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
+      <h5 class="card-title">Lenguajes</h5>
 
       <div class="medidores">
 
 
         <div class=" indicador ">
-            <h5 class="p-mt-3">Color</h5>
+            <h5 class="p-mt-3">HTML</h5>
             <p-knob [(ngModel)]="value1" valueColor="#8bd1ff" rangeColor=" #f8f9fa"></p-knob>
         </div>
 
         <div class="indicador ">
-          <h5 class="p-mt-3">Color</h5>
+          <h5 class="p-mt-3">CSS</h5>
           <p-knob [(ngModel)]="value2" valueColor="#8bd1ff" rangeColor="#f8f9fa"></p-knob>
         </div>
 
         <div class="indicador ">
-          <h5 class="p-mt-3">Color</h5>
+          <h5 class="p-mt-3">JavaScript</h5>
           <p-knob [(ngModel)]="value3" valueColor="#8bd1ff" rangeColor="#f8f9fa"></p-knob>
         </div>
 
         <div class="indicador ">
-          <h5 class="p-mt-3">Color</h5>
+          <h5 class="p-mt-3">Python</h5>
           <p-knob [(ngModel)]="value4" valueColor="#8bd1ff" rangeColor="#f8f9fa"></p-knob>
         </div>
 
         <div class="indicador ">
-          <h5 class="p-mt-3">Color</h5>
+          <h5 class="p-mt-3">Java</h5>
           <p-knob [(ngModel)]="value5" valueColor="#8bd1ff" rangeColor="#f8f9fa"></p-knob>
         </div>
+
+        <div class="indicador ">
+          <h5 class="p-mt-3">C / C++</h5>
+          <p-knob [(ngModel)]="value6" valueColor="#8bd1ff" rangeColor="#f8f9fa"></p-knob>
+        </div>
       </div>
+
+    </div>
+  </div>
+
+
+
+
+
+  <div class="card shadow ">
+    <div class="card-body ">
+      <h5 class="card-title">Soft - Skills</h5>
+
+      <h5>Autodidacta</h5>
+      <p-progressBar [value]="value_1"></p-progressBar>
+      <br>
+      <h5>Colaboración</h5>
+      <p-progressBar [value]="value_2"></p-progressBar>
+      <br>
+      <h5>Flexibilidad</h5>
+      <p-progressBar [value]="value_3"></p-progressBar>
+      <br>
+      <h5>Adaptabilidad</h5>
+      <p-progressBar [value]="value_4"></p-progressBar>
+      <br>
+      <h5>Creatividad</h5>
+      <p-progressBar [value]="value_5"></p-progressBar>
+      <br>
+      <h5>Ingles</h5>
+      <p-progressBar [value]="value_6"></p-progressBar>
+
+
+      <p class="texto">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+
+    </div>
+  </div>
+
+
+
+
+
+  <div class="card shadow">
+    <div class="card-body">
+      <h5 class="card-title">Tecnologías Conocidas</h5>
+
+      <p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="2" [numScroll]="1" [autoplayInterval]="6000"  [circular]="true"  [responsiveOptions]="responsiveOptions">
+        <ng-template pTemplate="header">
+
+        </ng-template>
+        <ng-template let-product pTemplate="item">
+            <div class="product-item">
+                <div class="product-item-content">
+                    <div class="p-mb-3">
+                        <img src={{product.direccionImagen}} [alt]="product.nombre" class="product-image" />
+                    </div>
+                    <div>
+                        <h4 class="p-mb-1">{{product.nombre}}</h4>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+
+      </p-carousel>
 
     </div>
   </div>

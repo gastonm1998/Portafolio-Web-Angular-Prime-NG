@@ -28,6 +28,10 @@ import { DescripcionPortafolioComponent } from './componentes-port/proyectos/des
 import { DescripcionAnubisComponent } from './componentes-port/proyectos/descripcion-anubis/descripcion-anubis.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import {KnobModule} from 'primeng/knob';
+import {RatingModule} from 'primeng/rating';
+import {ProgressBarModule} from 'primeng/progressbar';
+
+
 const appRoutes:Routes = [
   {path:'', component:CartelInicioComponent},
   {path:'lobby', component:LobbyComponent},
@@ -63,6 +67,8 @@ const appRoutes:Routes = [
     DialogModule,
     FormsModule,
     CommonModule,
+    RatingModule,
+    ProgressBarModule,
 
     RouterModule.forRoot(appRoutes)
   ],

@@ -39,10 +39,6 @@
   padding: 0;
 }
 
-.titulo{
-  padding-top: 7%;
-  padding-bottom: 5%;
-}
 
 .cuerpo-carta{
   text-align: center;
@@ -51,4 +47,22 @@
 }
 .cuerpo-carta img{
   padding-bottom: 5%;
+}
+
+
+.titulo{
+  margin: 0;
+  padding-top: 7%;
+  padding-bottom: 5%;
+  display: flex;
+  background-color: #f8f9fa;
+}
+.titulo2::first-letter{
+  color: black;
+  border-bottom: 4px solid orange;
+  border-radius: 2px;
+}
+
+.pi{
+  margin-top: 0.90%;
 }
