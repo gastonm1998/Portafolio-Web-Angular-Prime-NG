@@ -1,15 +1,34 @@
 
 <p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Mas informacion"></p-button>
-<p-dialog header="Senku" [(visible)]="displayModal" [modal]="true" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}"
+<p-dialog header="Portafolio v2.0" [(visible)]="displayModal" [modal]="true" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}"
     [draggable]="false" [resizable]="false">
 
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, quaerat animi? Harum necessitatibus ipsum ea rem nam maiores beatae eius culpa adipisci, delectus ut, quae labore nemo deleniti, consectetur deserunt suscipit officia minima modi soluta doloremque libero sapiente. Reprehenderit unde laboriosam non doloribus hic dolore quas, itaque dolorum at ex minus, soluta labore ducimus eaque atque accusantium nostrum repellendus. Libero quis impedit voluptatem vero dolorum veniam enim officia consectetur fugit repudiandae iusto delectus tempore, cum eius voluptatibus atque, minus accusamus sapiente itaque ea id. Excepturi iste recusandae eum voluptatem minima, vero blanditiis consequuntur esse laudantium alias nam non eaque facere autem cupiditate accusamus iure illum in ea numquam repellat. Esse quod temporibus consequatur pariatur reprehenderit aliquam? Hic omnis ad, placeat architecto tenetur aspernatur maxime unde adipisci ipsa explicabo quasi officia odio non, obcaecati animi quia eum, libero recusandae! Vel animi maxime maiores in inventore ducimus atque eos architecto sapiente? Eos iste esse soluta libero quae ipsum aperiam error officia ab praesentium a, aliquam fugiat culpa harum non ex, illum magni voluptates est ea perferendis nihil id animi facere. Natus dolor eos voluptate enim quod nam odit tenetur blanditiis iusto, tempora quaerat nostrum, suscipit molestiae atque quam fugiat laudantium eaque placeat cum temporibus quos, voluptas impedit saepe hic. Provident hic aliquid numquam asperiores nobis cupiditate nemo, doloremque excepturi ex molestiae assumenda, ratione eveniet. Omnis distinctio doloremque necessitatibus ea eum magnam quos dolorum quasi commodi dolorem, nulla, recusandae iure qui atque laborum vitae perferendis iusto repudiandae exercitationem asperiores alias quas? Rerum numquam amet corrupti cum delectus, inventore, deleniti modi odio ex laborum iure, sed temporibus. Unde voluptas odio dicta vel eius possimus labore deleniti. Vitae tenetur neque, laborum corporis sapiente cupiditate ea distinctio non sit quaerat ducimus eligendi quidem minima ipsum fugiat error perferendis assumenda commodi. Voluptatum aliquid sint mollitia magnam tempora iusto fuga impedit blanditiis veritatis odit, obcaecati nihil recusandae libero suscipit rem? Doloribus et voluptatibus beatae accusantium debitis ab pariatur, repudiandae in velit ex quo nam ea quos dolore. Commodi sequi ratione, omnis tenetur perspiciatis in quae laborum sunt. A odio facere natus corrupti. Quibusdam assumenda temporibus odit deserunt. Error exercitationem dolorem enim sapiente soluta sint eligendi voluptatum aliquid molestiae repellendus? Officia commodi explicabo nostrum ad! Doloribus pariatur ea incidunt in dignissimos! Mollitia maxime accusamus nesciunt, amet quasi delectus omnis libero esse repellendus quae odit, est nam inventore iure in dicta sequi explicabo tempore quibusdam nisi vero unde veniam. Et illo sit nostrum, obcaecati aliquid quibusdam earum quam quos fugit nihil ab eum aut quaerat optio quidem. Possimus natus minus voluptatum, temporibus aliquid ipsum explicabo iste tempora eveniet quibusdam sint dolores velit quasi qui quae dignissimos eligendi quos, odit, voluptatibus debitis incidunt harum est quis id. Quae repudiandae libero optio illum magni sapiente saepe aliquid possimus, a consequuntur, quod quidem delectus quo numquam nisi harum nobis? Eveniet, fugiat quam atque, quisquam mollitia dicta debitis unde quod quia ullam blanditiis quibusdam, delectus nobis excepturi recusandae dolor rem aperiam. Sunt dolor aliquid voluptates porro, voluptatem repudiandae atque velit. Expedita, recusandae. Explicabo, neque?</p>
+    <h4>Tecnologias usadas:</h4>
+    <br>
+    <img src="../../../../assets/icons/angular-icon.svg" alt="" class="iconos">
+    <img src="../../../../assets/icons/w3_html5-icon.svg" alt="" class="iconos">
+    <img src="../../../../assets/icons/w3_css-icon.svg" alt="" class="iconos">
 
+    <br>
 
+    <h4>Sobre el programa:</h4>
+    <br>
 
+    <p>El portafolio es un programa que tiene por objetivo mostrar los proyectos importantes terminados o los que estan en desarollo, e informacion del desarrolador del portafolio. <br> Se hizo uso de Angular 13 para el desarrolo del frontend y el Responsive Desing para que pueda ser vizualizado de manera correcta tanto en dispositivos moviles como en computadoras de escritorio y notebooks  </p>
 
+    <br>
+
+    <img src="../../../../assets/portafolio mobile.jpg" alt="" class="imagenes">
+    <br>
+    <img src="../../../../assets/portafolio escritorio.jpg" alt="" class="imagenes">
+
+    <a href="https://github.com/gastonm1998/portafolio-web-v2.0/tree/master" role="button" target="_blank" style="text-decoration:none">
+
+      <button pButton pRipple type="button" label="Ir al repositorio" class="p-button-outlined p-button-info" icon="pi pi-github "></button>
+
+    </a>
 
         <ng-template pTemplate="footer">
-        <p-button icon="pi pi-check" (click)="displayModal=false" label="Ok" styleClass="p-button-text"></p-button>
+        <p-button icon="pi pi-check" (click)="displayModal=false" label="Cerrar" styleClass="p-button-text"></p-button>
         </ng-template>
 </p-dialog>

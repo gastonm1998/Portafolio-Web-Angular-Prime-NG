@@ -65,8 +65,10 @@
 
           <h5>Repositorio Senku</h5>
           <br>
-          <a class="btn btn-outline-primary" href="https://github.com/gastonm1998/Senku" role="button" target="_blank">
-            <i class="fab fa-github-square  "></i> Ir al Repositorio
+          <a href="https://github.com/gastonm1998/Senku" role="button" target="_blank" style="text-decoration:none">
+
+            <button pButton pRipple type="button" label="Ir al repositorio" class="p-button-outlined p-button-info" icon="pi pi-github "></button>
+
           </a>
 
 
@@ -74,6 +76,6 @@
 
 
         <ng-template pTemplate="footer">
-        <p-button icon="pi pi-check" (click)="displayModal=false" label="Ok" styleClass="p-button-text"></p-button>
+        <p-button icon="pi pi-check" (click)="displayModal=false" label="Cerrar" styleClass="p-button-text"></p-button>
         </ng-template>
 </p-dialog>
