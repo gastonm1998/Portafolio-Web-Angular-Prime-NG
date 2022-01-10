@@ -7,31 +7,33 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CartelInicioComponent } from './home/cartel-inicio/cartel-inicio.component';
 import { LobbyComponent } from './lobby/lobby.component';
-
-/* ng prime*/
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {ButtonModule} from 'primeng/button';
-import {CardModule} from 'primeng/card';
 import { TarjetaPresentacionComponent } from './componentes-port/tarjeta-presentacion/tarjeta-presentacion.component';
 import { SoftSkillsComponent } from './componentes-port/soft-skills/soft-skills.component';
 import { ExperienciaComponent } from './componentes-port/experiencia/experiencia.component';
-import {TimelineModule} from 'primeng/timeline';
-import {PrimeIcons} from 'primeng/api';
 import { CertificadosComponent } from './componentes-port/certificados/certificados.component';
-import {AccordionModule} from 'primeng/accordion';
 import { ProyectosComponent } from './componentes-port/proyectos/proyectos.component';
-import {CarouselModule} from 'primeng/carousel';
-import {DialogModule} from 'primeng/dialog';
 import { DescripcionSenkuComponent } from './componentes-port/proyectos/descripcion-senku/descripcion-senku.component';
-import { RippleModule } from 'primeng/ripple';
 import { DescripcionPortafolioComponent } from './componentes-port/proyectos/descripcion-portafolio/descripcion-portafolio.component';
 import { DescripcionAnubisComponent } from './componentes-port/proyectos/descripcion-anubis/descripcion-anubis.component';
 import { ContactoComponent } from './contacto/contacto.component';
-import {KnobModule} from 'primeng/knob';
-import {RatingModule} from 'primeng/rating';
+import { HttpClientModule } from '@angular/common/http';
+
+
+/*Ng Prime*/
 import {ProgressBarModule} from 'primeng/progressbar';
+import {RatingModule} from 'primeng/rating';
+import {KnobModule} from 'primeng/knob';
+import { RippleModule } from 'primeng/ripple';
+import {CarouselModule} from 'primeng/carousel';
+import {DialogModule} from 'primeng/dialog';
+import {TimelineModule} from 'primeng/timeline';
+import {PrimeIcons} from 'primeng/api';
+import {AccordionModule} from 'primeng/accordion';
+import {ButtonModule} from 'primeng/button';
+import {CardModule} from 'primeng/card';
 
-
+/* Rutas */
 const appRoutes:Routes = [
   {path:'', component:CartelInicioComponent},
   {path:'lobby', component:LobbyComponent},
@@ -70,7 +72,8 @@ const appRoutes:Routes = [
     RatingModule,
     ProgressBarModule,
 
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

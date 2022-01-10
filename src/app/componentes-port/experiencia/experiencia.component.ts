@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {PrimeIcons} from 'primeng/api';
 
+import { ApiService } from '../../servicios/api/api.service';
+import {ExperienciaI} from '../../modelos/experiencia.interface';
+
 @Component({
   selector: 'app-experiencia',
   templateUrl: './experiencia.component.html',
@@ -8,14 +11,23 @@ import {PrimeIcons} from 'primeng/api';
 })
 export class ExperienciaComponent implements OnInit {
 
-  experiencia: any[] = [];
+  experiencia: ExperienciaI[] = [];
   educacion: any[] = [];
 
-  constructor() { }
+  constructor( private api:ApiService) { }
 
   ngOnInit(): void {
 
-    this.experiencia = [
+    this.api.obtenerDataExperiencia().subscribe(data => {
+      this.experiencia = data;
+    });
+
+
+
+
+
+
+    /*this.experiencia = [
       {
         status: "Temcoco", date: '01/2016 - 06/2016', icon: PrimeIcons.ID_CARD, color: '#bbe3ff',descripcion:"Bobinado y mantenimientos de motores electicos industriales, bombas de agua."
       },
@@ -28,7 +40,7 @@ export class ExperienciaComponent implements OnInit {
       {
         status: "Independiente",date: '01-2016 - 12/2021', icon: PrimeIcons.ID_CARD, color: '#bbe3ff',descripcion:"Armado, reparacion y mantenimiento de PC para gaming y workstation"
       },
-    ];
+    ];*/
 
 
 

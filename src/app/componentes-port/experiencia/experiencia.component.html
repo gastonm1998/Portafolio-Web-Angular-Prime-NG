@@ -12,11 +12,11 @@
     <p-timeline [value]="experiencia" align="alternate" styleClass="customized-timeline">
         <ng-template pTemplate="marker" let-event>
             <span class="custom-marker p-shadow-6" [style.backgroundColor]="event.color">
-                <i [ngClass]="event.icon"></i>
+                <i class="pi pi-id-card"></i>
             </span>
         </ng-template>
         <ng-template pTemplate="content" let-event>
-            <p-card [header]="event.status" [subheader]="event.date">
+            <p-card [header]="event.nombreEmpresa" [subheader]="event.fecha">
 
                   <p > {{event.descripcion}}</p>
 
