@@ -20,5 +20,12 @@ export class ApiService {
     return this.http.get<ExperienciaI[]>(direccion);
   }
 
+  /*obtenerDataExperiencia(){
+    let direccion = this.url;
 
+    return this.http.get('url');
+  }*/
+  agregarExperiencia(datosExperiencia:ExperienciaI):Observable<any>{
+    return this.http.post(this.url,datosExperiencia);
+  }
 }

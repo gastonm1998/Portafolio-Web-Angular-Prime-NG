@@ -1,7 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +18,7 @@ import { DescripcionPortafolioComponent } from './componentes-port/proyectos/des
 import { DescripcionAnubisComponent } from './componentes-port/proyectos/descripcion-anubis/descripcion-anubis.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { EExperienciaComponent } from './componentesEdicion/edicionExperiencia/e-experiencia/e-experiencia.component';
 
 /*Ng Prime*/
 import {ProgressBarModule} from 'primeng/progressbar';
@@ -32,11 +32,16 @@ import {PrimeIcons} from 'primeng/api';
 import {AccordionModule} from 'primeng/accordion';
 import {ButtonModule} from 'primeng/button';
 import {CardModule} from 'primeng/card';
+import {InputTextModule} from 'primeng/inputtext';
+import {CalendarModule} from 'primeng/calendar';
+import {ColorPickerModule} from 'primeng/colorpicker';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 
 /* Rutas */
 const appRoutes:Routes = [
   {path:'', component:CartelInicioComponent},
   {path:'lobby', component:LobbyComponent},
+  {path:'editarExperiencia', component:EExperienciaComponent}
 ];
 
 
@@ -53,7 +58,8 @@ const appRoutes:Routes = [
     DescripcionSenkuComponent,
     DescripcionPortafolioComponent,
     DescripcionAnubisComponent,
-    ContactoComponent
+    ContactoComponent,
+    EExperienciaComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +79,13 @@ const appRoutes:Routes = [
     ProgressBarModule,
 
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    InputTextModule,
+    CalendarModule,
+    ColorPickerModule,
+    InputTextareaModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

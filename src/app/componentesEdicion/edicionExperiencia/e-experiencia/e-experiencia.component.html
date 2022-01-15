@@ -1,0 +1,52 @@
+<div class="formulario-edicion-experiencia">
+
+  <form (ngSubmit)="enviarDatos()" [formGroup]="formularioExperiencia" >
+
+
+    <h5>Float Label</h5>
+    <span class="p-float-label">
+      <input id="float-input" type="text" pInputText [(ngModel)]="nombreEmpresa" formControlName="nombre">
+      <label for="float-input">Username</label>
+    </span>
+
+
+    <h5>Popup</h5>
+    <div class="p-field p-col-12 p-md-4">
+      <span class="p-float-label">
+          <p-calendar inputId="calendar" [(ngModel)]="fechaInicio" dateFormat="dd/mm/yy" formControlName="fecha1"></p-calendar>
+          <label for="calendar">Calendar</label>
+      </span>
+    </div>
+
+
+    <h5>Popup</h5>
+    <div class="p-field p-col-12 p-md-4">
+      <span class="p-float-label">
+          <p-calendar inputId="calendar" [(ngModel)]="fechaFinal" dateFormat="dd/mm/yy" formControlName="fecha2"></p-calendar>
+          <label for="calendar">Calendar</label>
+      </span>
+    </div>
+
+
+
+
+    <h5>Inline</h5>
+      <p-colorPicker [(ngModel)]="color" [inline]="true" formControlName="color"></p-colorPicker>
+
+
+      <h5>Float Label</h5>
+      <div class="p-field p-col-12 p-md-4">
+        <span class="p-float-label">
+            <textarea inputId="textarea" rows="3" style="resize: none;" cols="30" [(ngModel)]="descripcion" pInputTextarea formControlName="texto"></textarea>
+            <label for="textarea">Textarea</label>
+        </span>
+    </div>
+
+    <button pButton pRipple type="submit" label="Primary">agregar</button>
+
+    <button pButton pRipple type="button" label="Secondary" class="p-button-secondary"> cancelar</button>
+
+
+  </form>
+
+</div>

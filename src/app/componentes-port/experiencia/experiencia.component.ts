@@ -22,6 +22,10 @@ export class ExperienciaComponent implements OnInit {
       this.experiencia = data;
     });
 
+    /*this.apiService.obtenerDataExperiencia().subscribe(
+      res => console.log(res)
+
+    );*/
 
 
 
