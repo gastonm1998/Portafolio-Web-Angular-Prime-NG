@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { ApiService } from 'src/app/servicios/api/api.service';
-
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-e-experiencia',
@@ -10,35 +10,48 @@ import { ApiService } from 'src/app/servicios/api/api.service';
 })
 export class EExperienciaComponent implements OnInit {
 
-
   formularioExperiencia:FormGroup;
 
+  linkID:any;
+
+  value1: any ;
+
+  value10: any ;
+
+  color1: string;
 
 
 
-  //emp
-  nombreEmpresa: string = "";
+  constructor(
+    private activeRoute:ActivatedRoute,
+    private apiService:ApiService,
+    public formulario:FormBuilder,
+    public router:Router
 
-  //fecha
+   ) {
 
-  fechaInicio: any;
-  fechaFinal: any;
-  //color
-  color: string;
-
-  //descripcion
-  descripcion: any;
-
-  constructor( public formulario:FormBuilder, private apiService:ApiService) {
-
-    this.formularioExperiencia = this.formulario.group({
-      nombreEmpresa:[""],
-      color:[""],
-      descripcion:[""]
+    this.linkID = this.activeRoute.snapshot.paramMap.get('id');
+    //
+    console.log(this.linkID);
+    this.apiService.obtenerDataExperienciaIndividual(this.linkID).subscribe( respuesta =>{
+      console.log(respuesta);
+      this.formularioExperiencia.setValue({
+        nombreEmpresa:respuesta['nombreEmpresa'],
+        //falta fecha
+        color:respuesta["color"],
+        descripcion:respuesta['descripcion']
+      });
 
     });
 
 
+    this.formularioExperiencia = this.formulario.group({
+      nombreEmpresa:[""],
+      /*fecha:[""],*/
+      color:[""],
+      descripcion:[""]
+
+    });
 
   }
 
@@ -58,11 +71,11 @@ export class EExperienciaComponent implements OnInit {
 
   }
 
-  enviarDatos():any{
-    console.log("aaaaaaa");
+  editarDatos():any{
+    console.log(this.linkID);
     console.log(this.formularioExperiencia.value);
-    console.log(typeof( this.formularioExperiencia.value.fecha1));
-    this.apiService.agregarExperiencia(this.formularioExperiencia.value).subscribe();
+    this.apiService.editarExperiencia(this.linkID,this.formularioExperiencia.value).subscribe();
+    this.router.navigateByUrl("/lobby#experiencia");
   }
 
 }

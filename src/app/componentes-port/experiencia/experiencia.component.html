@@ -4,6 +4,9 @@
 <div class="titulo">
   <i class="pi pi-chevron-right" style="font-size: 2rem"></i>
   <h1 class=" titulo2">    Experiencia</h1>
+
+  <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-secondary" routerLink="/experienciaAgregar" id="botonAgregar"></button>
+
 </div>
 
 
@@ -20,7 +23,11 @@
         <ng-template pTemplate="content" let-event>
             <p-card [header]="event.nombreEmpresa" [subheader]="event.fecha">
 
-                  <p > {{event.descripcion}}</p>
+                  <p > id : {{event.id}} {{event.descripcion}}</p>
+
+                  <p-button label="Eliminar" icon="pi pi-times" styleClass="p-button-danger" (click)="borrarExperiencia(event.id)"></p-button>
+
+                  <p-button label="Editar" icon="pi pi-pencil" styleClass="p-button-info" routerLink="/experienciaEditar/{{event.id}}" ></p-button>
 
             </p-card>
         </ng-template>
@@ -31,7 +38,7 @@
     <i class="pi pi-chevron-right" style="font-size: 2rem"></i>
     <h1 class=" titulo2">    Educacion</h1>
   </div>
-  <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger"></button>
+
   <div class="card">
 
     <p-timeline [value]="educacion" align="alternate" styleClass="customized-timeline">

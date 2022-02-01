@@ -20,12 +20,20 @@ export class ApiService {
     return this.http.get<ExperienciaI[]>(direccion);
   }
 
-  /*obtenerDataExperiencia(){
-    let direccion = this.url;
 
-    return this.http.get('url');
-  }*/
   agregarExperiencia(datosExperiencia:ExperienciaI):Observable<any>{
     return this.http.post(this.url,datosExperiencia);
+  }
+
+  eliminarExperiencia(id:any):Observable<any>{
+    return this.http.delete(this.url +"/"+ id);
+  }
+
+  obtenerDataExperienciaIndividual(id:any):Observable<any>{
+    return this.http.get(this.url +"/"+ id);
+  }
+
+  editarExperiencia(id:any,datosExperiencia:ExperienciaI):Observable<any>{
+    return this.http.put(this.url+"/"+ id,datosExperiencia);
   }
 }

@@ -36,6 +36,7 @@ import {InputTextModule} from 'primeng/inputtext';
 import {CalendarModule} from 'primeng/calendar';
 import {ColorPickerModule} from 'primeng/colorpicker';
 import {InputTextareaModule} from 'primeng/inputtextarea';
+import { AExperienciaComponent } from './componentesEdicion/edicionExperiencia/a-experiencia/a-experiencia.component';
 
 /* Rutas */
 const appRoutes:Routes = [
@@ -59,7 +60,8 @@ const appRoutes:Routes = [
     DescripcionPortafolioComponent,
     DescripcionAnubisComponent,
     ContactoComponent,
-    EExperienciaComponent
+    EExperienciaComponent,
+    AExperienciaComponent
   ],
   imports: [
     BrowserModule,

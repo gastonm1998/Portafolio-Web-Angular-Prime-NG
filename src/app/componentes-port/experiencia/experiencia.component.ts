@@ -62,4 +62,10 @@ export class ExperienciaComponent implements OnInit {
     ];
   }
 
+
+  borrarExperiencia(id:any){
+      console.log(id);
+      this.api.eliminarExperiencia(id).subscribe();
+  }
+
 }
