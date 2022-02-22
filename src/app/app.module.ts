@@ -1,13 +1,19 @@
+
+/*Modulos angular*/
 import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
+
+/*Componentes Angular */
 import { AppComponent } from './app.component';
 import { CartelInicioComponent } from './home/cartel-inicio/cartel-inicio.component';
 import { LobbyComponent } from './lobby/lobby.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { TarjetaPresentacionComponent } from './componentes-port/tarjeta-presentacion/tarjeta-presentacion.component';
 import { SoftSkillsComponent } from './componentes-port/soft-skills/soft-skills.component';
 import { ExperienciaComponent } from './componentes-port/experiencia/experiencia.component';
@@ -17,10 +23,11 @@ import { DescripcionSenkuComponent } from './componentes-port/proyectos/descripc
 import { DescripcionPortafolioComponent } from './componentes-port/proyectos/descripcion-portafolio/descripcion-portafolio.component';
 import { DescripcionAnubisComponent } from './componentes-port/proyectos/descripcion-anubis/descripcion-anubis.component';
 import { ContactoComponent } from './contacto/contacto.component';
-import { HttpClientModule } from '@angular/common/http';
 import { EExperienciaComponent } from './componentesEdicion/edicionExperiencia/e-experiencia/e-experiencia.component';
+import { AExperienciaComponent } from './componentesEdicion/edicionExperiencia/a-experiencia/a-experiencia.component';
 
-/*Ng Prime*/
+
+/* Componentes Ng Prime*/
 import {ProgressBarModule} from 'primeng/progressbar';
 import {RatingModule} from 'primeng/rating';
 import {KnobModule} from 'primeng/knob';
@@ -36,15 +43,22 @@ import {InputTextModule} from 'primeng/inputtext';
 import {CalendarModule} from 'primeng/calendar';
 import {ColorPickerModule} from 'primeng/colorpicker';
 import {InputTextareaModule} from 'primeng/inputtextarea';
-import { AExperienciaComponent } from './componentesEdicion/edicionExperiencia/a-experiencia/a-experiencia.component';
+import { ConfirmPopupModule } from "primeng/confirmpopup";
+import { ToastModule } from "primeng/toast";
+import { ConfirmationService, MessageService } from "primeng/api";
 
-/* Rutas */
+
+
+
+/* Rutas angular routes*/
+/*
 const appRoutes:Routes = [
   {path:'', component:CartelInicioComponent},
   {path:'lobby', component:LobbyComponent},
   {path:'editarExperiencia', component:EExperienciaComponent}
 ];
 
+*/
 
 @NgModule({
   declarations: [
@@ -79,17 +93,18 @@ const appRoutes:Routes = [
     CommonModule,
     RatingModule,
     ProgressBarModule,
-
-    RouterModule.forRoot(appRoutes),
+    /*RouterModule.forRoot(routes),*/
     HttpClientModule,
     InputTextModule,
     CalendarModule,
     ColorPickerModule,
     InputTextareaModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ConfirmPopupModule,
+    ToastModule,
   ],
-  providers: [],
+  providers: [ConfirmationService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

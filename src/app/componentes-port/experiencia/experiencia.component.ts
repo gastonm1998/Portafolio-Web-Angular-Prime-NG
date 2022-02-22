@@ -4,19 +4,34 @@ import {PrimeIcons} from 'primeng/api';
 import { ApiService } from '../../servicios/api/api.service';
 import {ExperienciaI} from '../../modelos/experiencia.interface';
 
+import { Router } from '@angular/router';
+
+import {
+  ConfirmationService,
+  MessageService,
+  PrimeNGConfig
+} from "primeng/api";
+
+
+
 @Component({
   selector: 'app-experiencia',
   templateUrl: './experiencia.component.html',
-  styleUrls: ['./experiencia.component.scss']
+  styleUrls: ['./experiencia.component.scss'],
+
 })
 export class ExperienciaComponent implements OnInit {
 
   experiencia: ExperienciaI[] = [];
   educacion: any[] = [];
 
-  constructor( private api:ApiService) { }
+  constructor( private api:ApiService,private confirmationService: ConfirmationService,
+    private messageService: MessageService,
+    private primengConfig: PrimeNGConfig,private router:Router) { }
 
   ngOnInit(): void {
+
+    this.primengConfig.ripple = true;
 
     this.api.obtenerDataExperiencia().subscribe(data => {
       this.experiencia = data;
@@ -66,6 +81,39 @@ export class ExperienciaComponent implements OnInit {
   borrarExperiencia(id:any){
       console.log(id);
       this.api.eliminarExperiencia(id).subscribe();
+  }
+
+  reloadComponent() {
+    let currentUrl = this.router.url;
+        this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+        this.router.onSameUrlNavigation = 'reload';
+        this.router.navigateByUrl('lobby#experiencia');
+    }
+
+  confirm(event: Event,id:any) {
+    this.confirmationService.confirm({
+      target: event.target!,
+      message: "¿Estas seguro que desea eliminar?",
+      icon: "pi pi-exclamation-triangle",
+      accept: () => {
+        this.messageService.add({
+          severity: "info",
+          summary: "Experiencia eliminada",
+          detail: "Se a eliminado sastifactoriamente"
+        });
+        this.borrarExperiencia(id);
+
+        this.reloadComponent();
+
+      },
+      reject: () => {
+        this.messageService.add({
+          severity: "error",
+          summary: "Cancelado",
+          detail: "Se a cancelado la eliminacion"
+        });
+      }
+    });
   }
 
 }

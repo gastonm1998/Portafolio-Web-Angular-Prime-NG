@@ -1,7 +1,8 @@
 export interface ExperienciaI{
   id:number;
   nombreEmpresa:string;
-  fecha:string;
+  fechaInicio:String;
+  fechaFin:String;
   color:string;
   descripcion:string;
 

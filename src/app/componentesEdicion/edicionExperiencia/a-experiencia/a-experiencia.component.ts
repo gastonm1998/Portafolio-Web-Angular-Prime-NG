@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { ApiService } from 'src/app/servicios/api/api.service';
+import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-a-experiencia',
   templateUrl: './a-experiencia.component.html',
@@ -20,7 +21,8 @@ export class AExperienciaComponent implements OnInit {
 
   //fecha
 
-  rangeDates: Date[];
+  date1:Date;
+  date2:Date;
   //color
   color: string;
 
@@ -31,10 +33,11 @@ export class AExperienciaComponent implements OnInit {
 
 
 
-  constructor(public formulario:FormBuilder, private apiService:ApiService) {
+  constructor(public formulario:FormBuilder, private apiService:ApiService, private activeRoute:ActivatedRoute,public router:Router) {
     this.formularioExperiencia = this.formulario.group({
       nombreEmpresa:[""],
-      fecha:[""],
+      fechaInicio:this.date1 ,
+      fechaFin:this.date2,
       color:[""],
       descripcion:[""]
 
@@ -59,9 +62,15 @@ export class AExperienciaComponent implements OnInit {
   enviarDatos():any{
 
     console.log(this.formularioExperiencia.value);
-    console.log(typeof( this.formularioExperiencia.value.fecha1));
+    console.log(typeof( this.formularioExperiencia.value.fechaInicio));
+    console.log(this.formularioExperiencia.value.fechaInicio);
+    console.log(typeof( this.formularioExperiencia.value.fechaFin));
+    console.log( this.formularioExperiencia.value.fechaFin);
     this.apiService.agregarExperiencia(this.formularioExperiencia.value).subscribe();
+    this.router.navigateByUrl("/lobby#experiencia");
   }
-
+  volverAlInicio(){
+    this.router.navigateByUrl("/lobby#experiencia");
+  }
 
 }

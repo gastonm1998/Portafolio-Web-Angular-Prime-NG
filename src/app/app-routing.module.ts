@@ -4,10 +4,16 @@ import {AExperienciaComponent} from './componentesEdicion/edicionExperiencia/a-e
 
 import { EExperienciaComponent } from './componentesEdicion/edicionExperiencia/e-experiencia/e-experiencia.component';
 
+import { CartelInicioComponent } from './home/cartel-inicio/cartel-inicio.component';
+import { LobbyComponent } from './lobby/lobby.component';
 const routes: Routes = [
 
+  {path:'', component:CartelInicioComponent},
   {path: 'experienciaEditar/:id', component: EExperienciaComponent},
-  { path: 'experienciaAgregar', component: AExperienciaComponent}
+  { path: 'experienciaAgregar', component: AExperienciaComponent},
+
+  {path:'lobby', component:LobbyComponent},
+  {path:'editarExperiencia', component:EExperienciaComponent}
 ];
 
 @NgModule({

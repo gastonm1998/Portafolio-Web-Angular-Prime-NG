@@ -19,7 +19,7 @@ export class EExperienciaComponent implements OnInit {
   value10: any ;
 
   color1: string;
-
+  a:string = "2022-02-06T03:00:00.000Z"
 
 
   constructor(
@@ -35,19 +35,23 @@ export class EExperienciaComponent implements OnInit {
     console.log(this.linkID);
     this.apiService.obtenerDataExperienciaIndividual(this.linkID).subscribe( respuesta =>{
       console.log(respuesta);
+
       this.formularioExperiencia.setValue({
-        nombreEmpresa:respuesta['nombreEmpresa'],
-        //falta fecha
+        nombreEmpresa : respuesta.nombreEmpresa ,
+        fechaInicio: respuesta.fechaInicio.slice(0,10),
+        fechaFin: respuesta.fechaFin.slice(0,10),
         color:respuesta["color"],
         descripcion:respuesta['descripcion']
       });
+
 
     });
 
 
     this.formularioExperiencia = this.formulario.group({
       nombreEmpresa:[""],
-      /*fecha:[""],*/
+      fechaInicio:[""],
+      fechaFin:[""],
       color:[""],
       descripcion:[""]
 
@@ -71,11 +75,15 @@ export class EExperienciaComponent implements OnInit {
 
   }
 
+
   editarDatos():any{
-    console.log(this.linkID);
-    console.log(this.formularioExperiencia.value);
+
+
     this.apiService.editarExperiencia(this.linkID,this.formularioExperiencia.value).subscribe();
     this.router.navigateByUrl("/lobby#experiencia");
   }
 
+  volverAlInicio(){
+    this.router.navigateByUrl("/lobby#experiencia");
+  }
 }

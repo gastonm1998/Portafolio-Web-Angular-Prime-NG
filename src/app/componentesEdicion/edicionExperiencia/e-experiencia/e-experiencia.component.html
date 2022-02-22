@@ -1,36 +1,86 @@
 
-<div class="formulario-edicion-experiencia">
 
-  <form [formGroup]="formularioExperiencia" (ngSubmit)="editarDatos()">
+  <div class="titulo">
 
-    <div class="p-fluid grid">
-      <div class="field col-12 md:col-4">
+    <i class="pi pi-chevron-right" style="font-size: 2rem"></i>
+    <h1 class=" titulo2">   Edicion Experiencia</h1>
+
+  </div>
+
+
+
+
+  <div class="formulario-edicion-experiencia">
+
+    <form [formGroup]="formularioExperiencia" (ngSubmit)="editarDatos()">
+
+
+        <div class="p-fluid grid">
+          <div class="field col-12 md:col-4">
+
+              <span class="p-float-label">
+                    <input type="text" id="inputtext" pInputText  [(ngModel)]="value1" formControlName="nombreEmpresa">
+                    <label for="inputtext" >Nombre de la Empresa:</label>
+              </span>
+
+          </div>
+        </div>
+
+
+      <div class="p-fluid grid">
+        <div class="field col-12 md:col-4">
+
           <span class="p-float-label">
-              <input type="text" id="inputtext" pInputText [(ngModel)]="value1" formControlName="nombreEmpresa">
-              <label for="inputtext">titulo</label>
+
+            <p-calendar  dateFormat="yy-mm-dd" inputId="dateformat" formControlName="fechaInicio"></p-calendar>
+            <label for="calendar">Fecha de Inicio:</label>
+
           </span>
+
+        </div>
       </div>
-    </div>
 
 
-    <h5>Inline</h5>
-    <p-colorPicker [(ngModel)]="color1" [inline]="true" formControlName="color"></p-colorPicker>
+      <div class="p-fluid grid">
+        <div class="field col-12 md:col-4">
+          <span class="p-float-label">
+
+            <p-calendar  formControlName="fechaFin" dateFormat="yy-mm-dd" inputId="dateformat" ></p-calendar>
+            <label for="calendar">Fecha de Fin:</label>
+          </span>
+        </div>
+      </div>
+
+
+      <div class="p-fluid grid">
+        <div class="field col-12 md:col-4">
+          <span class="p-float-label">
+              <textarea inputId="textarea" rows="3" style="resize: none;" cols="30" [(ngModel)]="value10" pInputTextarea formControlName="descripcion"></textarea>
+              <label for="textarea">Descripcion del Trabajo:</label>
+          </span>
+        </div>
+      </div>
+
+      <div class="selectorDeColores">
+        <h5 class="tituloColores">Color de logo:</h5>
+        <p-colorPicker [(ngModel)]="color1" [inline]="true" formControlName="color"></p-colorPicker>
+      </div>
 
 
 
 
-    <div class="field col-12 md:col-4">
-      <span class="p-float-label">
-          <textarea inputId="textarea" rows="3" style="resize: none;" cols="30" [(ngModel)]="value10" pInputTextarea formControlName="descripcion"></textarea>
-          <label for="textarea">descripcion</label>
-      </span>
-    </div>
 
 
-    <button pButton pRipple type="submit" label="Primary">agregar</button>
+      
 
-    <button pButton pRipple type="button" label="Secondary" class="p-button-secondary"> cancelar</button>
+      <div class="botones">
+        <p-button label="Editar" icon=" pi pi-pencil" styleClass="p-button-info" type="submit"></p-button>
+
+        <p-button label="Cancelar" icon="pi pi-times" styleClass="p-button-danger" (onClick)="volverAlInicio()" ></p-button>
+      </div>
+    </form>
 
 
-  </form>
-</div>
+  </div>
+
+

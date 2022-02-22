@@ -21,13 +21,23 @@
         </ng-template>
 
         <ng-template pTemplate="content" let-event>
-            <p-card [header]="event.nombreEmpresa" [subheader]="event.fecha">
+            <p-card [header]="event.nombreEmpresa" [subheader]="event.fechaInicio +' - '+ event.fechaFin">
 
                   <p > id : {{event.id}} {{event.descripcion}}</p>
 
-                  <p-button label="Eliminar" icon="pi pi-times" styleClass="p-button-danger" (click)="borrarExperiencia(event.id)"></p-button>
+
 
                   <p-button label="Editar" icon="pi pi-pencil" styleClass="p-button-info" routerLink="/experienciaEditar/{{event.id}}" ></p-button>
+
+                  <!-- botones eliminar con mensaje de confirmacion-->
+
+                  <p-toast></p-toast>
+
+                  <p-confirmPopup> </p-confirmPopup>
+
+                  <button (click)="confirm($event,event.id)" pButton icon="pi pi-times" class="p-button-danger" label="Eliminar"></button>
+
+                  <!-- -------------------- -->
 
             </p-card>
         </ng-template>
