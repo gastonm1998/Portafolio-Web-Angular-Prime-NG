@@ -50,15 +50,7 @@ import { ConfirmationService, MessageService } from "primeng/api";
 
 
 
-/* Rutas angular routes*/
-/*
-const appRoutes:Routes = [
-  {path:'', component:CartelInicioComponent},
-  {path:'lobby', component:LobbyComponent},
-  {path:'editarExperiencia', component:EExperienciaComponent}
-];
 
-*/
 
 @NgModule({
   declarations: [
@@ -93,7 +85,6 @@ const appRoutes:Routes = [
     CommonModule,
     RatingModule,
     ProgressBarModule,
-    /*RouterModule.forRoot(routes),*/
     HttpClientModule,
     InputTextModule,
     CalendarModule,

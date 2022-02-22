@@ -59,6 +59,13 @@ export class AExperienciaComponent implements OnInit {
 
   }
 
+  reloadComponent() {
+    let currentUrl = this.router.url;
+        this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+        this.router.onSameUrlNavigation = 'reload';
+        this.router.navigateByUrl('lobby#experiencia');
+    }
+
   enviarDatos():any{
 
     console.log(this.formularioExperiencia.value);
@@ -67,10 +74,12 @@ export class AExperienciaComponent implements OnInit {
     console.log(typeof( this.formularioExperiencia.value.fechaFin));
     console.log( this.formularioExperiencia.value.fechaFin);
     this.apiService.agregarExperiencia(this.formularioExperiencia.value).subscribe();
-    this.router.navigateByUrl("/lobby#experiencia");
+    /*this.router.navigateByUrl("/lobby#experiencia");*/
+    this.reloadComponent();
   }
   volverAlInicio(){
     this.router.navigateByUrl("/lobby#experiencia");
   }
+
 
 }
