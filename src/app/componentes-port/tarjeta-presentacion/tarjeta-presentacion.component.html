@@ -1,20 +1,25 @@
 
+<!--Componente para la cargar la info del creador, descripcion, habilidades en porcentaje del conocimiento de algun lenguaje o framework, habilidades blandas y tecnologias conocidas (carousel)
+componentes usados: advance card (NG Prime), card (NG Prime), knob (NG Prime), prime icons v5(NG prime ), carousel (NG Prime),progress bar(NG Prime)  -->
 
-
+<!--Titulo principal-->
 <div class="titulo">
+
   <i class="pi pi-chevron-right" style="font-size: 2rem"></i>
   <h1 class=" titulo2">    About Me</h1>
+
 </div>
 
+<!--Advance card-->
 <div class="presentacion">
 
-
-
-
   <p-card header= "Gaston Monasterio"  [style]="{width: '360px'}" styleClass="p-card-shadow-8">
+
     <ng-template pTemplate="header">
+      <!--Banner advance card-->
         <img alt="Card" src="../../../assets/fondo8.jpg">
     </ng-template>
+    <!--interior advance card-->
     <p>
 
       🎯 Soy una persona curiosa, autodidacta, me gusta estar en constante aprendizaje, el trabajar en equipo y tengo una pasión muy grande por el mundo de la tecnología<br><br>
@@ -26,17 +31,17 @@
 
   </p-card>
 
+</div>
 
-  </div>
-
+<!--knobs dentro de una card -->
 <div class="soft-skills">
-
+  <!--card simple-->
   <div class="card shadow " >
     <div class="card-body">
+
       <h5 class="card-title">Lenguajes</h5>
-
+      <!--knobs-->
       <div class="medidores">
-
 
         <div class=" indicador ">
             <h5 class="p-mt-3">HTML</h5>
@@ -75,11 +80,13 @@
 
 
 
+ <!--progress bar dentro de card simple-->
 
+ <!--card-->
   <div class="card shadow ">
     <div class="card-body ">
       <h5 class="card-title">Soft - Skills</h5>
-
+      <!-- progress bar-->
       <h5>Autodidacta</h5>
       <p-progressBar [value]="value_1"></p-progressBar>
       <br>

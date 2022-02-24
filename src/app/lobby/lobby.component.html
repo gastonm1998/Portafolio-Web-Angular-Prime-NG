@@ -1,42 +1,52 @@
+<!--Componente lobby contiene varios componentes y la barra de navegacion interna para moverse por la pagina -->
 
+<!--Barra de navegacion  sticky top (bootstrap)-->
 <nav class="navbar sticky-top navbar-expand-lg navbar-light shadow" style="background-color: #c9e6fa;">
   <div class="container-fluid">
+    <!--Icono de la barra de navegacion-->
     <a class="navbar-brand" href="#">
       <img class="imagen" src="../../assets/argprog.png" alt="" width="60" height="48">
-
     </a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
       <span class="navbar-toggler-icon "></span>
+
     </button>
+
     <div class="collapse navbar-collapse " id="navbarSupportedContent">
       <ul class="navbar-nav  mx-auto ">
+        <!--boton home-->
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">
             <button pButton pRipple type="button" label="Home" class="p-button-text p-button-secondary"></button>
           </a>
         </li>
+        <!--boton descripcion-->
         <li class="nav-item">
           <a class="nav-link active" href="/lobby#presentacion">
             <button pButton pRipple type="button" label="Descripcion" class="p-button-text p-button-secondary"></button>
           </a>
         </li>
+        <!--boton experiencia-->
         <li class="nav-item">
           <a class="nav-link active" href="/lobby#experiencia">
             <button pButton pRipple type="button" label="Experiencia" class="p-button-text p-button-secondary"></button>
           </a>
         </li>
+        <!--boton Hard skills-->
         <li class="nav-item">
           <a class="nav-link active" href="/lobby#hard-skills">
             <button pButton pRipple type="button" label="Hard Skills" class="p-button-text p-button-secondary"></button>
           </a>
         </li>
-
+        <!--boton proyectos-->
         <li class="nav-item">
           <a class="nav-link active" href="/lobby#proyectos">
             <button pButton pRipple type="button" label="Proyectos" class="p-button-text p-button-secondary"></button>
           </a>
         </li>
-
+        <!--boton contactos-->
         <li class="nav-item">
           <a class="nav-link active" href="/lobby#contacto">
             <button pButton pRipple type="button" label="Contactame" class="p-button-rounded p-button-danger"></button>
@@ -48,10 +58,15 @@
   </div>
 </nav>
 
+<!-- Invocacion de los otros componentes-->
 <app-tarjeta-presentacion id="presentacion"></app-tarjeta-presentacion>
+
 <app-experiencia id="experiencia"></app-experiencia>
+
 <app-certificados id="hard-skills"></app-certificados>
+
 <app-proyectos id="proyectos"></app-proyectos >
+
 <app-contacto id="contacto"></app-contacto>
 
 <router-outlet></router-outlet>

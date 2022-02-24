@@ -16,6 +16,7 @@ export class CartelInicioComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  /*Funcion que usa angular router para redirecion */
   irAlLobby(){
     this.router.navigate(['lobby']);
     this.primengConfig.ripple = true;

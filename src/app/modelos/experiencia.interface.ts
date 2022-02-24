@@ -1,3 +1,6 @@
+/*Modelos o entidades  de los componentes*/
+
+/*Modelo experiencia */
 export interface ExperienciaI{
   id:number;
   nombreEmpresa:string;
@@ -5,5 +8,4 @@ export interface ExperienciaI{
   fechaFin:String;
   color:string;
   descripcion:string;
-
 }
