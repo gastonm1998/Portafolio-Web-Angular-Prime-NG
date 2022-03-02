@@ -114,11 +114,11 @@ componentes usados: advance card (NG Prime), card (NG Prime), knob (NG Prime), p
 
 
 
-
+<!--carousel dentro de card simple -->
   <div class="card shadow">
     <div class="card-body">
       <h5 class="card-title">Tecnologías Conocidas</h5>
-
+      <!--carousel-->
       <p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="2" [numScroll]="1" [autoplayInterval]="6000"  [circular]="true"  [responsiveOptions]="responsiveOptions">
         <ng-template pTemplate="header">
 
@@ -131,12 +131,6 @@ componentes usados: advance card (NG Prime), card (NG Prime), knob (NG Prime), p
                     </div>
                     <div>
                         <h4 class="p-mb-1">{{product.nombre}}</h4>
-
-
-
-
-
-
 
                     </div>
                 </div>

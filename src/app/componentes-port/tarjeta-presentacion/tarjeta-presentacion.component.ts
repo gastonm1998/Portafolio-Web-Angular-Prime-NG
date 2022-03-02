@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TarjetaPresentacionComponent implements OnInit {
 
+  /*valores de los lenguajes (knob) */
     value1: number = 50;
 
     value2: number = 50;
@@ -19,11 +20,15 @@ export class TarjetaPresentacionComponent implements OnInit {
 
     value6: number = 75;
 
+/*--------------------------------------- */
+
+  /*array con imagenes del carousel */
     products: any[] =[] ;
 
     responsiveOptions;
+/*--------------------------------------------------*/
 
-
+  /*Valores de las soft skills */
     value_1: number = 90;
     value_2: number = 85;
     value_3: number = 80;
@@ -31,10 +36,10 @@ export class TarjetaPresentacionComponent implements OnInit {
     value_5: number = 80;
     value_6: number = 50;
 
-
+  /*---------------------------- */
 
   constructor() {
-
+    /*responsive del carousel */
     this.responsiveOptions = [
       {
           breakpoint: '1024px',
@@ -58,7 +63,7 @@ export class TarjetaPresentacionComponent implements OnInit {
 
   ngOnInit(): void {
 
-
+    /*datos del carousel*/
     this.products = [
       {
         nombre: "",direccionImagen: "../../../assets/icons/angular-icon.svg"
