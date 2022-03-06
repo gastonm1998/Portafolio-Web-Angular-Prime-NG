@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
 export class ApiService {
 
   /*direccion del backend (Spring boot) */
-  url:string = "http://localhost:8080/api/experiencias";
+  url:string = "http://localhost:8080/experiencia";
 
 
   constructor( private http:HttpClient) { }

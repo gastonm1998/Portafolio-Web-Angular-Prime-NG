@@ -19,7 +19,6 @@ export class EExperienciaComponent implements OnInit {
   value10: any ;
 
   color1: string;
-  a:string = "2022-02-06T03:00:00.000Z"
 
 
   constructor(
