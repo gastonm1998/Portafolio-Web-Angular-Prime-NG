@@ -51,6 +51,8 @@ import {SliderModule} from 'primeng/slider';
 import { EBannerPrincipalComponent } from './componentesEdicion/edicionBannerPrincipal/e-banner-principal/e-banner-principal.component';
 import { ELenguajesComponent } from './componentesEdicion/edicionLenguajes/e-lenguajes/e-lenguajes.component';
 import { ALenguajesComponent } from './componentesEdicion/edicionLenguajes/a-lenguajes/a-lenguajes.component';
+import { ASoftSkillComponent } from './componentesEdicion/edicionSoftSkills/a-soft-skill/a-soft-skill.component';
+import { ESoftSkillComponent } from './componentesEdicion/edicionSoftSkills/e-soft-skill/e-soft-skill.component';
 
 
 
@@ -75,7 +77,9 @@ import { ALenguajesComponent } from './componentesEdicion/edicionLenguajes/a-len
     AExperienciaComponent,
     EBannerPrincipalComponent,
     ELenguajesComponent,
-    ALenguajesComponent
+    ALenguajesComponent,
+    ASoftSkillComponent,
+    ESoftSkillComponent
   ],
   imports: [
     BrowserModule,
