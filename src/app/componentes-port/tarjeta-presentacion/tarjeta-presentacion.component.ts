@@ -12,6 +12,12 @@ import { LenguajesI } from 'src/app/modelos/aboutMeLenguajes.interface';
 import { LenguajesService } from 'src/app/servicios/api/lenguajes.service';
 /*------------------------------------------ */
 
+/*implementacion del backend Soft Skills */
+
+import { SoftSkillsI } from 'src/app/modelos/aboutMeSoftSkills.inerface';
+import { SoftSkillsService } from 'src/app/servicios/api/soft-skills.service';
+/*------------------------------------------ */
+
 import {
   ConfirmationService,
   MessageService,
@@ -37,15 +43,15 @@ export class TarjetaPresentacionComponent implements OnInit {
   /*------------------------------------------ */
 
 
-  /*array con imagenes del carousel */
-    products: any[] =[] ;
+  /*implementacion del backend soft skills */
+    elementosSoftSkills:SoftSkillsI[] ;
 
 
 /*--------------------------------------------------*/
 
   /*Valores de las soft skills */
-    value_1: number = 90;
-    value_2: number = 85;
+    value_2: number[];
+    value_1: number = 85;
     value_3: number = 80;
     value_4: number = 80;
     value_5: number = 80;
@@ -59,7 +65,8 @@ export class TarjetaPresentacionComponent implements OnInit {
     private messageService: MessageService,
     private primengConfig: PrimeNGConfig,
     private bannerPrincipal:BannerPrincipalService, //backend banner principal
-    private lenguaje:LenguajesService //backend lenguajes
+    private lenguaje:LenguajesService, //backend lenguajes
+    private sofSkills:SoftSkillsService // backend soft Skills
   ) { }
 
   ngOnInit(): void {
@@ -76,12 +83,18 @@ export class TarjetaPresentacionComponent implements OnInit {
 
     this.lenguaje.obtenerLenguajes().subscribe( respuesta =>{
       this.elementosLenguaje = respuesta
-      console.log(respuesta)
     })
 
   /*------------------------------------------ */
 
+    /*LLamada desde el backend soft Skills*/
 
+    this.sofSkills.obtenerSoftSkills().subscribe(respuesta =>{
+      this.elementosSoftSkills = respuesta;
+      console.log(respuesta);
+
+    })
+    /*------------------------------------ */
 
 
 
@@ -126,10 +139,6 @@ export class TarjetaPresentacionComponent implements OnInit {
         }
       });
     }
-
-
-
-
 
   /*----------------------------------------- */
 

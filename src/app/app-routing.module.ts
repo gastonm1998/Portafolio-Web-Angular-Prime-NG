@@ -7,6 +7,8 @@ import {AExperienciaComponent} from './componentesEdicion/edicionExperiencia/a-e
 import { EExperienciaComponent } from './componentesEdicion/edicionExperiencia/e-experiencia/e-experiencia.component';
 import { ALenguajesComponent } from './componentesEdicion/edicionLenguajes/a-lenguajes/a-lenguajes.component';
 import { ELenguajesComponent } from './componentesEdicion/edicionLenguajes/e-lenguajes/e-lenguajes.component';
+import { ASoftSkillComponent } from './componentesEdicion/edicionSoftSkills/a-soft-skill/a-soft-skill.component';
+import { ESoftSkillComponent } from './componentesEdicion/edicionSoftSkills/e-soft-skill/e-soft-skill.component';
 import { CartelInicioComponent } from './home/cartel-inicio/cartel-inicio.component';
 import { LobbyComponent } from './lobby/lobby.component';
 
@@ -19,7 +21,9 @@ const routes: Routes = [
   {path:'editarExperiencia', component:EExperienciaComponent},
   {path:"editarBannerPrincipal",component:EBannerPrincipalComponent},
   {path:"agregarLenguaje",component:ALenguajesComponent},
-  {path:"lobby/editarLenguaje/:id",component:ELenguajesComponent}
+  {path:"lobby/editarLenguaje/:id",component:ELenguajesComponent},
+  {path:"agregarSoftSkill",component:ASoftSkillComponent},
+  {path:"lobby/editarSoftSkill/:id",component:ESoftSkillComponent}
 
 ];
 

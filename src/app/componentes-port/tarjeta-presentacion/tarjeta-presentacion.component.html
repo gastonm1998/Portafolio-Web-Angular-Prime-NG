@@ -56,7 +56,6 @@ componentes usados: advance card (NG Prime), card (NG Prime), knob (NG Prime), p
 
       <!--Grupo de botones de los lenguajes eliminar editar-->
       <span class="p-buttonset">
-
         <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirm($event,lenguajes.id)" class="p-button-danger"></button>
         <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarLenguaje/{{lenguajes.id}}"></button>
       </span>
@@ -73,8 +72,26 @@ componentes usados: advance card (NG Prime), card (NG Prime), knob (NG Prime), p
  <!--card-->
   <div class="card shadow ">
     <div class="card-body ">
-      <h5 class="card-title">Soft - Skills</h5>
+      <h5 class="card-title" >Soft - Skills</h5>
+
+      <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarSoftSkill" ></p-button>
+
+      <div *ngFor="let habilidad of elementosSoftSkills; let indice=index;">
+
+        <h5>{{habilidad.softSkill}}</h5>
+
+        <p-progressBar [value]="habilidad.pocentaje"></p-progressBar>
+
+        <span class="p-buttonset">
+          <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirm($event,habilidad.id)" class="p-button-danger"></button>
+          <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarSoftSkill/{{habilidad.id}}"></button>
+
+        </span>
+        <br>
+
+      </div>
       <!-- progress bar-->
+      <!--
       <h5>Autodidacta</h5>
       <p-progressBar [value]="value_1"></p-progressBar>
       <br>
@@ -93,7 +110,7 @@ componentes usados: advance card (NG Prime), card (NG Prime), knob (NG Prime), p
       <h5>Ingles</h5>
       <p-progressBar [value]="value_6"></p-progressBar>
 
-
+        -->
       <p class="texto">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
 
     </div>
