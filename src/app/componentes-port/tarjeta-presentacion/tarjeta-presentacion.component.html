@@ -11,9 +11,9 @@ componentes usados: advance card (NG Prime), card (NG Prime), knob (NG Prime), p
 </div>
 
 <!--Advance card-->
-<div class="presentacion">
+<div class="presentacion" *ngFor=" let elemento of elementosBannerPrincipal" >
 
-  <p-card header= "Gaston Monasterio"  [style]="{width: '360px'}" styleClass="p-card-shadow-8">
+  <p-card header= "{{elemento.nombre}} "  [style]="{width: '360px'}" styleClass="p-card-shadow-8">
 
     <ng-template pTemplate="header">
       <!--Banner advance card-->
@@ -22,13 +22,13 @@ componentes usados: advance card (NG Prime), card (NG Prime), knob (NG Prime), p
     <!--interior advance card-->
     <p>
 
-      🎯 Soy una persona curiosa, autodidacta, me gusta estar en constante aprendizaje, el trabajar en equipo y tengo una pasión muy grande por el mundo de la tecnología<br><br>
+      {{elemento.descripcion}}
 
-      🎮 Otros de mis pasatiempos favoritos es trabajar en en armado de PC Gaming y Workstation<br><br>
 
-      ⚡️ Tengo también conocimientos y experiencia en electrónica y electricidad<br><br>
       </p>
-
+    <ng-template pTemplate="footer">
+      <p-button label="Editar" icon="pi pi-pencil" styleClass="p-button-info" routerLink="/editarBannerPrincipal" ></p-button>
+    </ng-template>
   </p-card>
 
 </div>

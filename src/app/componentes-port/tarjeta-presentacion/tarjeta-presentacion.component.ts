@@ -1,11 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 
+ /*implementacion del backend banner principal*/
+ import {BannerPrincipalService} from "../../servicios/api/banner-principal.service";
+ import {bannerPrincipal} from "../../modelos/aboutMeBannerPrincipal.interface";
+
+  /*------------------------------------------ */
 @Component({
   selector: 'app-tarjeta-presentacion',
   templateUrl: './tarjeta-presentacion.component.html',
   styleUrls: ['./tarjeta-presentacion.component.scss']
 })
 export class TarjetaPresentacionComponent implements OnInit {
+  /*implementacion del backend banner principal*/
+
+  elementosBannerPrincipal:bannerPrincipal[];
+
+
+  /*------------------------------------------ */
 
   /*valores de los lenguajes (knob) */
     value1: number = 50;
@@ -38,7 +49,12 @@ export class TarjetaPresentacionComponent implements OnInit {
 
   /*---------------------------- */
 
-  constructor() {
+  constructor(
+
+    private bannerPrincipal:BannerPrincipalService //backend banner principal
+  ) {
+
+
     /*responsive del carousel */
     this.responsiveOptions = [
       {
@@ -62,6 +78,15 @@ export class TarjetaPresentacionComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    /*implementacion del backend banner principal*/
+
+    this.bannerPrincipal.obtenerBannerPrincipal().subscribe(respuesta =>{
+      this.elementosBannerPrincipal = respuesta
+    });
+
+    /*------------------------------------------ */
+
+
 
     /*datos del carousel*/
     this.products = [
@@ -90,6 +115,12 @@ export class TarjetaPresentacionComponent implements OnInit {
         nombre: "",direccionImagen: "../../../assets/icons/django-community.svg"
       },
     ]
+
+
+
   }
+
+
+
 
 }

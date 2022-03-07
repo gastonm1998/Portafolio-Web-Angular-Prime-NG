@@ -2,6 +2,7 @@
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { EBannerPrincipalComponent } from './componentesEdicion/edicionBannerPrincipal/e-banner-principal/e-banner-principal.component';
 import {AExperienciaComponent} from './componentesEdicion/edicionExperiencia/a-experiencia/a-experiencia.component';
 import { EExperienciaComponent } from './componentesEdicion/edicionExperiencia/e-experiencia/e-experiencia.component';
 import { CartelInicioComponent } from './home/cartel-inicio/cartel-inicio.component';
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'experienciaEditar/:id', component: EExperienciaComponent},
   { path: 'experienciaAgregar', component: AExperienciaComponent},
   {path:'lobby', component:LobbyComponent},
-  {path:'editarExperiencia', component:EExperienciaComponent}
+  {path:'editarExperiencia', component:EExperienciaComponent},
+  {path:"editarBannerPrincipal",component:EBannerPrincipalComponent}
 
 ];
 
