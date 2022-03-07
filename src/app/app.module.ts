@@ -48,6 +48,8 @@ import { ToastModule } from "primeng/toast";
 import { ConfirmationService, MessageService } from "primeng/api";
 
 import { EBannerPrincipalComponent } from './componentesEdicion/edicionBannerPrincipal/e-banner-principal/e-banner-principal.component';
+import { ELenguajesComponent } from './componentesEdicion/edicionLenguajes/e-lenguajes/e-lenguajes.component';
+import { ALenguajesComponent } from './componentesEdicion/edicionLenguajes/a-lenguajes/a-lenguajes.component';
 
 
 
@@ -70,7 +72,9 @@ import { EBannerPrincipalComponent } from './componentesEdicion/edicionBannerPri
     ContactoComponent,
     EExperienciaComponent,
     AExperienciaComponent,
-    EBannerPrincipalComponent
+    EBannerPrincipalComponent,
+    ELenguajesComponent,
+    ALenguajesComponent
   ],
   imports: [
     BrowserModule,
