@@ -1,1 +1,37 @@
-<p>a-lenguajes works!</p>
+
+  <div class="titulo">
+
+    <i class="pi pi-chevron-right" style="font-size: 2rem"></i>
+    <h1 class=" titulo2">   Agregar Lenguaje</h1>
+
+  </div>
+
+  <form (ngSubmit)="enviarDatos()" [formGroup]="formularioLenguajes" >
+
+
+    <div class="p-fluid grid">
+      <div class="field col-12 md:col-4">
+
+          <span class="p-float-label">
+                <input type="text" id="inputtext" pInputText   formControlName="nombreDelLenguaje">
+                <label for="inputtext" >Nombre del lenguaje:</label>
+          </span>
+
+      </div>
+    </div>
+
+    <!--slider para seleccionar el nivel de dominio del lenguaje-->
+    <div class="p-fluid grid">
+      <div class="field col-12 md:col-4">
+        <h5>Dominio: {{val1}}</h5>
+        <p-slider [(ngModel)]="val1 " formControlName="dominio"></p-slider>
+      </div>
+
+    </div>
+    <div class="botones">
+      <p-button label="Agregar" icon=" pi pi-check" styleClass="p-button-info" type="submit"></p-button>
+
+      <p-button label="Cancelar" icon="pi pi-times" styleClass="p-button-danger" (onClick)="volverAlInicio()" ></p-button>
+    </div>
+
+  </form>

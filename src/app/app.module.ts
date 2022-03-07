@@ -46,6 +46,7 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 import { ConfirmPopupModule } from "primeng/confirmpopup";
 import { ToastModule } from "primeng/toast";
 import { ConfirmationService, MessageService } from "primeng/api";
+import {SliderModule} from 'primeng/slider';
 
 import { EBannerPrincipalComponent } from './componentesEdicion/edicionBannerPrincipal/e-banner-principal/e-banner-principal.component';
 import { ELenguajesComponent } from './componentesEdicion/edicionLenguajes/e-lenguajes/e-lenguajes.component';
@@ -101,6 +102,7 @@ import { ALenguajesComponent } from './componentesEdicion/edicionLenguajes/a-len
     ReactiveFormsModule,
     ConfirmPopupModule,
     ToastModule,
+    SliderModule
 
   ],
   providers: [ConfirmationService, MessageService],

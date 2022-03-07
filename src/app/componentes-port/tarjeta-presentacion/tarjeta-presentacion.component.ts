@@ -1,10 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
  /*implementacion del backend banner principal*/
  import {BannerPrincipalService} from "../../servicios/api/banner-principal.service";
  import {bannerPrincipal} from "../../modelos/aboutMeBannerPrincipal.interface";
 
   /*------------------------------------------ */
+
+/*implementacion del backend lenguajes */
+import { LenguajesI } from 'src/app/modelos/aboutMeLenguajes.interface';
+import { LenguajesService } from 'src/app/servicios/api/lenguajes.service';
+/*------------------------------------------ */
+
+import {
+  ConfirmationService,
+  MessageService,
+  PrimeNGConfig
+} from "primeng/api";
+
 @Component({
   selector: 'app-tarjeta-presentacion',
   templateUrl: './tarjeta-presentacion.component.html',
@@ -15,28 +28,19 @@ export class TarjetaPresentacionComponent implements OnInit {
 
   elementosBannerPrincipal:bannerPrincipal[];
 
+  /*------------------------------------------ */
+
+  /*implementacion del backend Lenguaje*/
+
+  elementosLenguaje:LenguajesI[];
 
   /*------------------------------------------ */
 
-  /*valores de los lenguajes (knob) */
-    value1: number = 50;
-
-    value2: number = 50;
-
-    value3: number = 75;
-
-    value4: number = 60;
-
-    value5: number = 60;
-
-    value6: number = 75;
-
-/*--------------------------------------- */
 
   /*array con imagenes del carousel */
     products: any[] =[] ;
 
-    responsiveOptions;
+
 /*--------------------------------------------------*/
 
   /*Valores de las soft skills */
@@ -50,35 +54,17 @@ export class TarjetaPresentacionComponent implements OnInit {
   /*---------------------------- */
 
   constructor(
-
-    private bannerPrincipal:BannerPrincipalService //backend banner principal
-  ) {
-
-
-    /*responsive del carousel */
-    this.responsiveOptions = [
-      {
-          breakpoint: '1024px',
-          numVisible: 2,
-          numScroll: 2
-      },
-      {
-          breakpoint: '768px',
-          numVisible: 2,
-          numScroll: 2
-      },
-      {
-          breakpoint: '560px',
-          numVisible: 1,
-          numScroll: 1
-      }
-  ];
-
-
-  }
+    private router:Router,
+    private confirmationService: ConfirmationService,
+    private messageService: MessageService,
+    private primengConfig: PrimeNGConfig,
+    private bannerPrincipal:BannerPrincipalService, //backend banner principal
+    private lenguaje:LenguajesService //backend lenguajes
+  ) { }
 
   ngOnInit(): void {
-    /*implementacion del backend banner principal*/
+
+    /*LLamada desde el backend banner principal*/
 
     this.bannerPrincipal.obtenerBannerPrincipal().subscribe(respuesta =>{
       this.elementosBannerPrincipal = respuesta
@@ -86,41 +72,66 @@ export class TarjetaPresentacionComponent implements OnInit {
 
     /*------------------------------------------ */
 
+   /*LLamada desde el backend lenguaje*/
+
+    this.lenguaje.obtenerLenguajes().subscribe( respuesta =>{
+      this.elementosLenguaje = respuesta
+      console.log(respuesta)
+    })
+
+  /*------------------------------------------ */
 
 
-    /*datos del carousel*/
-    this.products = [
-      {
-        nombre: "",direccionImagen: "../../../assets/icons/angular-icon.svg"
-      },
-      {
-        nombre: "",direccionImagen: "../../../assets/icons/github-icon-1.svg"
-      },
-      {
-        nombre: "",direccionImagen: "../../../assets/icons/java-icon.svg"
-      },
-      {
-        nombre: "",direccionImagen: "../../../assets/icons/springio-ar21.svg"
-      },
-      {
-        nombre: "",direccionImagen: "../../../assets/icons/mysql-ar21.svg"
-      },
-      {
-        nombre: "",direccionImagen: "../../../assets/icons/mongodb-icon-1.svg"
-      },
-      {
-        nombre: "",direccionImagen: "../../../assets/icons/react-2.svg"
-      },
-      {
-        nombre: "",direccionImagen: "../../../assets/icons/django-community.svg"
-      },
-    ]
 
 
 
   }
 
+  /*metodos de eliminacion backend Lenguaje */
 
+  borrarExperiencia(id:any){
+
+    this.lenguaje.eliminarLenguajes(id).subscribe();
+  }
+  /*componentes del cartel de confirmacion de eliminacion */
+  reloadComponent() {
+    let currentUrl = this.router.url;
+        this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+        this.router.onSameUrlNavigation = 'reload';
+        this.router.navigateByUrl('lobby#experiencia');
+    }
+
+    confirm(event: Event,id:any) {
+      this.confirmationService.confirm({
+        target: event.target!,
+        message: "¿Estas seguro que desea eliminar?",
+        icon: "pi pi-exclamation-triangle",
+        accept: () => {
+          this.messageService.add({
+            severity: "info",
+            summary: "Experiencia eliminada",
+            detail: "Se a eliminado sastifactoriamente"
+          });
+          this.borrarExperiencia(id);
+
+          this.reloadComponent();
+
+        },
+        reject: () => {
+          this.messageService.add({
+            severity: "error",
+            summary: "Cancelado",
+            detail: "Se a cancelado la eliminacion"
+          });
+        }
+      });
+    }
+
+
+
+
+
+  /*----------------------------------------- */
 
 
 }

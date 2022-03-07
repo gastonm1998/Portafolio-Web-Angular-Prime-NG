@@ -40,39 +40,27 @@ componentes usados: advance card (NG Prime), card (NG Prime), knob (NG Prime), p
     <div class="card-body">
 
       <h5 class="card-title">Lenguajes</h5>
+
+
+      <!--boton de agregar un nuevo lenguaje-->
+      <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarLenguaje" ></p-button>
+
       <!--knobs-->
-      <div class="medidores">
+      <div class="medidores" *ngFor="let lenguajes of elementosLenguaje; let indice=index;">
 
         <div class=" indicador ">
-            <h5 class="p-mt-3">HTML</h5>
-            <p-knob [(ngModel)]="value1" valueColor="#8bd1ff" rangeColor=" #f8f9fa" ></p-knob>
-        </div>
-
-        <div class="indicador ">
-          <h5 class="p-mt-3">CSS</h5>
-          <p-knob [(ngModel)]="value2" valueColor="#8bd1ff" rangeColor="#f8f9fa"></p-knob>
-        </div>
-
-        <div class="indicador ">
-          <h5 class="p-mt-3">JavaScript</h5>
-          <p-knob [(ngModel)]="value3" valueColor="#8bd1ff" rangeColor="#f8f9fa"></p-knob>
-        </div>
-
-        <div class="indicador ">
-          <h5 class="p-mt-3">Python</h5>
-          <p-knob [(ngModel)]="value4" valueColor="#8bd1ff" rangeColor="#f8f9fa"></p-knob>
-        </div>
-
-        <div class="indicador ">
-          <h5 class="p-mt-3">Java</h5>
-          <p-knob [(ngModel)]="value5" valueColor="#8bd1ff" rangeColor="#f8f9fa"></p-knob>
-        </div>
-
-        <div class="indicador ">
-          <h5 class="p-mt-3">C / C++</h5>
-          <p-knob [(ngModel)]="value6" valueColor="#8bd1ff" rangeColor="#f8f9fa"></p-knob>
-        </div>
+          <h5 class="p-mt-3">{{lenguajes.nombreDelLenguaje}}</h5>
+          <p-knob [(ngModel)]="elementosLenguaje[indice].dominio" valueColor="#8bd1ff" rangeColor=" #f8f9fa" ></p-knob>
       </div>
+
+
+      <!--Grupo de botones de los lenguajes eliminar editar-->
+      <span class="p-buttonset">
+
+        <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirm($event,lenguajes.id)" class="p-button-danger"></button>
+        <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarLenguaje/{{lenguajes.id}}"></button>
+      </span>
+    </div>
 
     </div>
   </div>
@@ -114,33 +102,8 @@ componentes usados: advance card (NG Prime), card (NG Prime), knob (NG Prime), p
 
 
 
-<!--carousel dentro de card simple -->
-  <div class="card shadow">
-    <div class="card-body">
-      <h5 class="card-title">Tecnologías Conocidas</h5>
-      <!--carousel-->
-      <p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="2" [numScroll]="1" [autoplayInterval]="6000"  [circular]="true"  [responsiveOptions]="responsiveOptions">
-        <ng-template pTemplate="header">
 
-        </ng-template>
-        <ng-template let-product pTemplate="item">
-            <div class="product-item">
-                <div class="product-item-content">
-                    <div class="p-mb-3">
-                        <img src={{product.direccionImagen}} [alt]="product.nombre" class="product-image" />
-                    </div>
-                    <div>
-                        <h4 class="p-mb-1">{{product.nombre}}</h4>
 
-                    </div>
-                </div>
-            </div>
-        </ng-template>
-
-      </p-carousel>
-
-    </div>
-  </div>
 
 
 

@@ -37,8 +37,8 @@ export class EExperienciaComponent implements OnInit {
 
       this.formularioExperiencia.setValue({
         nombreEmpresa : respuesta.nombreEmpresa ,
-        fechaInicio: respuesta.fechaInicio.slice(0,10),
-        fechaFin: respuesta.fechaFin.slice(0,10),
+        fechaInicio: respuesta.fechaInicio,
+        fechaFin: respuesta.fechaFin,
         color:respuesta["color"],
         descripcion:respuesta['descripcion']
       });
