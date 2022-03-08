@@ -107,12 +107,7 @@ export class TarjetaPresentacionComponent implements OnInit {
     this.lenguaje.eliminarLenguajes(id).subscribe();
   }
   /*componentes del cartel de confirmacion de eliminacion */
-  reloadComponent() {
-    let currentUrl = this.router.url;
-        this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-        this.router.onSameUrlNavigation = 'reload';
-        this.router.navigateByUrl('lobby#experiencia');
-    }
+
 
     confirm(event: Event,id:any) {
       this.confirmationService.confirm({
@@ -143,4 +138,49 @@ export class TarjetaPresentacionComponent implements OnInit {
   /*----------------------------------------- */
 
 
+
+    /*metodos de eliminacion backend Soft skills */
+
+    eliminarSoftSkills(id:any){
+
+      this.sofSkills.eliminarSoftSkills(id).subscribe();
+    }
+    /*componentes del cartel de confirmacion de eliminacion */
+
+
+    confirmDeleteSoftSkills(event: Event,id:any) {
+        this.confirmationService.confirm({
+          target: event.target!,
+          message: "¿Estas seguro que desea eliminar?",
+          icon: "pi pi-exclamation-triangle",
+          accept: () => {
+            this.messageService.add({
+              severity: "info",
+              summary: "Experiencia eliminada",
+              detail: "Se a eliminado sastifactoriamente"
+            });
+            this.eliminarSoftSkills(id);
+
+            this.reloadComponent();
+
+          },
+          reject: () => {
+            this.messageService.add({
+              severity: "error",
+              summary: "Cancelado",
+              detail: "Se a cancelado la eliminacion"
+            });
+          }
+        });
+      }
+
+    /*----------------------------------------- */
+
+    /*metodo recargar pagina */
+    reloadComponent() {
+      let currentUrl = this.router.url;
+          this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+          this.router.onSameUrlNavigation = 'reload';
+          this.router.navigateByUrl('lobby');
+      }
 }

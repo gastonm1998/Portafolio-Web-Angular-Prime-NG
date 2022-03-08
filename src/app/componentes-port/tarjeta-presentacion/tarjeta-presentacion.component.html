@@ -83,7 +83,7 @@ componentes usados: advance card (NG Prime), card (NG Prime), knob (NG Prime), p
         <p-progressBar [value]="habilidad.pocentaje"></p-progressBar>
 
         <span class="p-buttonset">
-          <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirm($event,habilidad.id)" class="p-button-danger"></button>
+          <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteSoftSkills($event,habilidad.id)" class="p-button-danger"></button>
           <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarSoftSkill/{{habilidad.id}}"></button>
 
         </span>
