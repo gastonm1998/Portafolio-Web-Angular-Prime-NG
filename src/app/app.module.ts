@@ -53,6 +53,8 @@ import { ELenguajesComponent } from './componentesEdicion/edicionLenguajes/e-len
 import { ALenguajesComponent } from './componentesEdicion/edicionLenguajes/a-lenguajes/a-lenguajes.component';
 import { ASoftSkillComponent } from './componentesEdicion/edicionSoftSkills/a-soft-skill/a-soft-skill.component';
 import { ESoftSkillComponent } from './componentesEdicion/edicionSoftSkills/e-soft-skill/e-soft-skill.component';
+import { EEducacionComponent } from './componentesEdicion/edicionEducacion/e-educacion/e-educacion.component';
+import { AEducacionComponent } from './componentesEdicion/edicionEducacion/a-educacion/a-educacion.component';
 
 
 
@@ -79,7 +81,9 @@ import { ESoftSkillComponent } from './componentesEdicion/edicionSoftSkills/e-so
     ELenguajesComponent,
     ALenguajesComponent,
     ASoftSkillComponent,
-    ESoftSkillComponent
+    ESoftSkillComponent,
+    EEducacionComponent,
+    AEducacionComponent
   ],
   imports: [
     BrowserModule,

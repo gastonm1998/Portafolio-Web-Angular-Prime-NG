@@ -49,15 +49,7 @@ export class TarjetaPresentacionComponent implements OnInit {
 
 /*--------------------------------------------------*/
 
-  /*Valores de las soft skills */
-    value_2: number[];
-    value_1: number = 85;
-    value_3: number = 80;
-    value_4: number = 80;
-    value_5: number = 80;
-    value_6: number = 50;
 
-  /*---------------------------- */
 
   constructor(
     private router:Router,
