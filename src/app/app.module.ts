@@ -55,6 +55,8 @@ import { ASoftSkillComponent } from './componentesEdicion/edicionSoftSkills/a-so
 import { ESoftSkillComponent } from './componentesEdicion/edicionSoftSkills/e-soft-skill/e-soft-skill.component';
 import { EEducacionComponent } from './componentesEdicion/edicionEducacion/e-educacion/e-educacion.component';
 import { AEducacionComponent } from './componentesEdicion/edicionEducacion/a-educacion/a-educacion.component';
+import { AJavaScriptComponent } from './componentesEdicion/edicionCertificadoJavaScript/a-java-script/a-java-script.component';
+import { EJavaScriptComponent } from './componentesEdicion/edicionCertificadoJavaScript/e-java-script/e-java-script.component';
 
 
 
@@ -83,7 +85,9 @@ import { AEducacionComponent } from './componentesEdicion/edicionEducacion/a-edu
     ASoftSkillComponent,
     ESoftSkillComponent,
     EEducacionComponent,
-    AEducacionComponent
+    AEducacionComponent,
+    AJavaScriptComponent,
+    EJavaScriptComponent
   ],
   imports: [
     BrowserModule,
