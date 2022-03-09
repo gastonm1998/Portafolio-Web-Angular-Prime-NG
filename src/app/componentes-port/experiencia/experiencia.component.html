@@ -17,13 +17,15 @@
     <p-timeline [value]="experiencia" align="alternate" styleClass="customized-timeline">
 
         <ng-template pTemplate="marker" let-event>
+
             <span class="custom-marker p-shadow-6" [style.backgroundColor]="event.color">
                 <i class="pi pi-id-card"></i>
             </span>
+
         </ng-template>
 
         <ng-template pTemplate="content" let-event>
-            <p-card [header]="event.nombreEmpresa" [subheader]="event.fechaInicio +' - '+ event.fechaFin">
+            <p-card [header]="event.nombreEmpresa" [subheader]="event.fechaInicio +' || '+ event.fechaFin">
 
                   <p > id : {{event.id}} {{event.descripcion}}</p>
 
@@ -46,27 +48,45 @@
     </p-timeline>
   </div>
 
+  <!---------------------------Educacion--------------------------->
   <div class="titulo">
     <i class="pi pi-chevron-right" style="font-size: 2rem"></i>
     <h1 class=" titulo2">    Educacion</h1>
+
+    <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-secondary" routerLink="/agregarEducacion" id="botonAgregar"></button>
   </div>
 
   <div class="card">
 
-    <p-timeline [value]="educacion" align="alternate" styleClass="customized-timeline">
-        <ng-template pTemplate="marker" let-event>
-            <span class="custom-marker p-shadow-6" [style.backgroundColor]="event.color">
-                <i [ngClass]="event.icon"></i>
-            </span>
-        </ng-template>
-        <ng-template pTemplate="content" let-event>
-            <p-card [header]="event.status" [subheader]="event.date">
+    <p-timeline [value]="elementosEducacion" align="alternate" styleClass="customized-timeline">
+        <ng-template pTemplate="marker" let-educ>
 
-                  <p > {{event.descripcion}}</p>
+            <span class="custom-marker p-shadow-6" [style.backgroundColor]="educ.color">
+                 <i class="pi pi-file"></i>
+            </span>
+
+        </ng-template>
+        <ng-template pTemplate="content" let-educ>
+            <p-card [header]="educ.educacion" [subheader]="educ.fechaInicio +' || '+ educ.fechaFin">
+
+                  <p > {{educ.descripcion}}</p>
+
+                  <p-button label="Editar" icon="pi pi-pencil" styleClass="p-button-info" routerLink="editarEducacion/{{educ.id}}" ></p-button>
+
+                   <!--botones eliminar con mensaje de confirmacion-->
+
+                  <p-toast></p-toast>
+
+                  <p-confirmPopup> </p-confirmPopup>
+
+                  <button (click)="confirmBorrarEducacion($event,educ.id)" pButton icon="pi pi-times" class="p-button-danger" label="Eliminar"></button>
+
+
 
             </p-card>
         </ng-template>
     </p-timeline>
+
   </div>
 
 

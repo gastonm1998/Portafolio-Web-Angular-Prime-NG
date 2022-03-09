@@ -3,6 +3,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EBannerPrincipalComponent } from './componentesEdicion/edicionBannerPrincipal/e-banner-principal/e-banner-principal.component';
+import { AEducacionComponent } from './componentesEdicion/edicionEducacion/a-educacion/a-educacion.component';
+import { EEducacionComponent } from './componentesEdicion/edicionEducacion/e-educacion/e-educacion.component';
 import {AExperienciaComponent} from './componentesEdicion/edicionExperiencia/a-experiencia/a-experiencia.component';
 import { EExperienciaComponent } from './componentesEdicion/edicionExperiencia/e-experiencia/e-experiencia.component';
 import { ALenguajesComponent } from './componentesEdicion/edicionLenguajes/a-lenguajes/a-lenguajes.component';
@@ -23,7 +25,9 @@ const routes: Routes = [
   {path:"agregarLenguaje",component:ALenguajesComponent},
   {path:"lobby/editarLenguaje/:id",component:ELenguajesComponent},
   {path:"agregarSoftSkill",component:ASoftSkillComponent},
-  {path:"lobby/editarSoftSkill/:id",component:ESoftSkillComponent}
+  {path:"lobby/editarSoftSkill/:id",component:ESoftSkillComponent},
+  {path:"agregarEducacion",component:AEducacionComponent},
+  {path:"lobby/editarEducacion/:id",component:EEducacionComponent}
 
 ];
 

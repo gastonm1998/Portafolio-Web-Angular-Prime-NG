@@ -1,1 +1,79 @@
-<p>a-educacion works!</p>
+<div class="titulo">
+
+  <i class="pi pi-chevron-right" style="font-size: 2rem"></i>
+  <h1 class=" titulo2">   Agregar Educacion</h1>
+
+</div>
+
+
+
+
+
+
+<form (ngSubmit)="enviarDatos()" [formGroup]="formularioEducacion" >
+
+
+  <div class="p-fluid grid">
+    <div class="field col-12 md:col-4">
+
+        <span class="p-float-label">
+              <input type="text" id="inputtext" pInputText   formControlName="educacion">
+              <label for="inputtext" >Nombre de la Institucion educativa:</label>
+        </span>
+
+    </div>
+  </div>
+
+
+  <div class="p-fluid grid">
+    <div class="field col-12 md:col-4">
+
+      <span class="p-float-label">
+
+        <p-calendar  dateFormat="yy/mm/dd" inputId="dateformat" formControlName="fechaInicio"></p-calendar>
+        <label for="calendar">Fecha de Inicio:</label>
+
+      </span>
+
+    </div>
+  </div>
+
+
+<div class="p-fluid grid">
+  <div class="field col-12 md:col-4">
+    <span class="p-float-label">
+
+      <p-calendar  formControlName="fechaFin" dateFormat="yy/mm/dd" inputId="dateformat" ></p-calendar>
+      <label for="calendar">Fecha de Fin:</label>
+    </span>
+  </div>
+</div>
+
+
+ <div class="p-fluid grid">
+  <div class="field col-12 md:col-4">
+    <span class="p-float-label">
+        <textarea inputId="textarea" rows="3" style="resize: none;" cols="30"  pInputTextarea formControlName="descripcion"></textarea>
+        <label for="textarea">Descripcion :</label>
+    </span>
+  </div>
+</div>
+
+<div class="selectorDeColores">
+  <h5 class="tituloColores">Color de logo:</h5>
+  <p-colorPicker  [inline]="true" formControlName="color"></p-colorPicker>
+</div>
+
+
+
+
+
+
+
+  <div class="botones">
+    <p-button label="Agregar" icon=" pi pi-check" styleClass="p-button-info" type="submit"></p-button>
+
+    <p-button label="Cancelar" icon="pi pi-times" styleClass="p-button-danger" (onClick)="volverAlInicio()" ></p-button>
+  </div>
+
+</form>
