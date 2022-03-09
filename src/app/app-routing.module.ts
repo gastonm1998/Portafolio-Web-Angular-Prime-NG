@@ -3,6 +3,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EBannerPrincipalComponent } from './componentesEdicion/edicionBannerPrincipal/e-banner-principal/e-banner-principal.component';
+import { AJavaScriptComponent } from './componentesEdicion/edicionCertificadoJavaScript/a-java-script/a-java-script.component';
+import { EJavaScriptComponent } from './componentesEdicion/edicionCertificadoJavaScript/e-java-script/e-java-script.component';
 import { AEducacionComponent } from './componentesEdicion/edicionEducacion/a-educacion/a-educacion.component';
 import { EEducacionComponent } from './componentesEdicion/edicionEducacion/e-educacion/e-educacion.component';
 import {AExperienciaComponent} from './componentesEdicion/edicionExperiencia/a-experiencia/a-experiencia.component';
@@ -27,7 +29,9 @@ const routes: Routes = [
   {path:"agregarSoftSkill",component:ASoftSkillComponent},
   {path:"lobby/editarSoftSkill/:id",component:ESoftSkillComponent},
   {path:"agregarEducacion",component:AEducacionComponent},
-  {path:"lobby/editarEducacion/:id",component:EEducacionComponent}
+  {path:"lobby/editarEducacion/:id",component:EEducacionComponent},
+  {path:"agregarcertJavaScript",component:AJavaScriptComponent},
+  {path:"lobby/editarCertJavaScript/:id",component:EJavaScriptComponent}
 
 ];
 

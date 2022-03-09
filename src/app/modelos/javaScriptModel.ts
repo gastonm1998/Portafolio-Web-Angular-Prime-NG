@@ -4,8 +4,8 @@
 export interface JavaScriptModelI{
 
   id:number,
+  titulo:string,
   fechaInicio:string,
-  direccionBanner:string,
   entidadEmisora:string,
   linkCertificado:string
 
