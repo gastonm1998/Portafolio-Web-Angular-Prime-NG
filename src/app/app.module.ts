@@ -57,6 +57,8 @@ import { EEducacionComponent } from './componentesEdicion/edicionEducacion/e-edu
 import { AEducacionComponent } from './componentesEdicion/edicionEducacion/a-educacion/a-educacion.component';
 import { AJavaScriptComponent } from './componentesEdicion/edicionCertificadoJavaScript/a-java-script/a-java-script.component';
 import { EJavaScriptComponent } from './componentesEdicion/edicionCertificadoJavaScript/e-java-script/e-java-script.component';
+import { EPhytonComponent } from './componentesEdicion/edicionCertificadoPyhton/e-phyton/e-phyton.component';
+import { APhytonComponent } from './componentesEdicion/edicionCertificadoPyhton/a-phyton/a-phyton.component';
 
 
 
@@ -87,7 +89,9 @@ import { EJavaScriptComponent } from './componentesEdicion/edicionCertificadoJav
     EEducacionComponent,
     AEducacionComponent,
     AJavaScriptComponent,
-    EJavaScriptComponent
+    EJavaScriptComponent,
+    EPhytonComponent,
+    APhytonComponent
   ],
   imports: [
     BrowserModule,

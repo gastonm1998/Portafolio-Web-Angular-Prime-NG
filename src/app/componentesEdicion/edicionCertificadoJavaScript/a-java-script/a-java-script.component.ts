@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { JavaScriptModelI } from 'src/app/modelos/javaScriptModel';
+import { JavaScriptModelI } from 'src/app/modelos/javaScriptModel.interface';
 import { CertificadosJavaScriptService } from 'src/app/servicios/api/certificados-java-script.service';
 
 @Component({

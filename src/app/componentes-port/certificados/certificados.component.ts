@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 /*implementacion del backend Soft Skills */
 
 import { CertificadosJavaScriptService } from 'src/app/servicios/api/certificados-java-script.service';
-import { JavaScriptModelI } from 'src/app/modelos/javaScriptModel';
+import { JavaScriptModelI } from 'src/app/modelos/javaScriptModel.interface';
 
 /*------------------------------------------ */
 import {
