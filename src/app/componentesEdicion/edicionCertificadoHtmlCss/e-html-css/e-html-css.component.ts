@@ -22,7 +22,30 @@ export class EHtmlCssComponent implements OnInit {
     public router:Router
   ) {
 
-    this.certificadoHtmlCss.obtenerHtmlCssIndividual(this.linkID).subscribe( respuesta =>{
+    this.linkID = this.activeRoute.snapshot.paramMap.get('id');
+
+
+    this.certificadoHtmlCss.obtenerHtmlCss().subscribe(respuestap =>{
+      console.log(respuestap);
+
+      this.formularioHtmlCss.setValue({
+
+        id: respuestap[this.linkID -1].id,
+        titulo : respuestap[this.linkID -1].titulo,
+        //fechaInicio: respuestap[this.linkID -1].fechaInicio,
+        entidadEmisora: respuestap[this.linkID -1].entidadEmisora,
+        linkCertificado: respuestap[this.linkID -1].linkCertificado,
+
+      });
+
+    })
+
+
+
+
+
+    /*this.certificadoHtmlCss.obtenerHtmlCssIndividual(this.linkID).subscribe( respuesta =>{
+      console.log(respuesta);
 
       this.formularioHtmlCss.setValue({
 
@@ -34,7 +57,10 @@ export class EHtmlCssComponent implements OnInit {
 
       });
 
-    });
+    });*/
+
+
+
 
     this.formularioHtmlCss = this.formulario.group({
 
