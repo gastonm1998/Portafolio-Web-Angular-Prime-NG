@@ -59,6 +59,8 @@ import { AJavaScriptComponent } from './componentesEdicion/edicionCertificadoJav
 import { EJavaScriptComponent } from './componentesEdicion/edicionCertificadoJavaScript/e-java-script/e-java-script.component';
 import { EPhytonComponent } from './componentesEdicion/edicionCertificadoPyhton/e-phyton/e-phyton.component';
 import { APhytonComponent } from './componentesEdicion/edicionCertificadoPyhton/a-phyton/a-phyton.component';
+import { AHtmlCssComponent } from './componentesEdicion/edicionCertificadoHtmlCss/a-html-css/a-html-css.component';
+import { EHtmlCssComponent } from './componentesEdicion/edicionCertificadoHtmlCss/e-html-css/e-html-css.component';
 
 
 
@@ -91,7 +93,9 @@ import { APhytonComponent } from './componentesEdicion/edicionCertificadoPyhton/
     AJavaScriptComponent,
     EJavaScriptComponent,
     EPhytonComponent,
-    APhytonComponent
+    APhytonComponent,
+    AHtmlCssComponent,
+    EHtmlCssComponent
   ],
   imports: [
     BrowserModule,
