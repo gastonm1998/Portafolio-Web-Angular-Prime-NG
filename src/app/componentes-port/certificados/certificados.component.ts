@@ -14,6 +14,11 @@ import { CertificadosPythonService } from 'src/app/servicios/api/certificados-py
 import { PythonModelI } from 'src/app/modelos/pythonModel.interface';
 /*------------------------------------------ */
 
+/*implementacion del backend html css */
+
+import { CertificadosHtmlCssService } from 'src/app/servicios/api/certificados-html-css.service';
+import { HtmlCssModelI } from 'src/app/modelos/htmlCssModel.interface';
+/*------------------------------------------ */
 
 import {
   ConfirmationService,
@@ -33,11 +38,18 @@ export class CertificadosComponent implements OnInit {
 
    /*------------------------------------------ */
 
-   /*implementacion del backend certificacdos javaScript*/
+   /*implementacion del backend certificacdos python*/
 
    elementosCertPython:PythonModelI[];
 
    /*------------------------------------------ */
+
+    /*implementacion del backend certificacdos html css*/
+
+    elementosCertHtmlCss:HtmlCssModelI[];
+
+    /*------------------------------------------ */
+
 
   constructor(
     private router:Router,
@@ -45,7 +57,8 @@ export class CertificadosComponent implements OnInit {
     private messageService: MessageService,
     private primengConfig: PrimeNGConfig,
     private certificadoJavaScript:CertificadosJavaScriptService,//backend certificado javaScript
-    private certificadoPython:CertificadosPythonService//backend certificado python
+    private certificadoPython:CertificadosPythonService,//backend certificado python
+    private certificadoHtmlCss:CertificadosHtmlCssService//backend certificado html css
   ) {
 
    }
@@ -61,14 +74,23 @@ export class CertificadosComponent implements OnInit {
 
       /*------------------------------------------ */
 
-          /*LLamada Get desde el backend certificado JavaScript*/
+      /*LLamada Get desde el backend certificado JavaScript*/
 
-          this.certificadoPython.obtenerPython().subscribe(respuesta =>{
-            this.elementosCertPython = respuesta;
-            console.log(respuesta);
-          });
+      this.certificadoPython.obtenerPython().subscribe(respuesta =>{
+        this.elementosCertPython = respuesta;
+        console.log(respuesta);
+      });
 
-          /*------------------------------------------ */
+      /*------------------------------------------ */
+
+      /*LLamada Get desde el backend certificado Html Css*/
+
+      this.certificadoHtmlCss.obtenerHtmlCss().subscribe(respuesta =>{
+      this.elementosCertHtmlCss = respuesta;
+      console.log(respuesta);
+    });
+
+      /*------------------------------------------ */
   }
 
   /*metodos de eliminacion backend JavaScript */
@@ -106,7 +128,9 @@ export class CertificadosComponent implements OnInit {
       });
     }
 
-    /*metodos de eliminacion backend JavaScript */
+
+
+    /*metodos de eliminacion backend Python */
 
   borrarCertificadoPython(id:any){
 
@@ -126,7 +150,7 @@ export class CertificadosComponent implements OnInit {
             summary: "Experiencia eliminada",
             detail: "Se a eliminado sastifactoriamente"
           });
-          this.borrarCertificadoJavaScript(id);
+          this.borrarCertificadoPython(id);
 
           this.reloadComponent();
 
@@ -142,6 +166,47 @@ export class CertificadosComponent implements OnInit {
     }
 
   /*----------------------------------------- */
+
+
+
+  /*metodos de eliminacion backend html css */
+
+  borrarCertificadoHtmlCss(id:any){
+
+    this.certificadoHtmlCss.eliminarHtmlCss(id).subscribe();
+  }
+  /*componentes del cartel de confirmacion de eliminacion */
+
+
+    confirmDeleteCertificadoHtmlCss(event: Event,id:any) {
+      this.confirmationService.confirm({
+        target: event.target!,
+        message: "¿Estas seguro que desea eliminar?",
+        icon: "pi pi-exclamation-triangle",
+        accept: () => {
+          this.messageService.add({
+            severity: "info",
+            summary: "Experiencia eliminada",
+            detail: "Se a eliminado sastifactoriamente"
+          });
+          this.borrarCertificadoHtmlCss(id);
+
+          this.reloadComponent();
+
+        },
+        reject: () => {
+          this.messageService.add({
+            severity: "error",
+            summary: "Cancelado",
+            detail: "Se a cancelado la eliminacion"
+          });
+        }
+      });
+    }
+
+
+
+
 
   /*metodo recargar pagina */
   reloadComponent() {

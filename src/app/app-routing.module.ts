@@ -3,6 +3,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EBannerPrincipalComponent } from './componentesEdicion/edicionBannerPrincipal/e-banner-principal/e-banner-principal.component';
+import { AHtmlCssComponent } from './componentesEdicion/edicionCertificadoHtmlCss/a-html-css/a-html-css.component';
+import { EHtmlCssComponent } from './componentesEdicion/edicionCertificadoHtmlCss/e-html-css/e-html-css.component';
 import { AJavaScriptComponent } from './componentesEdicion/edicionCertificadoJavaScript/a-java-script/a-java-script.component';
 import { EJavaScriptComponent } from './componentesEdicion/edicionCertificadoJavaScript/e-java-script/e-java-script.component';
 import { APhytonComponent } from './componentesEdicion/edicionCertificadoPyhton/a-phyton/a-phyton.component';
@@ -35,7 +37,9 @@ const routes: Routes = [
   {path:"agregarcertJavaScript",component:AJavaScriptComponent},
   {path:"lobby/editarCertJavaScript/:id",component:EJavaScriptComponent},
   {path:"agregarcertPython",component:APhytonComponent},
-  {path:"lobby/editarCertPython/:id",component:EPhytonComponent}
+  {path:"lobby/editarCertPython/:id",component:EPhytonComponent},
+  {path:"agregarcertHtmlCss",component:AHtmlCssComponent},
+  {path:"lobby/editarCertHtmlCss/:id",component:EHtmlCssComponent}
 
 
 ];

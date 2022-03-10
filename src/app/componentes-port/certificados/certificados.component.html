@@ -612,10 +612,65 @@
           <div class="header-certificados">
 
             <p > <img src="../../../assets/icons/w3_css-icon.svg" alt=""> <img src="../../../assets/icons/w3_html5-icon.svg" alt=""> HTML / CSS</p>
+
+            <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarcertHtmlCss" ></p-button>
           </div>
         </ng-template>
 
         <!--Html css-->
+
+
+        <div class="acordion-body" *ngFor="let certificadoHtmlCss of elementosCertHtmlCss">
+
+
+
+          <p-card  [style]="{width: '250px'}" styleClass="p-card-shadow" class="carta">
+
+
+            <ng-template pTemplate="header">
+                <img alt="Card" src="../../../assets/maxresdefault.jpg">
+            </ng-template>
+
+
+            <div class="cuerpo-carta">
+
+              <img src="../../../assets/icons/graduation-cap-solid.svg" alt="" width="50">
+
+              <br>
+
+              <h5 class="card-title">{{certificadoHtmlCss.titulo}}</h5>
+
+              <p class="card-text">{{certificadoHtmlCss.entidadEmisora}}  </p>
+
+              <p class="card-text">{{certificadoHtmlCss.fechaInicio}}  </p>
+
+              <a href={{certificadoHtmlCss.linkCertificado}} class="card-link  " target="_blank">
+                <button pButton pRipple type="button" label="Ver Credencial" class="p-button-outlined p-button-info"></button>
+              </a>
+
+            </div>
+
+            <ng-template pTemplate="footer">
+
+                <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoHtmlCss($event,certificadoHtmlCss.id)" class="p-button-danger"></button>
+                <br>
+                <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarCertHtmlCss/{{certificadoHtmlCss.id}}"></button>
+
+            </ng-template>
+          </p-card>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--
         <div class="acordion-body">
           <p-card header="" subheader="" [style]="{width: '250px'}" styleClass="p-card-shadow" class="carta">
             <ng-template pTemplate="header">
@@ -714,7 +769,9 @@
 
             </ng-template>
           </p-card>
+        -->
         </div>
+
       </p-accordionTab>
 
       <!-- ----------------------iot-------------------------- -->
