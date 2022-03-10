@@ -61,6 +61,8 @@ import { EPhytonComponent } from './componentesEdicion/edicionCertificadoPyhton/
 import { APhytonComponent } from './componentesEdicion/edicionCertificadoPyhton/a-phyton/a-phyton.component';
 import { AHtmlCssComponent } from './componentesEdicion/edicionCertificadoHtmlCss/a-html-css/a-html-css.component';
 import { EHtmlCssComponent } from './componentesEdicion/edicionCertificadoHtmlCss/e-html-css/e-html-css.component';
+import { AIoTComponent } from './componentesEdicion/edicionCertificadoIoT/a-io-t/a-io-t.component';
+import { EIoTComponent } from './componentesEdicion/edicionCertificadoIoT/e-io-t/e-io-t.component';
 
 
 
@@ -95,7 +97,9 @@ import { EHtmlCssComponent } from './componentesEdicion/edicionCertificadoHtmlCs
     EPhytonComponent,
     APhytonComponent,
     AHtmlCssComponent,
-    EHtmlCssComponent
+    EHtmlCssComponent,
+    AIoTComponent,
+    EIoTComponent
   ],
   imports: [
     BrowserModule,
