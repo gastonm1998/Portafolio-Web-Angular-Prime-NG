@@ -5,7 +5,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { EBannerPrincipalComponent } from './componentesEdicion/edicionBannerPrincipal/e-banner-principal/e-banner-principal.component';
 import { AHtmlCssComponent } from './componentesEdicion/edicionCertificadoHtmlCss/a-html-css/a-html-css.component';
 import { EHtmlCssComponent } from './componentesEdicion/edicionCertificadoHtmlCss/e-html-css/e-html-css.component';
+import { ADataBaseComponent } from './componentesEdicion/edicionCertificadoIoT/a-data-base/a-data-base.component';
 import { AIoTComponent } from './componentesEdicion/edicionCertificadoIoT/a-io-t/a-io-t.component';
+import { EDataBaseComponent } from './componentesEdicion/edicionCertificadoIoT/e-data-base/e-data-base.component';
 import { EIoTComponent } from './componentesEdicion/edicionCertificadoIoT/e-io-t/e-io-t.component';
 import { AJavaScriptComponent } from './componentesEdicion/edicionCertificadoJavaScript/a-java-script/a-java-script.component';
 import { EJavaScriptComponent } from './componentesEdicion/edicionCertificadoJavaScript/e-java-script/e-java-script.component';
@@ -43,7 +45,10 @@ const routes: Routes = [
   {path:"agregarcertHtmlCss",component:AHtmlCssComponent},
   {path:"lobby/editarCertHtmlCss/:id",component:EHtmlCssComponent},
   {path:"agregarCertIoT",component:AIoTComponent},
-  {path:"lobby/editarCertIoT/:id",component:EIoTComponent}
+  {path:"lobby/editarCertIoT/:id",component:EIoTComponent},
+  {path:"agregarCertDataBase",component:ADataBaseComponent},
+  {path:"lobby/editarCertDataBase/:id",component:EDataBaseComponent}
+
 
 
 ];
