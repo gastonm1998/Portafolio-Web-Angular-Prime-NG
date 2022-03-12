@@ -3,6 +3,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EBannerPrincipalComponent } from './componentesEdicion/edicionBannerPrincipal/e-banner-principal/e-banner-principal.component';
+import { AComplementosComponent } from './componentesEdicion/edicionCertificadoComplementos/a-complementos/a-complementos.component';
+import { EComplementosComponent } from './componentesEdicion/edicionCertificadoComplementos/e-complementos/e-complementos.component';
 import { ADataBaseComponent } from './componentesEdicion/edicionCertificadoDataBase/a-data-base/a-data-base.component';
 import { EDataBaseComponent } from './componentesEdicion/edicionCertificadoDataBase/e-data-base/e-data-base.component';
 import { AHtmlCssComponent } from './componentesEdicion/edicionCertificadoHtmlCss/a-html-css/a-html-css.component';
@@ -47,7 +49,9 @@ const routes: Routes = [
   {path:"agregarCertIoT",component:AIoTComponent},
   {path:"lobby/editarCertIoT/:id",component:EIoTComponent},
   {path:"agregarCertDataBase",component:ADataBaseComponent},
-  {path:"lobby/editarCertDataBase/:id",component:EDataBaseComponent}
+  {path:"lobby/editarCertDataBase/:id",component:EDataBaseComponent},
+  {path:"agregarCertComplementos",component:AComplementosComponent},
+  {path:"lobby/editarCertComplementos/:id",component:EComplementosComponent}
 
 
 

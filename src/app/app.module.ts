@@ -65,6 +65,8 @@ import { AIoTComponent } from './componentesEdicion/edicionCertificadoIoT/a-io-t
 import { EIoTComponent } from './componentesEdicion/edicionCertificadoIoT/e-io-t/e-io-t.component';
 import { EDataBaseComponent } from './componentesEdicion/edicionCertificadoDataBase/e-data-base/e-data-base.component';
 import { ADataBaseComponent } from './componentesEdicion/edicionCertificadoDataBase/a-data-base/a-data-base.component';
+import { AComplementosComponent } from './componentesEdicion/edicionCertificadoComplementos/a-complementos/a-complementos.component';
+import { EComplementosComponent } from './componentesEdicion/edicionCertificadoComplementos/e-complementos/e-complementos.component';
 
 
 
@@ -105,6 +107,8 @@ import { ADataBaseComponent } from './componentesEdicion/edicionCertificadoDataB
     EIoTComponent,
     EDataBaseComponent,
     ADataBaseComponent,
+    AComplementosComponent,
+    EComplementosComponent,
 
   ],
   imports: [
