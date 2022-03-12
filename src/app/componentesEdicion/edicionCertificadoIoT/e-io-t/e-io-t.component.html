@@ -1,1 +1,79 @@
-<p>e-io-t works!</p>
+
+<div class="titulo">
+
+  <i class="pi pi-chevron-right" style="font-size: 2rem"></i>
+  <h1 class=" titulo2">   Edicion Html Css</h1>
+
+</div>
+
+<form (ngSubmit)="enviarDatos()" [formGroup]="formularioIot" >
+
+
+  <div class="p-fluid grid">
+    <div class="field col-12 md:col-4">
+
+        <span class="p-float-label">
+              <input type="text" id="inputtext" pInputText   formControlName="titulo">
+              <label for="inputtext" >Titulo del Certificado:</label>
+        </span>
+
+    </div>
+  </div>
+
+
+
+
+  <div class="p-fluid grid">
+    <div class="field col-12 md:col-4">
+
+        <span class="p-float-label">
+              <input type="text" id="inputtext" pInputText   formControlName="entidadEmisora">
+              <label for="inputtext" >Entidad Emisora:</label>
+        </span>
+
+    </div>
+  </div>
+
+
+
+
+
+  <div class="p-fluid grid">
+    <div class="field col-12 md:col-4">
+
+        <span class="p-float-label">
+              <input type="text" id="inputtext" pInputText   formControlName="linkCertificado">
+              <label for="inputtext" >Link del certificado:</label>
+        </span>
+
+    </div>
+  </div>
+
+
+<!--
+
+  <div class="p-fluid grid">
+    <div class="field col-12 md:col-4">
+
+      <span class="p-float-label">
+
+        <p-calendar  dateFormat="yy/mm/dd" inputId="dateformat" formControlName="fechaInicio" ></p-calendar>
+        <label for="calendar">Fecha de Finalizacion:</label>
+
+      </span>
+
+    </div>
+
+  </div>
+
+-->
+
+
+  <div class="botones">
+    <p-button label="Agregar" icon=" pi pi-check" styleClass="p-button-info" type="submit"></p-button>
+
+    <p-button label="Cancelar" icon="pi pi-times" styleClass="p-button-danger" (onClick)="volverAlInicio()" ></p-button>
+  </div>
+
+</form>
+
