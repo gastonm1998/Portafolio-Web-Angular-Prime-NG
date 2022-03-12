@@ -1175,10 +1175,58 @@
       <div class="header-certificados">
 
         <p > <img src="../../../assets/icons/github-icon-1.svg" alt=""> Complementos</p>
+        <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarCertComplementos" ></p-button>
       </div>
     </ng-template>
     <!--complemento-->
-    <div class="acordion-body">
+    <div class="acordion-body" *ngFor="let certificadoComplemento of elementosCertComplementos">
+
+      <p-card  [style]="{width: '250px'}" styleClass="p-card-shadow" class="carta">
+
+
+        <ng-template pTemplate="header">
+            <img alt="Card" src="../../../assets/Premium Vector _ Software development, programming language, coding.jpg">
+
+        </ng-template>
+
+
+        <div class="cuerpo-carta">
+
+          <img src="../../../assets/icons/graduation-cap-solid.svg" alt="" width="50">
+
+          <br>
+
+          <h5 class="card-title">{{certificadoComplemento.titulo}}</h5>
+
+          <p class="card-text">{{certificadoComplemento.entidadEmisora}}  </p>
+
+          <p class="card-text">{{certificadoComplemento.fechaInicio}}  </p>
+
+          <a href={{certificadoComplemento.linkCertificado}} class="card-link  " target="_blank">
+            <button pButton pRipple type="button" label="Ver Credencial" class="p-button-outlined p-button-info"></button>
+          </a>
+
+        </div>
+
+        <ng-template pTemplate="footer">
+
+            <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoComplementos($event,certificadoComplemento.id)" class="p-button-danger"></button>
+            <br>
+            <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarCertComplementos/{{certificadoComplemento.id}}"></button>
+
+        </ng-template>
+      </p-card>
+
+
+
+
+
+
+
+
+
+
+      <!--
       <p-card header="" subheader="" [style]="{width: '250px'}" styleClass="p-card-shadow" class="carta">
         <ng-template pTemplate="header">
             <img alt="Card" src="../../../assets/Premium Vector _ Software development, programming language, coding.jpg">
@@ -1329,6 +1377,7 @@
 
         </ng-template>
       </p-card>
+    -->
     </div>
   </p-accordionTab>
 
@@ -1338,8 +1387,8 @@
 
 
 
-  </p-accordion>
 
 
-</div>
+
+
 

@@ -33,6 +33,12 @@ import { DataBaseModelI } from 'src/app/modelos/dateBaseModel.interface';
 
 /*------------------------------------------ */
 
+/*implementacion del backend complementos */
+
+import { CertificadosComplementariosService } from 'src/app/servicios/api/certificados-complementarios.service';
+import { ComplementosModelI } from 'src/app/modelos/complementosModel.interface';
+/*------------------------------------------ */
+
 import {
   ConfirmationService,
   MessageService,
@@ -75,6 +81,12 @@ export class CertificadosComponent implements OnInit {
 
     /*------------------------------------------ */
 
+    /*implementacion del backend certificacdos iot*/
+
+    elementosCertComplementos:ComplementosModelI[];
+
+    /*------------------------------------------ */
+
 
   constructor(
     private router:Router,
@@ -85,7 +97,8 @@ export class CertificadosComponent implements OnInit {
     private certificadoPython:CertificadosPythonService,//backend certificado python
     private certificadoHtmlCss:CertificadosHtmlCssService,//backend certificado html css
     private certificadoIot:CertificadosIoTService,//backend certificado iot
-    private certificadoDataBase:CertificadosDataBaseService //backend certificado data base
+    private certificadoDataBase:CertificadosDataBaseService, //backend certificado data base
+    private certificadoComplementos:CertificadosComplementariosService//backend certificado complementos
   ) {
 
    }
@@ -128,7 +141,7 @@ export class CertificadosComponent implements OnInit {
 
       /*------------------------------------------ */
 
-      /*LLamada Get desde el backend certificado iot*/
+      /*LLamada Get desde el backend certificado data base*/
 
       this.certificadoDataBase.obtenerDataBase().subscribe(respuesta =>{
       this.elementosCertDataBase = respuesta;
@@ -136,6 +149,16 @@ export class CertificadosComponent implements OnInit {
       });
 
       /*------------------------------------------ */
+
+      /*LLamada Get desde el backend certificado complementos*/
+
+      this.certificadoComplementos.obtenerComplementos().subscribe(respuesta =>{
+      this.elementosCertComplementos = respuesta;
+      console.log(respuesta);
+      });
+
+      /*------------------------------------------ */
+
   }
 
   /*metodos de eliminacion backend JavaScript */
@@ -289,42 +312,80 @@ export class CertificadosComponent implements OnInit {
   /*----------------------------------------- */
 
 
-      /*metodos de eliminacion backend iot */
+  /*metodos de eliminacion backend data base */
 
-      borrarCertificadoDataBase(id:any){
+  borrarCertificadoDataBase(id:any){
 
-        this.certificadoDataBase.eliminarDataBase(id).subscribe();
-      }
-      /*componentes del cartel de confirmacion de eliminacion */
+    this.certificadoDataBase.eliminarDataBase(id).subscribe();
+  }
+  /*componentes del cartel de confirmacion de eliminacion */
 
 
-        confirmDeleteCertificadoDataBase(event: Event,id:any) {
-          this.confirmationService.confirm({
-            target: event.target!,
-            message: "¿Estas seguro que desea eliminar?",
-            icon: "pi pi-exclamation-triangle",
-            accept: () => {
-              this.messageService.add({
-                severity: "info",
-                summary: "Experiencia eliminada",
-                detail: "Se a eliminado sastifactoriamente"
-              });
-              this.borrarCertificadoDataBase(id);
+    confirmDeleteCertificadoDataBase(event: Event,id:any) {
+      this.confirmationService.confirm({
+        target: event.target!,
+        message: "¿Estas seguro que desea eliminar?",
+        icon: "pi pi-exclamation-triangle",
+        accept: () => {
+          this.messageService.add({
+            severity: "info",
+            summary: "Experiencia eliminada",
+            detail: "Se a eliminado sastifactoriamente"
+          });
+          this.borrarCertificadoDataBase(id);
 
-              this.reloadComponent();
+          this.reloadComponent();
 
-            },
-            reject: () => {
-              this.messageService.add({
-                severity: "error",
-                summary: "Cancelado",
-                detail: "Se a cancelado la eliminacion"
-              });
-            }
+        },
+        reject: () => {
+          this.messageService.add({
+            severity: "error",
+            summary: "Cancelado",
+            detail: "Se a cancelado la eliminacion"
           });
         }
+      });
+    }
 
-      /*----------------------------------------- */
+  /*----------------------------------------- */
+
+
+  /*metodos de eliminacion backend complementos */
+
+  borrarCertificadoComplementos(id:any){
+
+    this.certificadoComplementos.eliminarComplementos(id).subscribe();
+  }
+  /*componentes del cartel de confirmacion de eliminacion */
+
+
+    confirmDeleteCertificadoComplementos(event: Event,id:any) {
+      this.confirmationService.confirm({
+        target: event.target!,
+        message: "¿Estas seguro que desea eliminar?",
+        icon: "pi pi-exclamation-triangle",
+        accept: () => {
+          this.messageService.add({
+            severity: "info",
+            summary: "Experiencia eliminada",
+            detail: "Se a eliminado sastifactoriamente"
+          });
+          this.borrarCertificadoComplementos(id);
+
+          this.reloadComponent();
+
+        },
+        reject: () => {
+          this.messageService.add({
+            severity: "error",
+            summary: "Cancelado",
+            detail: "Se a cancelado la eliminacion"
+          });
+        }
+      });
+    }
+
+  /*----------------------------------------- */
 
 
 
