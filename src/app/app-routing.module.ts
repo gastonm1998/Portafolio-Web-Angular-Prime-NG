@@ -51,7 +51,8 @@ const routes: Routes = [
   {path:"agregarCertDataBase",component:ADataBaseComponent},
   {path:"lobby/editarCertDataBase/:id",component:EDataBaseComponent},
   {path:"agregarCertComplementos",component:AComplementosComponent},
-  {path:"lobby/editarCertComplementos/:id",component:EComplementosComponent}
+  {path:"lobby/editarCertComplementos/:id",component:EComplementosComponent},
+  {path:"lobby/editarInformacionContacto/:id",component:EComplementosComponent}
 
 
 

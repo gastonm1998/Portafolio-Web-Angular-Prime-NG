@@ -67,6 +67,7 @@ import { EDataBaseComponent } from './componentesEdicion/edicionCertificadoDataB
 import { ADataBaseComponent } from './componentesEdicion/edicionCertificadoDataBase/a-data-base/a-data-base.component';
 import { AComplementosComponent } from './componentesEdicion/edicionCertificadoComplementos/a-complementos/a-complementos.component';
 import { EComplementosComponent } from './componentesEdicion/edicionCertificadoComplementos/e-complementos/e-complementos.component';
+import { EInformacionComponent } from './componentesEdicion/edicionInformacionContacto/e-informacion/e-informacion.component';
 
 
 
@@ -109,6 +110,7 @@ import { EComplementosComponent } from './componentesEdicion/edicionCertificadoC
     ADataBaseComponent,
     AComplementosComponent,
     EComplementosComponent,
+    EInformacionComponent,
 
   ],
   imports: [
