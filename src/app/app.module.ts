@@ -63,8 +63,9 @@ import { AHtmlCssComponent } from './componentesEdicion/edicionCertificadoHtmlCs
 import { EHtmlCssComponent } from './componentesEdicion/edicionCertificadoHtmlCss/e-html-css/e-html-css.component';
 import { AIoTComponent } from './componentesEdicion/edicionCertificadoIoT/a-io-t/a-io-t.component';
 import { EIoTComponent } from './componentesEdicion/edicionCertificadoIoT/e-io-t/e-io-t.component';
-import { ADataBaseComponent } from './componentesEdicion/edicionCertificadoIoT/a-data-base/a-data-base.component';
-import { EDataBaseComponent } from './componentesEdicion/edicionCertificadoIoT/e-data-base/e-data-base.component';
+import { EDataBaseComponent } from './componentesEdicion/edicionCertificadoDataBase/e-data-base/e-data-base.component';
+import { ADataBaseComponent } from './componentesEdicion/edicionCertificadoDataBase/a-data-base/a-data-base.component';
+
 
 
 
@@ -102,8 +103,9 @@ import { EDataBaseComponent } from './componentesEdicion/edicionCertificadoIoT/e
     EHtmlCssComponent,
     AIoTComponent,
     EIoTComponent,
+    EDataBaseComponent,
     ADataBaseComponent,
-    EDataBaseComponent
+
   ],
   imports: [
     BrowserModule,

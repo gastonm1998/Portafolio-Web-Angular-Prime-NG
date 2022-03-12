@@ -1,12 +1,11 @@
-
 <div class="titulo">
 
   <i class="pi pi-chevron-right" style="font-size: 2rem"></i>
-  <h1 class=" titulo2">   Edicion IoT</h1>
+  <h1 class=" titulo2">   Agregar Certificado Data Base</h1>
 
 </div>
 
-<form (ngSubmit)="enviarDatos()" [formGroup]="formularioIot" >
+<form (ngSubmit)="enviarDatos()" [formGroup]="formularioCertificadoDataBase" >
 
 
   <div class="p-fluid grid">
@@ -50,24 +49,21 @@
   </div>
 
 
-<!--
 
+<!--
   <div class="p-fluid grid">
     <div class="field col-12 md:col-4">
 
       <span class="p-float-label">
 
-        <p-calendar  dateFormat="yy/mm/dd" inputId="dateformat" formControlName="fechaInicio" ></p-calendar>
+        <p-calendar  dateFormat="yy/mm/dd" inputId="dateformat" formControlName="fechaInicio"></p-calendar>
         <label for="calendar">Fecha de Finalizacion:</label>
 
       </span>
 
     </div>
-
   </div>
-
 -->
-
 
   <div class="botones">
     <p-button label="Agregar" icon=" pi pi-check" styleClass="p-button-info" type="submit"></p-button>
@@ -76,4 +72,7 @@
   </div>
 
 </form>
+
+
+
 

@@ -26,7 +26,12 @@ import { CertificadosIoTService } from 'src/app/servicios/api/certificados-io-t.
 import { IoTModelI } from 'src/app/modelos/IotModel.Interface';
 /*------------------------------------------ */
 
+/*implementacion del backend data base */
 
+import { CertificadosDataBaseService } from 'src/app/servicios/api/certificados-data-base.service';
+import { DataBaseModelI } from 'src/app/modelos/dateBaseModel.interface';
+
+/*------------------------------------------ */
 
 import {
   ConfirmationService,
@@ -64,6 +69,12 @@ export class CertificadosComponent implements OnInit {
 
     /*------------------------------------------ */
 
+    /*implementacion del backend certificacdos iot*/
+
+    elementosCertDataBase:IoTModelI[];
+
+    /*------------------------------------------ */
+
 
   constructor(
     private router:Router,
@@ -73,7 +84,8 @@ export class CertificadosComponent implements OnInit {
     private certificadoJavaScript:CertificadosJavaScriptService,//backend certificado javaScript
     private certificadoPython:CertificadosPythonService,//backend certificado python
     private certificadoHtmlCss:CertificadosHtmlCssService,//backend certificado html css
-    private certificadoIot:CertificadosIoTService//backend certificado iot
+    private certificadoIot:CertificadosIoTService,//backend certificado iot
+    private certificadoDataBase:CertificadosDataBaseService //backend certificado data base
   ) {
 
    }
@@ -112,6 +124,15 @@ export class CertificadosComponent implements OnInit {
       this.certificadoIot.obtenerIot().subscribe(respuesta =>{
         this.elementosCertIot = respuesta;
         console.log(respuesta);
+      });
+
+      /*------------------------------------------ */
+
+      /*LLamada Get desde el backend certificado iot*/
+
+      this.certificadoDataBase.obtenerDataBase().subscribe(respuesta =>{
+      this.elementosCertDataBase = respuesta;
+      console.log(respuesta);
       });
 
       /*------------------------------------------ */
@@ -266,6 +287,44 @@ export class CertificadosComponent implements OnInit {
     }
 
   /*----------------------------------------- */
+
+
+      /*metodos de eliminacion backend iot */
+
+      borrarCertificadoDataBase(id:any){
+
+        this.certificadoDataBase.eliminarDataBase(id).subscribe();
+      }
+      /*componentes del cartel de confirmacion de eliminacion */
+
+
+        confirmDeleteCertificadoDataBase(event: Event,id:any) {
+          this.confirmationService.confirm({
+            target: event.target!,
+            message: "¿Estas seguro que desea eliminar?",
+            icon: "pi pi-exclamation-triangle",
+            accept: () => {
+              this.messageService.add({
+                severity: "info",
+                summary: "Experiencia eliminada",
+                detail: "Se a eliminado sastifactoriamente"
+              });
+              this.borrarCertificadoDataBase(id);
+
+              this.reloadComponent();
+
+            },
+            reject: () => {
+              this.messageService.add({
+                severity: "error",
+                summary: "Cancelado",
+                detail: "Se a cancelado la eliminacion"
+              });
+            }
+          });
+        }
+
+      /*----------------------------------------- */
 
 
 
