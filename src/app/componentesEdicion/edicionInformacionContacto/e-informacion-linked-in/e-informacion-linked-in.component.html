@@ -1,1 +1,30 @@
-<p>e-informacion-linked-in works!</p>
+<div class="titulo">
+
+  <i class="pi pi-chevron-right" style="font-size: 2rem"></i>
+  <h1 class=" titulo2">   Edicion E-mail</h1>
+
+</div>
+
+<form (ngSubmit)="enviarDatos()" [formGroup]="formularioLinkedIn" >
+
+
+  <div class="p-fluid grid">
+    <div class="field col-12 md:col-4">
+
+        <span class="p-float-label">
+              <input type="text" id="inputtext" pInputText   formControlName="contenido">
+              <label for="inputtext" >Link LinkedIn:</label>
+        </span>
+
+    </div>
+  </div>
+
+
+  <div class="botones">
+    <p-button label="Agregar" icon=" pi pi-check" styleClass="p-button-info" type="submit"></p-button>
+
+    <p-button label="Cancelar" icon="pi pi-times" styleClass="p-button-danger" (onClick)="volverAlInicio()" ></p-button>
+  </div>
+
+</form>
+

@@ -56,7 +56,7 @@ export class EInformacionEmailComponent implements OnInit {
     let currentUrl = this.router.url;
         this.router.routeReuseStrategy.shouldReuseRoute = () => false;
         this.router.onSameUrlNavigation = 'reload';
-        this.router.navigateByUrl('lobby#hard-skills');
+        this.router.navigateByUrl('lobby#contacto');
   }
 
   enviarDatos():any{
@@ -65,7 +65,7 @@ export class EInformacionEmailComponent implements OnInit {
   }
 
   volverAlInicio(){
-    this.router.navigateByUrl("/lobby#hard-skills");
+    this.router.navigateByUrl("/lobby#contacto");
   }
 
 }
