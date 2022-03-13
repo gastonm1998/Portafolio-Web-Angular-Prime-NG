@@ -19,6 +19,10 @@ import { AEducacionComponent } from './componentesEdicion/edicionEducacion/a-edu
 import { EEducacionComponent } from './componentesEdicion/edicionEducacion/e-educacion/e-educacion.component';
 import {AExperienciaComponent} from './componentesEdicion/edicionExperiencia/a-experiencia/a-experiencia.component';
 import { EExperienciaComponent } from './componentesEdicion/edicionExperiencia/e-experiencia/e-experiencia.component';
+import { EInformacionDireccionComponent } from './componentesEdicion/edicionInformacionContacto/e-informacion-direccion/e-informacion-direccion.component';
+import { EInformacionEmailComponent } from './componentesEdicion/edicionInformacionContacto/e-informacion-email/e-informacion-email.component';
+import { EInformacionLinkedInComponent } from './componentesEdicion/edicionInformacionContacto/e-informacion-linked-in/e-informacion-linked-in.component';
+import { EInformacionTelefonoComponent } from './componentesEdicion/edicionInformacionContacto/e-informacion-telefono/e-informacion-telefono.component';
 import { ALenguajesComponent } from './componentesEdicion/edicionLenguajes/a-lenguajes/a-lenguajes.component';
 import { ELenguajesComponent } from './componentesEdicion/edicionLenguajes/e-lenguajes/e-lenguajes.component';
 import { ASoftSkillComponent } from './componentesEdicion/edicionSoftSkills/a-soft-skill/a-soft-skill.component';
@@ -52,7 +56,10 @@ const routes: Routes = [
   {path:"lobby/editarCertDataBase/:id",component:EDataBaseComponent},
   {path:"agregarCertComplementos",component:AComplementosComponent},
   {path:"lobby/editarCertComplementos/:id",component:EComplementosComponent},
-  {path:"lobby/editarInformacionContacto/:id",component:EComplementosComponent}
+  {path:"lobby/editarInformacionDireccion/:id",component:EInformacionDireccionComponent},
+  {path:"lobby/editarInformacionEmail/:id",component:EInformacionEmailComponent},
+  {path:"lobby/editarInformacionLinkedin/:id",component:EInformacionLinkedInComponent},
+  {path:"lobby/editarInformacionTelefono/:id",component:EInformacionTelefonoComponent}
 
 
 

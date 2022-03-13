@@ -68,6 +68,10 @@ import { ADataBaseComponent } from './componentesEdicion/edicionCertificadoDataB
 import { AComplementosComponent } from './componentesEdicion/edicionCertificadoComplementos/a-complementos/a-complementos.component';
 import { EComplementosComponent } from './componentesEdicion/edicionCertificadoComplementos/e-complementos/e-complementos.component';
 import { EInformacionComponent } from './componentesEdicion/edicionInformacionContacto/e-informacion/e-informacion.component';
+import { EInformacionEmailComponent } from './componentesEdicion/edicionInformacionContacto/e-informacion-email/e-informacion-email.component';
+import { EInformacionTelefonoComponent } from './componentesEdicion/edicionInformacionContacto/e-informacion-telefono/e-informacion-telefono.component';
+import { EInformacionDireccionComponent } from './componentesEdicion/edicionInformacionContacto/e-informacion-direccion/e-informacion-direccion.component';
+import { EInformacionLinkedInComponent } from './componentesEdicion/edicionInformacionContacto/e-informacion-linked-in/e-informacion-linked-in.component';
 
 
 
@@ -111,6 +115,10 @@ import { EInformacionComponent } from './componentesEdicion/edicionInformacionCo
     AComplementosComponent,
     EComplementosComponent,
     EInformacionComponent,
+    EInformacionEmailComponent,
+    EInformacionTelefonoComponent,
+    EInformacionDireccionComponent,
+    EInformacionLinkedInComponent,
 
   ],
   imports: [

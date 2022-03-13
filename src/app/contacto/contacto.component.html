@@ -12,31 +12,35 @@
   <!--e-mail-->
   <div class="item-1">
 
-    <i class="pi pi-envelope icono shadow " style="font-size: 2rem"></i>
-    <p>gastonmonasterio1998@gmail.com</p>
+    <i class="pi pi-{{elementosInformacionContacto[0].icono}} icono shadow " style="font-size: 2rem"></i>
+    <p>{{elementosInformacionContacto[0].contenido}}</p>
+    <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarInformacionEmail/1"></button>
 
   </div>
   <!--Celular-->
   <div class="item-1">
 
-    <i class="pi pi-mobile icono shadow" style="font-size: 2rem"></i>
-    <p>+54 3886 599877</p>
+    <i class="pi pi-{{elementosInformacionContacto[1].icono}} icono shadow" style="font-size: 2rem"></i>
+    <p>{{elementosInformacionContacto[1].contenido}}</p>
+    <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarInformacionTelefono/2"></button>
 
   </div>
   <!--Direccion-->
   <div class="item-1">
 
-    <i class="pi pi-map-marker icono shadow" style="font-size: 2rem"></i>
-    <p>Argentina Salta capital <br> Amancay 155 Villa las Rosas</p>
+    <i class="pi pi-{{elementosInformacionContacto[2].icono}} icono shadow" style="font-size: 2rem"></i>
+    <p>{{elementosInformacionContacto[2].contenido}}</p>
+    <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarInformacionDireccion/3"></button>
 
   </div>
   <!--Linkedin-->
   <div class="item-1">
 
-    <i class="pi pi-linkedin icono shadow " style="font-size: 2rem"></i>
-    <a href="https://www.linkedin.com/in/gast%C3%B3n-gabriel-monasterio-3b3612198/" role="button" target="_blank" style="text-decoration:none">
-      <p>https://www.linkedin.com/in/gast%C3%B3n-gabriel-monasterio-3b3612198/</p>
+    <i class="pi pi-{{elementosInformacionContacto[3].icono}} icono shadow " style="font-size: 2rem"></i>
+    <a href="{{elementosInformacionContacto[3].contenido}}" role="button" target="_blank" style="text-decoration:none">
+      <p>Gaston Monasterio</p>
     </a>
+    <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarInformacionLinkedin/4"></button>
 
   </div>
 
