@@ -72,6 +72,7 @@ import { EInformacionEmailComponent } from './componentesEdicion/edicionInformac
 import { EInformacionTelefonoComponent } from './componentesEdicion/edicionInformacionContacto/e-informacion-telefono/e-informacion-telefono.component';
 import { EInformacionDireccionComponent } from './componentesEdicion/edicionInformacionContacto/e-informacion-direccion/e-informacion-direccion.component';
 import { EInformacionLinkedInComponent } from './componentesEdicion/edicionInformacionContacto/e-informacion-linked-in/e-informacion-linked-in.component';
+import { LoginComponent } from './componenteLogin/login/login.component';
 
 
 
@@ -119,6 +120,7 @@ import { EInformacionLinkedInComponent } from './componentesEdicion/edicionInfor
     EInformacionTelefonoComponent,
     EInformacionDireccionComponent,
     EInformacionLinkedInComponent,
+    LoginComponent,
 
   ],
   imports: [

@@ -2,6 +2,7 @@
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './componenteLogin/login/login.component';
 import { EBannerPrincipalComponent } from './componentesEdicion/edicionBannerPrincipal/e-banner-principal/e-banner-principal.component';
 import { AComplementosComponent } from './componentesEdicion/edicionCertificadoComplementos/a-complementos/a-complementos.component';
 import { EComplementosComponent } from './componentesEdicion/edicionCertificadoComplementos/e-complementos/e-complementos.component';
@@ -59,7 +60,8 @@ const routes: Routes = [
   {path:"lobby/editarInformacionDireccion/:id",component:EInformacionDireccionComponent},
   {path:"lobby/editarInformacionEmail/:id",component:EInformacionEmailComponent},
   {path:"lobby/editarInformacionLinkedin/:id",component:EInformacionLinkedInComponent},
-  {path:"lobby/editarInformacionTelefono/:id",component:EInformacionTelefonoComponent}
+  {path:"lobby/editarInformacionTelefono/:id",component:EInformacionTelefonoComponent},
+  {path:"login",component:LoginComponent}
 
 
 
