@@ -8,6 +8,9 @@ import { InformacionContactoService } from '../servicios/api/informacion-contact
 import { InformacionContactoModelI } from '../modelos/informacionContactoModel.interface';
 
 /*------------------------------------------ */
+/*---------------control del loggin----------- */
+import { TokenService } from 'src/app/jwt/service/token.service';
+/*-------------------- ------------------------*/
 
 @Component({
   selector: 'app-contacto',
@@ -22,9 +25,12 @@ export class ContactoComponent implements OnInit {
 
   /*------------------------------------------ */
 
+  isLogged= false;//control de loggin
+
   constructor(
 
-    private informacionDeContacto:InformacionContactoService
+    private informacionDeContacto:InformacionContactoService,
+    private tokenService:TokenService//control del loggin
 
   ) { }
 
@@ -34,6 +40,16 @@ export class ContactoComponent implements OnInit {
       this.elementosInformacionContacto = respuesta;
       console.log(respuesta);
     });
+
+        /*bloqueo de botones por token*/
+
+
+        if (this.tokenService.getToken()){
+          this.isLogged = true;
+        }else{
+          this.isLogged = false;
+        }
+        /*------------------------------------ */
   }
 
 }

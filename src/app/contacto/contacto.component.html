@@ -14,7 +14,7 @@
 
     <i class="pi pi-{{elementosInformacionContacto[0].icono}} icono shadow " style="font-size: 2rem"></i>
     <p>{{elementosInformacionContacto[0].contenido}}</p>
-    <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarInformacionEmail/1"></button>
+    <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarInformacionEmail/1" *ngIf="isLogged"></button>
 
   </div>
   <!--Celular-->
@@ -22,7 +22,7 @@
 
     <i class="pi pi-{{elementosInformacionContacto[1].icono}} icono shadow" style="font-size: 2rem"></i>
     <p>{{elementosInformacionContacto[1].contenido}}</p>
-    <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarInformacionTelefono/2"></button>
+    <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarInformacionTelefono/2" *ngIf="isLogged"></button>
 
   </div>
   <!--Direccion-->
@@ -30,7 +30,7 @@
 
     <i class="pi pi-{{elementosInformacionContacto[2].icono}} icono shadow" style="font-size: 2rem"></i>
     <p>{{elementosInformacionContacto[2].contenido}}</p>
-    <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarInformacionDireccion/3"></button>
+    <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarInformacionDireccion/3" *ngIf="isLogged"></button>
 
   </div>
   <!--Linkedin-->
@@ -40,7 +40,7 @@
     <a href="{{elementosInformacionContacto[3].contenido}}" role="button" target="_blank" style="text-decoration:none">
       <p>Gaston Monasterio</p>
     </a>
-    <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarInformacionLinkedin/4"></button>
+    <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarInformacionLinkedin/4" *ngIf="isLogged"></button>
 
   </div>
 
