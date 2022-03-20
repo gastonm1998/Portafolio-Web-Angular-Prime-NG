@@ -13,7 +13,8 @@
           <div class="header-certificados">
 
             <p > <img src="../../../assets/icons/logo-javascript.svg" alt=""> JavaScript</p>
-            <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarcertJavaScript" ></p-button>
+            <!--boton agregar-->
+            <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarcertJavaScript" *ngIf="isLogged"></p-button>
 
           </div>
 
@@ -47,16 +48,17 @@
               <p class="card-text">{{certificadoJavaScript.fechaInicio}}  </p>
 
               <a href={{certificadoJavaScript.linkCertificado}} class="card-link  " target="_blank">
-                <button pButton pRipple type="button" label="Ver Credencial" class="p-button-outlined p-button-info"></button>
+                <!--boton agregar-->
+                <button pButton pRipple type="button" label="Ver Credencial" class="p-button-outlined p-button-info" ></button>
               </a>
 
             </div>
-
+            <!--boton eliminar editar-->
             <ng-template pTemplate="footer">
 
-                <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoJavaScript($event,certificadoJavaScript.id)" class="p-button-danger"></button>
+                <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoJavaScript($event,certificadoJavaScript.id)" class="p-button-danger" *ngIf="isLogged"></button>
                 <br>
-                <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarCertJavaScript/{{certificadoJavaScript.id}}"></button>
+                <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarCertJavaScript/{{certificadoJavaScript.id}}" *ngIf="isLogged"></button>
 
             </ng-template>
           </p-card>
@@ -343,7 +345,8 @@
           <div class="header-certificados">
 
             <p > <img src="../../../assets/icons/python-icon.svg" alt=""> Python</p>
-            <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarcertPython" ></p-button>
+            <!--boton agregar-->
+            <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarcertPython" *ngIf="isLogged"></p-button>
           </div>
 
 
@@ -382,8 +385,8 @@
               </a>
 
             </div>
-
-            <ng-template pTemplate="footer">
+            <!--boton eliminar editar-->
+            <ng-template pTemplate="footer" *ngIf="isLogged">
 
                 <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoPython($event,certificadoPython.id)" class="p-button-danger"></button>
                 <br>
@@ -612,8 +615,8 @@
           <div class="header-certificados">
 
             <p > <img src="../../../assets/icons/w3_css-icon.svg" alt=""> <img src="../../../assets/icons/w3_html5-icon.svg" alt=""> HTML / CSS</p>
-
-            <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarcertHtmlCss" ></p-button>
+            <!--boton agregar-->
+            <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarcertHtmlCss" *ngIf="isLogged"></p-button>
           </div>
         </ng-template>
 
@@ -649,8 +652,8 @@
               </a>
 
             </div>
-
-            <ng-template pTemplate="footer">
+            <!--boton eliminar editar-->
+            <ng-template pTemplate="footer"*ngIf="isLogged">
 
                 <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoHtmlCss($event,certificadoHtmlCss.id)" class="p-button-danger"></button>
                 <br>
@@ -780,7 +783,8 @@
           <div class="header-certificados">
 
             <p > <img src="../../../assets/icons/wifi.svg" alt=""> IoT</p>
-            <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarCertIoT" ></p-button>
+            <!--boton agregar-->
+            <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarCertIoT" *ngIf="isLogged" ></p-button>
           </div>
         </ng-template>
         <!--Iot-->
@@ -814,10 +818,10 @@
               </a>
 
             </div>
+            <!--boton editar eliminar-->
+            <ng-template pTemplate="footer" *ngIf="isLogged">
 
-            <ng-template pTemplate="footer">
-
-                <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoIot($event,certificadoIot.id)" class="p-button-danger"></button>
+                <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoIot($event,certificadoIot.id)" class="p-button-danger" ></button>
                 <br>
                 <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarCertIoT/{{certificadoIot.id}}"></button>
 
@@ -1054,7 +1058,8 @@
         <div class="header-certificados">
 
           <p > <img src="../../../assets/icons/mysql-ar21.svg" alt="" width="50px" > Data Base</p>
-          <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarCertDataBase" ></p-button>
+          <!--boton agregar-->
+          <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarCertDataBase" *ngIf="isLogged"></p-button>
         </div>
       </ng-template>
 
@@ -1088,8 +1093,8 @@
             </a>
 
           </div>
-
-          <ng-template pTemplate="footer">
+          <!--boton editar eliminar-->
+          <ng-template pTemplate="footer" *ngIf="isLogged">
 
               <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoDataBase($event,certificadoDataBase.id)" class="p-button-danger"></button>
               <br>
@@ -1175,7 +1180,8 @@
       <div class="header-certificados">
 
         <p > <img src="../../../assets/icons/github-icon-1.svg" alt=""> Complementos</p>
-        <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarCertComplementos" ></p-button>
+        <!--boton agregar-->
+        <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarCertComplementos" *ngIf="isLogged"></p-button>
       </div>
     </ng-template>
     <!--complemento-->
@@ -1207,8 +1213,8 @@
           </a>
 
         </div>
-
-        <ng-template pTemplate="footer">
+        <!--boton editar eliminar-->
+        <ng-template pTemplate="footer" *ngIf="isLogged">
 
             <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoComplementos($event,certificadoComplemento.id)" class="p-button-danger"></button>
             <br>

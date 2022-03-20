@@ -17,7 +17,10 @@ export class AuthService {
     return this.httpClient.post<any>(this.authURL + "nuevo" , nuevoUsuario);
   }
 
-  public login(loginUsuario: LoginUsuario): Observable<any>{
-    return this.httpClient.post<any>(this.authURL + "nuevo" , loginUsuario);
+  /*public login(loginUsuario: LoginUsuario): Observable<any>{
+    return this.httpClient.post<any>(this.authURL + "login" , loginUsuario);
+  }*/
+  login(loginUsuario: LoginUsuario):Observable<any>{
+    return this.httpClient.post(this.authURL + "login" , loginUsuario);
   }
 }

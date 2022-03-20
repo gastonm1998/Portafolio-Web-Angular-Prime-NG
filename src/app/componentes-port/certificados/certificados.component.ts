@@ -39,6 +39,10 @@ import { CertificadosComplementariosService } from 'src/app/servicios/api/certif
 import { ComplementosModelI } from 'src/app/modelos/complementosModel.interface';
 /*------------------------------------------ */
 
+/*---------------control del loggin----------- */
+import { TokenService } from 'src/app/jwt/service/token.service';
+/*-------------------- ------------------------*/
+
 import {
   ConfirmationService,
   MessageService,
@@ -87,6 +91,7 @@ export class CertificadosComponent implements OnInit {
 
     /*------------------------------------------ */
 
+    isLogged= false;//control de loggin
 
   constructor(
     private router:Router,
@@ -98,7 +103,8 @@ export class CertificadosComponent implements OnInit {
     private certificadoHtmlCss:CertificadosHtmlCssService,//backend certificado html css
     private certificadoIot:CertificadosIoTService,//backend certificado iot
     private certificadoDataBase:CertificadosDataBaseService, //backend certificado data base
-    private certificadoComplementos:CertificadosComplementariosService//backend certificado complementos
+    private certificadoComplementos:CertificadosComplementariosService,//backend certificado complementos
+    private tokenService:TokenService//control del loggin
   ) {
 
    }
@@ -158,6 +164,16 @@ export class CertificadosComponent implements OnInit {
       });
 
       /*------------------------------------------ */
+
+    /*bloqueo de botones por token*/
+    this.primengConfig.ripple = true;
+
+    if (this.tokenService.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
+    /*------------------------------------ */
 
   }
 

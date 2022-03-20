@@ -52,6 +52,22 @@
             <button pButton pRipple type="button" label="Contactame" class="p-button-rounded p-button-danger"></button>
           </a>
         </li>
+
+         <!--boton iniciar sesion-->
+         <li class="nav-item" *ngIf="!isLogged">
+          <a class="nav-link active" >
+            <button pButton pRipple type="button" label="Iniciar Sesion" class="p-button-secondary p-button-text" icon="pi pi-user" (click)="irAlLoggin()"></button>
+          </a>
+        </li>
+
+        <!--boton cerrar sesion-->
+        <li class="nav-item" *ngIf="isLogged" >
+          <a class="nav-link active"  >
+            <button pButton pRipple type="button" label="Cerrar Sesion" class="p-button-secondary p-button-text" icon="pi pi-power-off" (click)="onLogOut()"></button>
+
+          </a>
+        </li>
+
       </ul>
 
     </div>

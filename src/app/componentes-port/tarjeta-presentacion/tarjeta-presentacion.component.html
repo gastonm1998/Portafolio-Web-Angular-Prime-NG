@@ -10,6 +10,7 @@ componentes usados: advance card (NG Prime), card (NG Prime), knob (NG Prime), p
 
 </div>
 
+<!-- ------------------------ banner presentacion -------------------------------->
 <!--Advance card-->
 <div class="presentacion" *ngFor=" let elemento of elementosBannerPrincipal" >
 
@@ -26,13 +27,16 @@ componentes usados: advance card (NG Prime), card (NG Prime), knob (NG Prime), p
 
 
       </p>
-    <ng-template pTemplate="footer">
+    <ng-template pTemplate="footer" *ngIf="isLogged" >
       <p-button label="Editar" icon="pi pi-pencil" styleClass="p-button-info" routerLink="/editarBannerPrincipal" ></p-button>
     </ng-template>
   </p-card>
 
 </div>
 
+<!-- -------------------------------------------------------------------------------------- -->
+
+<!-- ----------- dominio de lenguajes porcentual --------------------------------------------->
 <!--knobs dentro de una card -->
 <div class="soft-skills">
   <!--card simple-->
@@ -43,7 +47,7 @@ componentes usados: advance card (NG Prime), card (NG Prime), knob (NG Prime), p
 
 
       <!--boton de agregar un nuevo lenguaje-->
-      <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarLenguaje" ></p-button>
+      <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarLenguaje" *ngIf="isLogged" ></p-button>
 
       <!--knobs-->
       <div class="medidores" *ngFor="let lenguajes of elementosLenguaje; let indice=index;">
@@ -56,17 +60,17 @@ componentes usados: advance card (NG Prime), card (NG Prime), knob (NG Prime), p
 
       <!--Grupo de botones de los lenguajes eliminar editar-->
       <span class="p-buttonset">
-        <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirm($event,lenguajes.id)" class="p-button-danger"></button>
-        <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarLenguaje/{{lenguajes.id}}"></button>
+        <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirm($event,lenguajes.id)" class="p-button-danger" *ngIf="isLogged"></button>
+        <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarLenguaje/{{lenguajes.id}}" *ngIf="isLogged"></button>
       </span>
     </div>
 
     </div>
   </div>
 
+<!-- -------------------------------------------------------------------------------------- -->
 
-
-
+<!-- ----------------- soft skills ---------------------------------->
  <!--progress bar dentro de card simple-->
 
  <!--card-->
@@ -74,7 +78,7 @@ componentes usados: advance card (NG Prime), card (NG Prime), knob (NG Prime), p
     <div class="card-body ">
       <h5 class="card-title" >Soft - Skills</h5>
 
-      <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarSoftSkill" ></p-button>
+      <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarSoftSkill" *ngIf="isLogged"></p-button>
 
       <div *ngFor="let habilidad of elementosSoftSkills; let indice=index;">
 
@@ -82,7 +86,7 @@ componentes usados: advance card (NG Prime), card (NG Prime), knob (NG Prime), p
 
         <p-progressBar [value]="habilidad.pocentaje"></p-progressBar>
 
-        <span class="p-buttonset">
+        <span class="p-buttonset" *ngIf="isLogged">
           <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteSoftSkills($event,habilidad.id)" class="p-button-danger"></button>
           <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarSoftSkill/{{habilidad.id}}"></button>
 
@@ -117,7 +121,7 @@ componentes usados: advance card (NG Prime), card (NG Prime), knob (NG Prime), p
   </div>
 
 
-
+<!-- -------------------------------------------------------------------------------------- -->
 
 
 

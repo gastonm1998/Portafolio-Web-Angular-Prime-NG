@@ -17,12 +17,16 @@ import { LenguajesService } from 'src/app/servicios/api/lenguajes.service';
 import { SoftSkillsI } from 'src/app/modelos/aboutMeSoftSkills.inerface';
 import { SoftSkillsService } from 'src/app/servicios/api/soft-skills.service';
 /*------------------------------------------ */
+/*---------------control del loggin----------- */
+import { TokenService } from 'src/app/jwt/service/token.service';
+/*-------------------- ------------------------*/
 
 import {
   ConfirmationService,
   MessageService,
   PrimeNGConfig
 } from "primeng/api";
+
 
 @Component({
   selector: 'app-tarjeta-presentacion',
@@ -49,7 +53,7 @@ export class TarjetaPresentacionComponent implements OnInit {
 
 /*--------------------------------------------------*/
 
-
+  isLogged= false;//control de loggin
 
   constructor(
     private router:Router,
@@ -58,7 +62,8 @@ export class TarjetaPresentacionComponent implements OnInit {
     private primengConfig: PrimeNGConfig,
     private bannerPrincipal:BannerPrincipalService, //backend banner principal
     private lenguaje:LenguajesService, //backend lenguajes
-    private sofSkills:SoftSkillsService // backend soft Skills
+    private sofSkills:SoftSkillsService, // backend soft Skills
+    private tokenService:TokenService//control del loggin
   ) { }
 
   ngOnInit(): void {
@@ -86,9 +91,18 @@ export class TarjetaPresentacionComponent implements OnInit {
       console.log(respuesta);
 
     })
+
+
+
+    /*bloqueo de botones por token*/
+    this.primengConfig.ripple = true;
+
+    if (this.tokenService.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
     /*------------------------------------ */
-
-
 
   }
 

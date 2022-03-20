@@ -73,6 +73,7 @@ import { EInformacionTelefonoComponent } from './componentesEdicion/edicionInfor
 import { EInformacionDireccionComponent } from './componentesEdicion/edicionInformacionContacto/e-informacion-direccion/e-informacion-direccion.component';
 import { EInformacionLinkedInComponent } from './componentesEdicion/edicionInformacionContacto/e-informacion-linked-in/e-informacion-linked-in.component';
 import { LoginComponent } from './componenteLogin/login/login.component';
+import { interceptorPrivider } from './jwt/service/interceptors.service';
 
 
 
@@ -151,7 +152,7 @@ import { LoginComponent } from './componenteLogin/login/login.component';
     SliderModule
 
   ],
-  providers: [ConfirmationService, MessageService],
+  providers: [ConfirmationService, MessageService,interceptorPrivider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

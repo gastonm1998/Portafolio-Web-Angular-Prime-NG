@@ -1,1 +1,90 @@
-<p>login works!</p>
+<div class="titulo">
+
+  <i class="pi pi-chevron-right" style="font-size: 2rem"></i>
+  <h1 class=" titulo2">   Login</h1>
+
+</div>
+<!--
+<form (ngSubmit)="onLogin()"  >
+
+
+  <div class="p-fluid grid">
+    <div class="field col-12 md:col-4">
+
+        <span class="p-float-label">
+              <input type="text" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" pInputText   >
+              <label for="nombreUsuario" >Username:</label>
+        </span>
+
+    </div>
+  </div>
+
+  <div class="p-fluid grid">
+    <div class="field col-12 md:col-4">
+
+        <span class="p-float-label">
+          <input type="password" id="password" name="password" [(ngModel)]="password" pInputText   >
+          <label for="password" >Password:</label>
+        </span>
+
+    </div>
+  </div>
+
+
+
+
+
+  <div class="botones">
+    <p-button label="Iniciar Sesion" icon=" pi pi-check" styleClass="p-button-info" type="submit"></p-button>
+
+    <p-button label="Cancelar" icon="pi pi-times" styleClass="p-button-danger" (onClick)="volverAlInicio()" ></p-button>
+  </div>
+
+</form>
+
+-->
+
+
+
+<form (ngSubmit)="enviarDatos()"  [formGroup]="formularioLogin" >
+
+
+  <div class="p-fluid grid">
+    <div class="field col-12 md:col-4">
+
+        <span class="p-float-label">
+              <input type="text" id="inputtext" pInputText   formControlName="nombreUsuario">
+              <label for="inputtext" >Nombre Usuario:</label>
+        </span>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <div class="p-fluid grid">
+    <div class="field col-12 md:col-4">
+
+        <span class="p-float-label">
+              <input type="password" id="inputtext" pInputText   formControlName="password">
+              <label for="inputtext" >Contraseña:</label>
+        </span>
+
+    </div>
+  </div>
+
+
+
+
+
+  <div class="botones">
+    <p-button label="Iniciar Sesion" icon=" pi pi-check" styleClass="p-button-info" type="submit" ></p-button>
+
+    <p-button label="Cancelar" icon="pi pi-times" styleClass="p-button-danger" (onClick)="volverAlInicio()" ></p-button>
+  </div>
+
+</form>
