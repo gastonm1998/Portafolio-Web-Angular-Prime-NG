@@ -12,6 +12,10 @@ import { EducacionService } from 'src/app/servicios/api/educacion.service';
 import { EducacionI } from 'src/app/modelos/educacion.interface';
 /*---------------------------------------------------------------------- */
 
+/*---------------control del loggin----------- */
+import { TokenService } from 'src/app/jwt/service/token.service';
+/*-------------------- ------------------------*/
+
 
 import {
   ConfirmationService,
@@ -37,6 +41,8 @@ export class ExperienciaComponent implements OnInit {
   elementosEducacion:EducacionI[];
   /*--------------------------- */
 
+  isLogged= false;//control de loggin
+
   //educacion: any[] = [];
 
   constructor(
@@ -45,7 +51,9 @@ export class ExperienciaComponent implements OnInit {
     private confirmationService: ConfirmationService,
     private messageService: MessageService,
     private primengConfig: PrimeNGConfig,
-    private router:Router) { }
+    private tokenService:TokenService,//control del loggin
+    private router:Router
+    ) { }
 
   ngOnInit(): void {
 
@@ -63,6 +71,17 @@ export class ExperienciaComponent implements OnInit {
       console.log(respuesta);
     })
     /*--------------------------------------------------- */
+
+
+    /*bloqueo de botones por token*/
+    this.primengConfig.ripple = true;
+
+    if (this.tokenService.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
+    /*------------------------------------ */
 
 
   }

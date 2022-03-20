@@ -5,9 +5,9 @@
   <i class="pi pi-chevron-right" style="font-size: 2rem"></i>
   <h1 class=" titulo2">    Experiencia</h1>
 
-  <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-secondary" routerLink="/experienciaAgregar" id="botonAgregar"></button>
-
-
+<!-- ------------------ boton agregar experiencia --------------------- -->
+  <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/experienciaAgregar" id="botonAgregar" *ngIf="isLogged"></p-button>
+<!-- ----------------------------------------------------------------- --->
 
 </div>
 
@@ -30,8 +30,8 @@
                   <p > id : {{event.id}} {{event.descripcion}}</p>
 
 
-
-                  <p-button label="Editar" icon="pi pi-pencil" styleClass="p-button-info" routerLink="/experienciaEditar/{{event.id}}" ></p-button>
+                  <!-- ---------------------- boton para editar --------------------->
+                  <p-button *ngIf="isLogged" label="Editar" icon="pi pi-pencil" styleClass="p-button-info" routerLink="/experienciaEditar/{{event.id}}"  ></p-button>
 
                   <!-- botones eliminar con mensaje de confirmacion-->
 
@@ -39,7 +39,7 @@
 
                   <p-confirmPopup> </p-confirmPopup>
 
-                  <button (click)="confirm($event,event.id)" pButton icon="pi pi-times" class="p-button-danger" label="Eliminar"></button>
+                  <button *ngIf="isLogged" (click)="confirm($event,event.id)" pButton icon="pi pi-times" class="p-button-danger" label="Eliminar" ></button>
 
                   <!-- -------------------- -->
 
@@ -53,7 +53,9 @@
     <i class="pi pi-chevron-right" style="font-size: 2rem"></i>
     <h1 class=" titulo2">    Educacion</h1>
 
-    <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-secondary" routerLink="/agregarEducacion" id="botonAgregar"></button>
+    <!-- boton agregar-->
+    <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarEducacion" id="botonAgregar" *ngIf="isLogged"></p-button>
+
   </div>
 
   <div class="card">
@@ -71,7 +73,8 @@
 
                   <p > {{educ.descripcion}}</p>
 
-                  <p-button label="Editar" icon="pi pi-pencil" styleClass="p-button-info" routerLink="editarEducacion/{{educ.id}}" ></p-button>
+                  <!--boton editar-->
+                  <p-button *ngIf="isLogged" label="Editar" icon="pi pi-pencil" styleClass="p-button-info" routerLink="editarEducacion/{{educ.id}}" ></p-button>
 
                    <!--botones eliminar con mensaje de confirmacion-->
 
@@ -79,7 +82,7 @@
 
                   <p-confirmPopup> </p-confirmPopup>
 
-                  <button (click)="confirmBorrarEducacion($event,educ.id)" pButton icon="pi pi-times" class="p-button-danger" label="Eliminar"></button>
+                  <button *ngIf="isLogged" (click)="confirmBorrarEducacion($event,educ.id)" pButton icon="pi pi-times" class="p-button-danger" label="Eliminar"></button>
 
 
 
