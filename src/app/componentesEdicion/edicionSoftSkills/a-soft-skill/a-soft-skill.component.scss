@@ -1,12 +1,45 @@
+
 .titulo{
   margin: 0;
-  padding-top: 7%;
-  padding-bottom: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
   display: flex;
-  background-color: #f8f9fa;
+  background-color: #92cdf5;
+  align-items: center;
+  justify-content: center;
 }
 .titulo2::first-letter{
   color: black;
   border-bottom: 4px solid orange;
   border-radius: 2px;
 }
+
+.pi{
+  margin-top: 0.90%;
+}
+
+
+.formulario-edicion-experiencia{
+  background-color: #f8f9fa;
+}
+
+.p-fluid {
+  padding-top: 3%;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectorDeColores{
+  padding-top: 3%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.botones{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
