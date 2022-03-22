@@ -13,8 +13,8 @@ export class ApiService {
 
   /*direccion del backend (Spring boot) */
 
-  url:string = "http://localhost:8080/experiencia";
-  //url:string = "https://portafolio-gaston-monasterio.herokuapp.com/experiencia";
+  //url:string = "http://localhost:8080/experiencia";
+  url:string = "https://portafolio-gaston-monasterio.herokuapp.com/experiencia";
 
   constructor( private http:HttpClient) { }
 
