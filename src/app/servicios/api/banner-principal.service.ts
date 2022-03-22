@@ -10,8 +10,8 @@ export class BannerPrincipalService {
 
  /*direccion del backend (Spring boot) */
 
-  url:string = "http://localhost:8080/bannerPrincipal"
-  //url:string = "https://portafolio-gaston-monasterio.herokuapp.com/bannerPrincipal";
+  //url:string = "http://localhost:8080/bannerPrincipal"
+  url:string = "https://portafolio-gaston-monasterio.herokuapp.com/bannerPrincipal";
 
   constructor(private httpClient:HttpClient) { }
 

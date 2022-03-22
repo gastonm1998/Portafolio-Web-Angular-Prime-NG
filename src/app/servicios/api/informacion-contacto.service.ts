@@ -9,8 +9,8 @@ import { InformacionContactoModelI } from 'src/app/modelos/informacionContactoMo
 export class InformacionContactoService {
   /*direccion del backend (Spring boot) */
 
-  url:string = "http://localhost:8080/contacto";
-  //url:string = "https://portafolio-gaston-monasterio.herokuapp.com/contacto";
+  //url:string = "http://localhost:8080/contacto";
+  url:string = "https://portafolio-gaston-monasterio.herokuapp.com/contacto";
 
   constructor(private http:HttpClient) { }
 
