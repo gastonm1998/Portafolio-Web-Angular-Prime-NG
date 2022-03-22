@@ -10,8 +10,8 @@ export class CertificadosIoTService {
 
   /*direccion del backend (Spring boot) */
 
-  //url:string = "http://localhost:8080/iot";
-  url:string = "https://portafolio-gaston-monasterio.herokuapp.com/iot";
+  url:string = "http://localhost:8080/iot";
+  //url:string = "https://portafolio-gaston-monasterio.herokuapp.com/iot";
 
   constructor(private http:HttpClient) { }
 

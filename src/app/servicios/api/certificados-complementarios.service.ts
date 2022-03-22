@@ -10,8 +10,8 @@ export class CertificadosComplementariosService {
 
   /*direccion del backend (Spring boot) */
 
-  //url:string = "http://localhost:8080/complementos";
-  url:string = "https://portafolio-gaston-monasterio.herokuapp.com/complementos";
+  url:string = "http://localhost:8080/complementos";
+  //url:string = "https://portafolio-gaston-monasterio.herokuapp.com/complementos";
 
   constructor(private http:HttpClient) { }
 

@@ -10,8 +10,8 @@ export class SoftSkillsService {
 
   /*direccion del backend (Spring boot) */
 
-  //url:string = "http://localhost:8080/softSkills";
-  url:string = "https://portafolio-gaston-monasterio.herokuapp.com/softSkills";
+  url:string = "http://localhost:8080/softSkills";
+  //url:string = "https://portafolio-gaston-monasterio.herokuapp.com/softSkills";
 
   constructor(private http:HttpClient) { }
 
