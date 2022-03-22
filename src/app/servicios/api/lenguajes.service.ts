@@ -11,7 +11,9 @@ import { Observable } from 'rxjs';
 export class LenguajesService {
 
   /*direccion del backend (Spring boot) */
-  url:string = "http://localhost:8080/lenguajes";
+
+  //url:string = "http://localhost:8080/lenguajes";
+  url:string = "https://portafolio-gaston-monasterio.herokuapp.com/lenguajes";
 
   constructor(private http:HttpClient) { }
 

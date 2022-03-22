@@ -9,7 +9,9 @@ import { HtmlCssModelI } from 'src/app/modelos/htmlCssModel.interface';
 export class CertificadosHtmlCssService {
 
     /*direccion del backend (Spring boot) */
-    url:string = "http://localhost:8080/cssHtml";
+
+    //url:string = "http://localhost:8080/cssHtml";
+    url:string = "https://portafolio-gaston-monasterio.herokuapp.com/cssHtml";
 
   constructor(private http:HttpClient) { }
   /*metodos manipulacion crud */

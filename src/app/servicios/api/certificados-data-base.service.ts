@@ -10,7 +10,9 @@ import { DataBaseModelI } from 'src/app/modelos/dateBaseModel.interface';
 export class CertificadosDataBaseService {
 
   /*direccion del backend (Spring boot) */
-  url:string = "http://localhost:8080/dataBase";
+
+  //url:string = "http://localhost:8080/dataBase";
+  url:string = "https://portafolio-gaston-monasterio.herokuapp.com/dataBase";
 
 
   constructor(private http:HttpClient) { }

@@ -9,7 +9,9 @@ import { PythonModelI } from 'src/app/modelos/pythonModel.interface';
 })
 export class CertificadosPythonService {
    /*direccion del backend (Spring boot) */
-   url:string = "http://localhost:8080/python";
+
+   //url:string = "http://localhost:8080/python";
+   url:string = "https://portafolio-gaston-monasterio.herokuapp.com/python";
 
   constructor(private http:HttpClient) { }
 

@@ -8,7 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class EducacionService {
 
-  url:string = "http://localhost:8080/CertEducacion";
+  //url:string = "http://localhost:8080/CertEducacion";
+  url:string = "https://portafolio-gaston-monasterio.herokuapp.com/CertEducacion";
 
   constructor(private http:HttpClient) { }
 
