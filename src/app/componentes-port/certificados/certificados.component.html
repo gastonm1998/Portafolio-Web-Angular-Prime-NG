@@ -7,7 +7,7 @@
 <div class="hard-skills">
 
   <p-accordion [multiple]="true">
-      <p-accordionTab  class="acordion" styleClass="p-accordionTab-shadow">
+      <p-accordionTab  class="acordion" styleClass="p-accordionTab-shadow" >
 
         <ng-template pTemplate="header"  styleClass="dark-panel " styleClass="ng-template-shadow">
           <div class="header-certificados">
@@ -22,49 +22,49 @@
         </ng-template>
 
           <!-- javascript-->
-
-        <div class="acordion-body" *ngFor="let certificadoJavaScript of elementosCertJavaScript">
-
-
-
-          <p-card  [style]="{width: '250px'}" styleClass="p-card-shadow" class="carta">
-
-
-            <ng-template pTemplate="header">
-                <img alt="Card" src="../../../assets/javascript.png">
-            </ng-template>
-
-
-            <div class="cuerpo-carta">
-
-              <img src="../../../assets/icons/graduation-cap-solid.svg" alt="" width="50">
-
-              <br>
-
-              <h5 class="card-title">{{certificadoJavaScript.titulo}}</h5>
-
-              <p class="card-text">{{certificadoJavaScript.entidadEmisora}}  </p>
-
-              <p class="card-text">{{certificadoJavaScript.fechaInicio}}  </p>
-
-              <a href={{certificadoJavaScript.linkCertificado}} class="card-link  " target="_blank">
-                <!--boton agregar-->
-                <button pButton pRipple type="button" label="Ver Credencial" class="p-button-outlined p-button-info" ></button>
-              </a>
-
-            </div>
-            <!--boton eliminar editar-->
-            <ng-template pTemplate="footer">
-
-                <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoJavaScript($event,certificadoJavaScript.id)" class="p-button-danger" *ngIf="isLogged"></button>
-                <br>
-                <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarCertJavaScript/{{certificadoJavaScript.id}}" *ngIf="isLogged"></button>
-
-            </ng-template>
-          </p-card>
+      <div  class="p-accordion-content ng-tns-c95-0" id="eeeeeeee">
+        <div class="acordion-body" *ngFor="let certificadoJavaScript of elementosCertJavaScript" >
 
 
 
+              <p-card  [style]="{width: '250px'}" styleClass="p-card-shadow" class="carta" >
+
+
+                <ng-template pTemplate="header">
+                    <img alt="Card" src="../../../assets/javascript.png">
+                </ng-template>
+
+
+                <div class="cuerpo-carta">
+
+                  <img src="../../../assets/icons/graduation-cap-solid.svg" alt="" width="50">
+
+                  <br>
+
+                  <h5 class="card-title">{{certificadoJavaScript.titulo}}</h5>
+
+                  <p class="card-text">{{certificadoJavaScript.entidadEmisora}}  </p>
+
+                  <p class="card-text">{{certificadoJavaScript.fechaInicio}}  </p>
+
+                  <a href={{certificadoJavaScript.linkCertificado}} class="card-link  " target="_blank">
+                    <!--boton agregar-->
+                    <button pButton pRipple type="button" label="Ver Credencial" class="p-button-outlined p-button-info" ></button>
+                  </a>
+
+                </div>
+                <!--boton eliminar editar-->
+                <ng-template pTemplate="footer">
+
+                    <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoJavaScript($event,certificadoJavaScript.id)" class="p-button-danger" *ngIf="isLogged"></button>
+                    <br>
+                    <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarCertJavaScript/{{certificadoJavaScript.id}}" *ngIf="isLogged"></button>
+
+                </ng-template>
+              </p-card>
+
+
+      </div>
 
 
 
@@ -354,48 +354,48 @@
         </ng-template>
         <!--python-->
 
+        <div  class="p-accordion-content ng-tns-c95-0" id="eeeeeeee">
+
+            <div class="acordion-body" *ngFor="let certificadoPython of elementosCertPython">
 
 
-        <div class="acordion-body" *ngFor="let certificadoPython of elementosCertPython">
+
+              <p-card  [style]="{width: '250px'}" styleClass="p-card-shadow" class="carta">
 
 
-
-          <p-card  [style]="{width: '250px'}" styleClass="p-card-shadow" class="carta">
-
-
-            <ng-template pTemplate="header">
-                <img alt="Card" src="../../../assets/Dictionary - Python Programming _ Geekboots.jpg">
-            </ng-template>
+                <ng-template pTemplate="header">
+                    <img alt="Card" src="../../../assets/Dictionary - Python Programming _ Geekboots.jpg">
+                </ng-template>
 
 
-            <div class="cuerpo-carta">
+                <div class="cuerpo-carta">
 
-              <img src="../../../assets/icons/graduation-cap-solid.svg" alt="" width="50">
+                  <img src="../../../assets/icons/graduation-cap-solid.svg" alt="" width="50">
 
-              <br>
+                  <br>
 
-              <h5 class="card-title">{{certificadoPython.titulo}}</h5>
+                  <h5 class="card-title">{{certificadoPython.titulo}}</h5>
 
-              <p class="card-text">{{certificadoPython.entidadEmisora}}  </p>
+                  <p class="card-text">{{certificadoPython.entidadEmisora}}  </p>
 
-              <p class="card-text">{{certificadoPython.fechaInicio}}  </p>
+                  <p class="card-text">{{certificadoPython.fechaInicio}}  </p>
 
-              <a href={{certificadoPython.linkCertificado}} class="card-link  " target="_blank">
-                <button pButton pRipple type="button" label="Ver Credencial" class="p-button-outlined p-button-info"></button>
-              </a>
+                  <a href={{certificadoPython.linkCertificado}} class="card-link  " target="_blank">
+                    <button pButton pRipple type="button" label="Ver Credencial" class="p-button-outlined p-button-info"></button>
+                  </a>
 
-            </div>
-            <!--boton eliminar editar-->
-            <ng-template pTemplate="footer" *ngIf="isLogged">
+                </div>
+                <!--boton eliminar editar-->
+                <ng-template pTemplate="footer" *ngIf="isLogged">
 
-                <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoPython($event,certificadoPython.id)" class="p-button-danger"></button>
-                <br>
-                <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarCertPython/{{certificadoPython.id}}"></button>
+                    <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoPython($event,certificadoPython.id)" class="p-button-danger"></button>
+                    <br>
+                    <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarCertPython/{{certificadoPython.id}}"></button>
 
-            </ng-template>
-          </p-card>
+                </ng-template>
+              </p-card>
 
-
+        </div>
 
 
 
@@ -622,46 +622,46 @@
 
         <!--Html css-->
 
-
-        <div class="acordion-body" *ngFor="let certificadoHtmlCss of elementosCertHtmlCss">
-
-
-
-          <p-card  [style]="{width: '250px'}" styleClass="p-card-shadow" class="carta">
+        <div  class="p-accordion-content ng-tns-c95-0" id="eeeeeeee">
+              <div class="acordion-body" *ngFor="let certificadoHtmlCss of elementosCertHtmlCss">
 
 
-            <ng-template pTemplate="header">
-                <img alt="Card" src="../../../assets/maxresdefault.jpg">
-            </ng-template>
+
+                <p-card  [style]="{width: '250px'}" styleClass="p-card-shadow" class="carta">
 
 
-            <div class="cuerpo-carta">
+                  <ng-template pTemplate="header">
+                      <img alt="Card" src="../../../assets/maxresdefault.jpg">
+                  </ng-template>
 
-              <img src="../../../assets/icons/graduation-cap-solid.svg" alt="" width="50">
 
-              <br>
+                  <div class="cuerpo-carta">
 
-              <h5 class="card-title">{{certificadoHtmlCss.titulo}}</h5>
+                    <img src="../../../assets/icons/graduation-cap-solid.svg" alt="" width="50">
 
-              <p class="card-text">{{certificadoHtmlCss.entidadEmisora}}  </p>
+                    <br>
 
-              <p class="card-text">{{certificadoHtmlCss.fechaInicio}}  </p>
+                    <h5 class="card-title">{{certificadoHtmlCss.titulo}}</h5>
 
-              <a href={{certificadoHtmlCss.linkCertificado}} class="card-link  " target="_blank">
-                <button pButton pRipple type="button" label="Ver Credencial" class="p-button-outlined p-button-info"></button>
-              </a>
+                    <p class="card-text">{{certificadoHtmlCss.entidadEmisora}}  </p>
 
-            </div>
-            <!--boton eliminar editar-->
-            <ng-template pTemplate="footer"*ngIf="isLogged">
+                    <p class="card-text">{{certificadoHtmlCss.fechaInicio}}  </p>
 
-                <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoHtmlCss($event,certificadoHtmlCss.id)" class="p-button-danger"></button>
-                <br>
-                <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarCertHtmlCss/{{certificadoHtmlCss.id}}"></button>
+                    <a href={{certificadoHtmlCss.linkCertificado}} class="card-link  " target="_blank">
+                      <button pButton pRipple type="button" label="Ver Credencial" class="p-button-outlined p-button-info"></button>
+                    </a>
 
-            </ng-template>
-          </p-card>
+                  </div>
+                  <!--boton eliminar editar-->
+                  <ng-template pTemplate="footer"*ngIf="isLogged">
 
+                      <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoHtmlCss($event,certificadoHtmlCss.id)" class="p-button-danger"></button>
+                      <br>
+                      <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarCertHtmlCss/{{certificadoHtmlCss.id}}"></button>
+
+                  </ng-template>
+                </p-card>
+        </div>
 
 
 
@@ -788,47 +788,47 @@
           </div>
         </ng-template>
         <!--Iot-->
-
-        <div class="acordion-body" *ngFor="let certificadoIot of elementosCertIot">
-
-
-
-          <p-card  [style]="{width: '250px'}" styleClass="p-card-shadow" class="carta">
+        <div  class="p-accordion-content ng-tns-c95-0" id="eeeeeeee">
+            <div class="acordion-body" *ngFor="let certificadoIot of elementosCertIot">
 
 
-            <ng-template pTemplate="header">
-                <img alt="Card" src="../../../assets/IoT - the Internet of Things.png">
-            </ng-template>
+
+              <p-card  [style]="{width: '250px'}" styleClass="p-card-shadow" class="carta">
 
 
-            <div class="cuerpo-carta">
-
-              <img src="../../../assets/icons/graduation-cap-solid.svg" alt="" width="50">
-
-              <br>
-
-              <h5 class="card-title">{{certificadoIot.titulo}}</h5>
-
-              <p class="card-text">{{certificadoIot.entidadEmisora}}  </p>
-
-              <p class="card-text">{{certificadoIot.fechaInicio}}  </p>
-
-              <a href={{certificadoIot.linkCertificado}} class="card-link  " target="_blank">
-                <button pButton pRipple type="button" label="Ver Credencial" class="p-button-outlined p-button-info"></button>
-              </a>
-
-            </div>
-            <!--boton editar eliminar-->
-            <ng-template pTemplate="footer" *ngIf="isLogged">
-
-                <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoIot($event,certificadoIot.id)" class="p-button-danger" ></button>
-                <br>
-                <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarCertIoT/{{certificadoIot.id}}"></button>
-
-            </ng-template>
-          </p-card>
+                <ng-template pTemplate="header">
+                    <img alt="Card" src="../../../assets/IoT - the Internet of Things.png">
+                </ng-template>
 
 
+                <div class="cuerpo-carta">
+
+                  <img src="../../../assets/icons/graduation-cap-solid.svg" alt="" width="50">
+
+                  <br>
+
+                  <h5 class="card-title">{{certificadoIot.titulo}}</h5>
+
+                  <p class="card-text">{{certificadoIot.entidadEmisora}}  </p>
+
+                  <p class="card-text">{{certificadoIot.fechaInicio}}  </p>
+
+                  <a href={{certificadoIot.linkCertificado}} class="card-link  " target="_blank">
+                    <button pButton pRipple type="button" label="Ver Credencial" class="p-button-outlined p-button-info"></button>
+                  </a>
+
+                </div>
+                <!--boton editar eliminar-->
+                <ng-template pTemplate="footer" *ngIf="isLogged">
+
+                    <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoIot($event,certificadoIot.id)" class="p-button-danger" ></button>
+                    <br>
+                    <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarCertIoT/{{certificadoIot.id}}"></button>
+
+                </ng-template>
+              </p-card>
+
+        </div>
 
 
 
@@ -1064,46 +1064,47 @@
       </ng-template>
 
       <!--Data base-->
-      <div class="acordion-body" *ngFor="let certificadoDataBase of elementosCertDataBase">
+      <div  class="p-accordion-content ng-tns-c95-0" id="eeeeeeee">
+          <div class="acordion-body" *ngFor="let certificadoDataBase of elementosCertDataBase">
 
 
 
-        <p-card  [style]="{width: '250px'}" styleClass="p-card-shadow" class="carta">
+            <p-card  [style]="{width: '250px'}" styleClass="p-card-shadow" class="carta">
 
 
-          <ng-template pTemplate="header">
-              <img alt="Card" src="../../../assets/cloud-computing-data-database-services-tiny-people-character-concept-vector-illustration-suitable-web-landing-page-167233625.jpg">
-          </ng-template>
+              <ng-template pTemplate="header">
+                  <img alt="Card" src="../../../assets/cloud-computing-data-database-services-tiny-people-character-concept-vector-illustration-suitable-web-landing-page-167233625.jpg">
+              </ng-template>
 
 
-          <div class="cuerpo-carta">
+              <div class="cuerpo-carta">
 
-            <img src="../../../assets/icons/graduation-cap-solid.svg" alt="" width="50">
+                <img src="../../../assets/icons/graduation-cap-solid.svg" alt="" width="50">
 
-            <br>
+                <br>
 
-            <h5 class="card-title">{{certificadoDataBase.titulo}}</h5>
+                <h5 class="card-title">{{certificadoDataBase.titulo}}</h5>
 
-            <p class="card-text">{{certificadoDataBase.entidadEmisora}}  </p>
+                <p class="card-text">{{certificadoDataBase.entidadEmisora}}  </p>
 
-            <p class="card-text">{{certificadoDataBase.fechaInicio}}  </p>
+                <p class="card-text">{{certificadoDataBase.fechaInicio}}  </p>
 
-            <a href={{certificadoDataBase.linkCertificado}} class="card-link  " target="_blank">
-              <button pButton pRipple type="button" label="Ver Credencial" class="p-button-outlined p-button-info"></button>
-            </a>
+                <a href={{certificadoDataBase.linkCertificado}} class="card-link  " target="_blank">
+                  <button pButton pRipple type="button" label="Ver Credencial" class="p-button-outlined p-button-info"></button>
+                </a>
 
-          </div>
-          <!--boton editar eliminar-->
-          <ng-template pTemplate="footer" *ngIf="isLogged">
+              </div>
+              <!--boton editar eliminar-->
+              <ng-template pTemplate="footer" *ngIf="isLogged">
 
-              <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoDataBase($event,certificadoDataBase.id)" class="p-button-danger"></button>
-              <br>
-              <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarCertDataBase/{{certificadoDataBase.id}}"></button>
+                  <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoDataBase($event,certificadoDataBase.id)" class="p-button-danger"></button>
+                  <br>
+                  <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarCertDataBase/{{certificadoDataBase.id}}"></button>
 
-          </ng-template>
-        </p-card>
+              </ng-template>
+            </p-card>
 
-
+      </div>
 
 
 
@@ -1185,45 +1186,46 @@
       </div>
     </ng-template>
     <!--complemento-->
-    <div class="acordion-body" *ngFor="let certificadoComplemento of elementosCertComplementos">
+    <div  class="p-accordion-content ng-tns-c95-0" id="eeeeeeee">
+        <div class="acordion-body" *ngFor="let certificadoComplemento of elementosCertComplementos">
 
-      <p-card  [style]="{width: '250px'}" styleClass="p-card-shadow" class="carta">
-
-
-        <ng-template pTemplate="header">
-            <img alt="Card" src="../../../assets/Premium Vector _ Software development, programming language, coding.jpg">
-
-        </ng-template>
+          <p-card  [style]="{width: '250px'}" styleClass="p-card-shadow" class="carta">
 
 
-        <div class="cuerpo-carta">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="../../../assets/Premium Vector _ Software development, programming language, coding.jpg">
 
-          <img src="../../../assets/icons/graduation-cap-solid.svg" alt="" width="50">
-
-          <br>
-
-          <h5 class="card-title">{{certificadoComplemento.titulo}}</h5>
-
-          <p class="card-text">{{certificadoComplemento.entidadEmisora}}  </p>
-
-          <p class="card-text">{{certificadoComplemento.fechaInicio}}  </p>
-
-          <a href={{certificadoComplemento.linkCertificado}} class="card-link  " target="_blank">
-            <button pButton pRipple type="button" label="Ver Credencial" class="p-button-outlined p-button-info"></button>
-          </a>
-
-        </div>
-        <!--boton editar eliminar-->
-        <ng-template pTemplate="footer" *ngIf="isLogged">
-
-            <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoComplementos($event,certificadoComplemento.id)" class="p-button-danger"></button>
-            <br>
-            <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarCertComplementos/{{certificadoComplemento.id}}"></button>
-
-        </ng-template>
-      </p-card>
+            </ng-template>
 
 
+            <div class="cuerpo-carta">
+
+              <img src="../../../assets/icons/graduation-cap-solid.svg" alt="" width="50">
+
+              <br>
+
+              <h5 class="card-title">{{certificadoComplemento.titulo}}</h5>
+
+              <p class="card-text">{{certificadoComplemento.entidadEmisora}}  </p>
+
+              <p class="card-text">{{certificadoComplemento.fechaInicio}}  </p>
+
+              <a href={{certificadoComplemento.linkCertificado}} class="card-link  " target="_blank">
+                <button pButton pRipple type="button" label="Ver Credencial" class="p-button-outlined p-button-info"></button>
+              </a>
+
+            </div>
+            <!--boton editar eliminar-->
+            <ng-template pTemplate="footer" *ngIf="isLogged">
+
+                <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirmDeleteCertificadoComplementos($event,certificadoComplemento.id)" class="p-button-danger"></button>
+                <br>
+                <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarCertComplementos/{{certificadoComplemento.id}}"></button>
+
+            </ng-template>
+          </p-card>
+
+    </div>
 
 
 

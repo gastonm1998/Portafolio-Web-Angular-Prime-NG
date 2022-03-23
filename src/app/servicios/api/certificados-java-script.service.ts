@@ -9,8 +9,8 @@ import { JavaScriptModelI } from 'src/app/modelos/javaScriptModel.interface';
 })
 export class CertificadosJavaScriptService {
 
-  //url:string = "http://localhost:8080/javaScript";
-  url:string = "https://portafolio-gaston-monasterio.herokuapp.com/javaScript";
+  url:string = "http://localhost:8080/javaScript";
+  //url:string = "https://portafolio-gaston-monasterio.herokuapp.com/javaScript";
 
 
   constructor(private http:HttpClient) { }

@@ -40,33 +40,38 @@ componentes usados: advance card (NG Prime), card (NG Prime), knob (NG Prime), p
 <!--knobs dentro de una card -->
 <div class="soft-skills">
   <!--card simple-->
-  <div class="card shadow " >
-    <div class="card-body">
+  <div class="card shadow " id="p1">
+    <div class="card-body" >
 
-      <h5 class="card-title">Lenguajes</h5>
-
-
-      <!--boton de agregar un nuevo lenguaje-->
-      <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarLenguaje" *ngIf="isLogged" ></p-button>
-
-      <!--knobs-->
-      <div class="medidores" *ngFor="let lenguajes of elementosLenguaje; let indice=index;">
-
-        <div class=" indicador ">
-          <h5 class="p-mt-3">{{lenguajes.nombreDelLenguaje}}</h5>
-          <p-knob [(ngModel)]="elementosLenguaje[indice].dominio" valueColor="#8bd1ff" rangeColor=" #f8f9fa" ></p-knob>
-      </div>
+      <h5 class="card-title" id="p3">Lenguajes</h5>
 
 
-      <!--Grupo de botones de los lenguajes eliminar editar-->
-      <span class="p-buttonset">
-        <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirm($event,lenguajes.id)" class="p-button-danger" *ngIf="isLogged"></button>
-        <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarLenguaje/{{lenguajes.id}}" *ngIf="isLogged"></button>
-      </span>
+         <div id="p2">
+            <!--boton de agregar un nuevo lenguaje-->
+            <p-button label="Agregar" icon="pi pi-plus" styleClass="p-button-info" routerLink="/agregarLenguaje" *ngIf="isLogged" ></p-button>
+
+            <!--knobs-->
+            <div class="medidores" *ngFor="let lenguajes of elementosLenguaje; let indice=index;">
+
+              <div class=" indicador ">
+                <h5 class="p-mt-3">{{lenguajes.nombreDelLenguaje}}</h5>
+                <p-knob [(ngModel)]="elementosLenguaje[indice].dominio" valueColor="#8bd1ff" rangeColor=" #f8f9fa" ></p-knob>
+            </div>
+
+
+            <!--Grupo de botones de los lenguajes eliminar editar-->
+            <span class="p-buttonset">
+              <button pButton pRipple label="Eliminar" icon="pi pi-trash" (click)="confirm($event,lenguajes.id)" class="p-button-danger" *ngIf="isLogged"></button>
+              <button pButton pRipple label="Editar" icon="pi pi-pencil"routerLink="editarLenguaje/{{lenguajes.id}}" *ngIf="isLogged"></button>
+            </span>
+         </div>
     </div>
 
     </div>
   </div>
+
+
+
 
 <!-- -------------------------------------------------------------------------------------- -->
 

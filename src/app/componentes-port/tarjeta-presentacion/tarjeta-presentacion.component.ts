@@ -34,6 +34,8 @@ import {
   styleUrls: ['./tarjeta-presentacion.component.scss']
 })
 export class TarjetaPresentacionComponent implements OnInit {
+
+
   /*implementacion del backend banner principal*/
 
   elementosBannerPrincipal:bannerPrincipal[];

@@ -7,19 +7,39 @@
 }
 
 .carta{
-  display: inline;
+ // display: inline;
 
   margin: 5%;
 
+
 }
 
-.acordion-body{
 
+#p2{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/*.p-accordionTab-shadow.p-toggleable-content .p-accordion-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}*/
+#eeeeeeee {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
-
+  justify-content: space-between;
+  align-content: center;
+  padding:5%;
+  border: 1px solid #dee2e6;
+  background: #ffffff;
+  color: #495057;
+  border-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
 .header-certificados{
