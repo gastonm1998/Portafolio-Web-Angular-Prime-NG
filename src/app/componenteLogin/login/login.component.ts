@@ -14,15 +14,11 @@ import { TokenService } from 'src/app/jwt/service/token.service';
 export class LoginComponent implements OnInit {
 
   formularioLogin:FormGroup;
-
   isLogged = false;
   isLoginFail = false;
   loginUsuario:LoginUsuario;
-  /*nombreUsuario:string;
-  password: string;*/
   roles: string[]=[];
   errMsj:string;
-
   value11:string;
 
   constructor(
@@ -47,25 +43,9 @@ export class LoginComponent implements OnInit {
     if (this.tokenService.getToken()){
       this.isLogged = true;
       this.isLoginFail = false;
-      /*this.roles = this.tokenService.getAuthorities();*/
     }
   }
-  /*onLogin():void{
-    this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
-    this.authService.login(this.loginUsuario).subscribe(
-      data => {
-        console.log(this.nombreUsuario);
-        console.log(this.password);
-        this.isLogged = true;
-        this.isLoginFail = false;
-        this.tokenService.setToken(data.token);
-        this.tokenService.setUserName(data.nombreUsuario);
-        this.tokenService.setAuthorities(data.authorities);
 
-      },
-
-    );
-  }*/
   enviarDatos():any{
     this.authService.login(this.formularioLogin.value).subscribe(
       data => {
@@ -79,11 +59,7 @@ export class LoginComponent implements OnInit {
       }
 
     );
-
-
     this.reloadComponent();
-    //this.router.navigateByUrl("/lobby");
-
   }
 
   volverAlInicio(){
@@ -91,7 +67,6 @@ export class LoginComponent implements OnInit {
   }
   reloadComponent() {
     this.router.navigateByUrl('/lobby', {skipLocationChange: true}).then(()=> this.router.navigate([LoginComponent]));
-
 
   }
 

@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-
+import { interceptorPrivider } from './jwt/service/interceptors.service';
 
 /*Componentes Angular */
 import { AppComponent } from './app.component';
@@ -25,29 +25,6 @@ import { DescripcionAnubisComponent } from './componentes-port/proyectos/descrip
 import { ContactoComponent } from './contacto/contacto.component';
 import { EExperienciaComponent } from './componentesEdicion/edicionExperiencia/e-experiencia/e-experiencia.component';
 import { AExperienciaComponent } from './componentesEdicion/edicionExperiencia/a-experiencia/a-experiencia.component';
-
-
-/* Componentes Ng Prime*/
-import {ProgressBarModule} from 'primeng/progressbar';
-import {RatingModule} from 'primeng/rating';
-import {KnobModule} from 'primeng/knob';
-import { RippleModule } from 'primeng/ripple';
-import {CarouselModule} from 'primeng/carousel';
-import {DialogModule} from 'primeng/dialog';
-import {TimelineModule} from 'primeng/timeline';
-import {PrimeIcons} from 'primeng/api';
-import {AccordionModule} from 'primeng/accordion';
-import {ButtonModule} from 'primeng/button';
-import {CardModule} from 'primeng/card';
-import {InputTextModule} from 'primeng/inputtext';
-import {CalendarModule} from 'primeng/calendar';
-import {ColorPickerModule} from 'primeng/colorpicker';
-import {InputTextareaModule} from 'primeng/inputtextarea';
-import { ConfirmPopupModule } from "primeng/confirmpopup";
-import { ToastModule } from "primeng/toast";
-import { ConfirmationService, MessageService } from "primeng/api";
-import {SliderModule} from 'primeng/slider';
-
 import { EBannerPrincipalComponent } from './componentesEdicion/edicionBannerPrincipal/e-banner-principal/e-banner-principal.component';
 import { ELenguajesComponent } from './componentesEdicion/edicionLenguajes/e-lenguajes/e-lenguajes.component';
 import { ALenguajesComponent } from './componentesEdicion/edicionLenguajes/a-lenguajes/a-lenguajes.component';
@@ -73,7 +50,32 @@ import { EInformacionTelefonoComponent } from './componentesEdicion/edicionInfor
 import { EInformacionDireccionComponent } from './componentesEdicion/edicionInformacionContacto/e-informacion-direccion/e-informacion-direccion.component';
 import { EInformacionLinkedInComponent } from './componentesEdicion/edicionInformacionContacto/e-informacion-linked-in/e-informacion-linked-in.component';
 import { LoginComponent } from './componenteLogin/login/login.component';
-import { interceptorPrivider } from './jwt/service/interceptors.service';
+
+
+
+/* Componentes Ng Prime*/
+import {ProgressBarModule} from 'primeng/progressbar';
+import {RatingModule} from 'primeng/rating';
+import {KnobModule} from 'primeng/knob';
+import { RippleModule } from 'primeng/ripple';
+import {CarouselModule} from 'primeng/carousel';
+import {DialogModule} from 'primeng/dialog';
+import {TimelineModule} from 'primeng/timeline';
+import {PrimeIcons} from 'primeng/api';
+import {AccordionModule} from 'primeng/accordion';
+import {ButtonModule} from 'primeng/button';
+import {CardModule} from 'primeng/card';
+import {InputTextModule} from 'primeng/inputtext';
+import {CalendarModule} from 'primeng/calendar';
+import {ColorPickerModule} from 'primeng/colorpicker';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import { ConfirmPopupModule } from "primeng/confirmpopup";
+import { ToastModule } from "primeng/toast";
+import { ConfirmationService, MessageService } from "primeng/api";
+import {SliderModule} from 'primeng/slider';
+
+
+
 
 
 
