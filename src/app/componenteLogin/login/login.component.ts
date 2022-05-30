@@ -59,15 +59,16 @@ export class LoginComponent implements OnInit {
       }
 
     );
-    this.reloadComponent();
+    
+    this.volverAlInicio();
+    
   }
 
   volverAlInicio(){
+    this.tokenService.getToken();
     this.router.navigateByUrl("/lobby");
+    
   }
-  reloadComponent() {
-    this.router.navigateByUrl('/lobby', {skipLocationChange: true}).then(()=> this.router.navigate([LoginComponent]));
 
-  }
 
 }
