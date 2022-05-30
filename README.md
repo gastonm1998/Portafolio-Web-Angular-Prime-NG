@@ -35,8 +35,8 @@
 - Base de datos: clever cloud
 [![c](https://raw.githubusercontent.com/gastonm1998/Portafolio-v2.0-frontend-Angular-PrimeNg/master/src/assets/imagenes%20readme/clever%20cloud.png "c")](https://raw.githubusercontent.com/gastonm1998/Portafolio-v2.0-frontend-Angular-PrimeNg/master/src/assets/imagenes%20readme/clever%20cloud.png "c")
 
-- Frontend: Heroku
-[![h](https://raw.githubusercontent.com/gastonm1998/Portafolio-v2.0-frontend-Angular-PrimeNg/master/src/assets/imagenes%20readme/heroku.png "h")](https://raw.githubusercontent.com/gastonm1998/Portafolio-v2.0-frontend-Angular-PrimeNg/master/src/assets/imagenes%20readme/heroku.png "h")
+- Frontend: Firebase
+[![h](https://raw.githubusercontent.com/gastonm1998/Portafolio-v2.0-frontend-Angular-PrimeNg/master/src/assets/imagenes%20readme/firebase.png "h")](https://raw.githubusercontent.com/gastonm1998/Portafolio-v2.0-frontend-Angular-PrimeNg/master/src/assets/imagenes%20readme/firebase.png "h")
 
 - Backend: Heroku
 [![h](https://raw.githubusercontent.com/gastonm1998/Portafolio-v2.0-frontend-Angular-PrimeNg/master/src/assets/imagenes%20readme/heroku.png "h")](https://raw.githubusercontent.com/gastonm1998/Portafolio-v2.0-frontend-Angular-PrimeNg/master/src/assets/imagenes%20readme/heroku.png "h")
